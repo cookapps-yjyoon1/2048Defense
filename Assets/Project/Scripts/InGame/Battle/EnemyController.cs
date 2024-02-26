@@ -14,9 +14,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] WallController target;
     
-    public void InitData(float _waveBuff)
+    public void InitData(float _waveBuff, WallController _target)
     {
-        //target = 
+        target = _target;
         hp = initHp * _waveBuff;
         atkDmg = initAtkDmg * _waveBuff;
         StartCoroutine(CoMove());
@@ -32,9 +32,12 @@ public class EnemyController : MonoBehaviour
         //transCha.transform.localScale = (transform.position.x > Target.transform.position.x) ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
         while (true)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > atkDist)
+            print(transform.position.y - target.transform.position.y);
+
+            if (transform.position.y - target.transform.position.y > atkDist)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+                transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
             }
             else
             {
@@ -49,7 +52,7 @@ public class EnemyController : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= atkDist)
+            if (transform.position.y - target.transform.position.y <= atkDist)
             {
                 //target.Hit(atkDmg);
             }

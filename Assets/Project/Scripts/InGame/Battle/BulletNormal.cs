@@ -5,7 +5,12 @@ using UnityEngine;
 public class BulletNormal : Bullet
 {
     public float speed = 10f;
-    [SerializeField] Rigidbody2D rb;
+    Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     override public void InitData(Vector2 _dir, float _dmg)
     {

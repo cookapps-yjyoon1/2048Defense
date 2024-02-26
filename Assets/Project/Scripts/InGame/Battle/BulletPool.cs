@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class BulletPool : ObjectPool
 {
-    public void Shoot(Vector2 _dir, int _bulType, float _dmg)
+    public void Shot(Vector2 _dir, int _bulType, float _dmg)
     {
         Bullet bul = Get(_bulType, transform.position).GetComponent<Bullet>();
         bul.InitData(_dir, _dmg);
