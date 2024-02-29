@@ -753,6 +753,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1502859959}
     m_Modifications:
+    - target: {fileID: 1242475955, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
+      propertyPath: prefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242475955, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
+      propertyPath: prefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 1626918750898884845, guid: bd0265a888014e647974fbafab471475, type: 3}
     - target: {fileID: 4668296673562926985, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
       propertyPath: m_Camera
       value: 
@@ -5726,7 +5734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04fee724d625e74981981bb421f43f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enumyList: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6167,7 +6174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f8b7fc9f01b3941b374b9f79e2d480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitList: {fileID: 507476491}
 --- !u!4 &889187071
 Transform:
   m_ObjectHideFlags: 0
@@ -6280,6 +6286,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1502859959}
     m_Modifications:
+    - target: {fileID: 1242475955, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
+      propertyPath: prefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242475955, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
+      propertyPath: prefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 1626918750898884845, guid: f1f9716a78653d74a99e8d9a22dd9273, type: 3}
+    - target: {fileID: 1242475955, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
+      propertyPath: prefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 1626918750898884845, guid: e317ed8e3c9f46345be60b5fdc141307, type: 3}
     - target: {fileID: 4668296673562926985, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
       propertyPath: m_Camera
       value: 
@@ -9104,10 +9122,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1502859959}
     m_Modifications:
-    - target: {fileID: 4194049853398487552, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4668296673562926985, guid: ba9ecb3d7f658e344a6888943c3ad3c7, type: 3}
       propertyPath: m_Camera
       value: 
