@@ -6,9 +6,8 @@ public class EnemyController : MonoBehaviour
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
 
-    [SerializeField] float initHp;
-    [SerializeField] float hp;
-    [SerializeField] float initAtkDmg;
+    [SerializeField] float maxHp;
+    [SerializeField] float nowHp;
     [SerializeField] float atkDmg;
     [SerializeField] float atkDist;
     [SerializeField] float moveSpeed;
@@ -17,8 +16,8 @@ public class EnemyController : MonoBehaviour
     public void InitData(float _waveBuff, WallController _target)
     {
         target = _target;
-        hp = initHp * _waveBuff;
-        atkDmg = initAtkDmg * _waveBuff;
+        nowHp = maxHp * _waveBuff;
+        //atkDmg *= _waveBuff;
         StartCoroutine(CoMove());
     }
     
@@ -32,9 +31,7 @@ public class EnemyController : MonoBehaviour
         //transCha.transform.localScale = (transform.position.x > Target.transform.position.x) ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
         while (true)
         {
-            print(transform.position.y - target.transform.position.y);
-
-            if (transform.position.y - target.transform.position.y > atkDist)
+            if (Mathf.Abs(transform.position.y - target.transform.position.y) > atkDist)
             {
                 transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
                 //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
@@ -52,7 +49,7 @@ public class EnemyController : MonoBehaviour
     {
         while (true)
         {
-            if (transform.position.y - target.transform.position.y <= atkDist)
+            if (Mathf.Abs(transform.position.y - target.transform.position.y) <= atkDist)
             {
                 //target.Hit(atkDmg);
             }
@@ -67,11 +64,17 @@ public class EnemyController : MonoBehaviour
 
     public void Hit(float _dmg)
     {
-        hp -= _dmg;
-        if (hp <= 0)
+        nowHp -= _dmg;
+        if (nowHp <= 0)
         {
-            StopCoroutine(CoAtk());
-            gameObject.SetActive(false);
+            Death();
         }
+    }
+
+    void Death()
+    {
+        StopAllCoroutines();
+        UnitList.enumyList.Remove(this);
+        gameObject.SetActive(false);
     }
 }

@@ -7,5 +7,5 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] public float Dmg { protected get; set; }
 
-    virtual public void InitData(Vector2 _dir, float _dmg) { }
+    virtual public void InitData(Vector3 _dir, float _dmg) { }
 }

@@ -5,20 +5,17 @@ using UnityEngine;
 public class BulletNormal : Bullet
 {
     public float speed = 10f;
-    Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    override public void InitData(Vector2 _dir, float _dmg)
+    override public void InitData(Vector3 _dir, float _dmg)
     {
         Dmg = _dmg;
-        StartCoroutine(CoShoot(_dir));
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
+
+        StartCoroutine(CoShot(_dir));
     }
 
-    IEnumerator CoShoot(Vector2 _dir)
+    IEnumerator CoShot(Vector3 _dir)
     {
         float timer = 0;
 
@@ -36,7 +33,8 @@ public class BulletNormal : Bullet
     {
         if (other.CompareTag("Enemy"))
         {
-            //other.GetComponent<EnemyController>().Hit(Dmg);
+            other.GetComponent<EnemyController>().Hit(Dmg);
+            //print("몬스터 히트");
             gameObject.SetActive(false);
         }
     }

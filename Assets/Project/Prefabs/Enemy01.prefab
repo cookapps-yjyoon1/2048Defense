@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1115303252452110381}
   - component: {fileID: 2736707005137822334}
   - component: {fileID: -8413350101717917366}
+  - component: {fileID: 246183935}
   m_Layer: 0
   m_Name: Enemy01
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,10 +98,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7130e3dcc16c4c64d98dc52226ac31b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initHp: 1
-  hp: 1
-  initAtkDmg: 1
+  maxHp: 3
+  nowHp: 0
   atkDmg: 1
   atkDist: 0.1
-  moveSpeed: 1
+  moveSpeed: 0.5
   target: {fileID: 0}
+--- !u!58 &246183935
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274897996198959854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

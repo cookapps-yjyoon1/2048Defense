@@ -12,10 +12,13 @@ public class TowerController : Tower
 
     [SerializeField] float dmg;
     [SerializeField] float atkSpeed;
-    [SerializeField] float criChance;
-    [SerializeField] float criFactor;
 
-    Transform target;
+    [SerializeField] Transform target;
+    List<Transform> targetGroup = new List<Transform>();
+
+    public List<Bullet> eqArrow = new List<Bullet>();
+    int curArrowIndexMax;
+    int curArrowIndex;
 
     private void Start()
     {
@@ -25,19 +28,22 @@ public class TowerController : Tower
         // 나중에 시트 연동
         dmg = 1;
         atkSpeed = 1;
-        criChance = 0.5f;
-        criFactor = 2;
+
+        // 화살 추가 할 때마다 리스트에 추가해야함
+        curArrowIndexMax = bulletPool.prefab.Length;
+        //atkSpeed /= eqArrow.Count;
+        atkSpeed /= curArrowIndexMax;
     }
 
-    void FirstDistTarget(List<Transform> _targetList)
+    void FirstDistTarget()
     {
         float firstDist = 10000;
         float curDist = 0;
         int firstDistIndex = 0;
 
-        for (int i = 0; i < _targetList.Count; i++)
+        for (int i = 0; i < UnitList.enumyList.Count; i++)
         {
-            curDist = Vector3.Distance(transform.position, _targetList[i].transform.position);
+            curDist = Vector3.Distance(transform.position, UnitList.enumyList[i].transform.position); //GameManager.instance.unitList.enumyList[i].transform.position.y;
 
             if (firstDist > curDist)
             {
@@ -45,17 +51,16 @@ public class TowerController : Tower
                 firstDist = curDist;
             }
         }
-        firstDist = 10000;
-        target = _targetList[firstDistIndex];
+        target = UnitList.enumyList[firstDistIndex].transform;
+        
     }
-
     IEnumerator CoFindTarget()
     {
         while (true)
         {
-            if (UnitList.targetList.Count != 0)
+            if (UnitList.enumyList.Count != 0)
             {
-                FirstDistTarget(UnitList.targetList);
+                FirstDistTarget();
             }
             else
             {
@@ -69,30 +74,44 @@ public class TowerController : Tower
     {
         while (true)
         {
-            if (target != null)
+            if (target != null && target.transform.position.y < 2)
             {
                 Shot(target);
-
-                yield return new WaitForSeconds(atkSpeed);
             }
-            yield return null;
+
+            yield return new WaitForSeconds(atkSpeed);
         }
     }
 
     void Shot(Transform _target)
     {
-        Vector2 shotDir = (_target.position - transform.position).normalized;
-        bool isCri = Random.value < criChance;
-        bulletPool.Shot(shotDir, 0, DmgCalculation(dmg, isCri));
-    }
+        Vector3 shotDir = (_target.position - bulletPool.transform.position).normalized;
+        //bool isCri = Random.value < criChance;
+        bulletPool.Shot(shotDir, curArrowIndex, dmg);
 
-    int DmgCalculation(float _dmg, bool _isCri)
-    {
-        if (_isCri)
+        curArrowIndex++;
+        
+        if(curArrowIndex == curArrowIndexMax)
         {
-            _dmg = criFactor * _dmg;
+            curArrowIndex = 0;
         }
-
-        return Mathf.CeilToInt(_dmg);
     }
+
+    void Test()
+    {
+        for(int i = 0; i < eqArrow.Count; i++)
+        {
+            //eqArrow.Add(bulletPool.prefab[Random.Range(0,bulletPool.prefab[bulletPool.prefab.Length - 1]));
+        }
+    }
+
+    //int DmgCalculation(float _dmg, bool _isCri)
+    //{
+    //    if (_isCri)
+    //    {
+    //        _dmg = criFactor * _dmg;
+    //    }
+
+    //    return Mathf.CeilToInt(_dmg);
+    //}
 }

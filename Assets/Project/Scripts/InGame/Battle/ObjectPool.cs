@@ -17,7 +17,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    public GameObject Get(int index, Vector2 pivotPos)
+    public GameObject Get(int index, Vector3 pivotPos)
     {
         GameObject select = null;
 

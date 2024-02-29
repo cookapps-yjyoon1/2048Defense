@@ -29,14 +29,11 @@ public class EnemyPool : ObjectPool
 
     public void Spawn(float _buff, int _unitIndex)
     {
-        //Vector2 randomDirection = Random.insideUnitCircle.normalized;
         float randomX = Random.Range(-randomXvalue, randomXvalue);
-        Vector2 spawnPos = new Vector3(randomX, transform.position.y, 0f);
-
+        Vector3 spawnPos = new Vector3(randomX, transform.position.y, 0f);
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
-
-
         unit.InitData(_buff, target);
+        UnitList.enumyList.Add(unit);
     }
 
     IEnumerator TestSpawn()
