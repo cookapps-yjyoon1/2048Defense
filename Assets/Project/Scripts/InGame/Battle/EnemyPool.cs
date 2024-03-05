@@ -30,7 +30,7 @@ public class EnemyPool : ObjectPool
     public void Spawn(float _buff, int _unitIndex)
     {
         float randomX = Random.Range(-randomXvalue, randomXvalue);
-        Vector3 spawnPos = new Vector3(randomX, transform.position.y, 0f);
+        Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
         unit.InitData(_buff, target);
         UnitList.enumyList.Add(unit);

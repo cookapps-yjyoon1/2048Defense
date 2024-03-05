@@ -16,7 +16,6 @@ public class TowerController : Tower
     [SerializeField] Transform target;
     List<Transform> targetGroup = new List<Transform>();
 
-    public List<Bullet> eqArrow = new List<Bullet>();
     int curArrowIndexMax;
     int curArrowIndex;
 
@@ -31,7 +30,6 @@ public class TowerController : Tower
 
         // 화살 추가 할 때마다 리스트에 추가해야함
         curArrowIndexMax = bulletPool.prefab.Length;
-        //atkSpeed /= eqArrow.Count;
         atkSpeed /= curArrowIndexMax;
     }
 
@@ -94,14 +92,6 @@ public class TowerController : Tower
         if(curArrowIndex == curArrowIndexMax)
         {
             curArrowIndex = 0;
-        }
-    }
-
-    void Test()
-    {
-        for(int i = 0; i < eqArrow.Count; i++)
-        {
-            //eqArrow.Add(bulletPool.prefab[Random.Range(0,bulletPool.prefab[bulletPool.prefab.Length - 1]));
         }
     }
 
