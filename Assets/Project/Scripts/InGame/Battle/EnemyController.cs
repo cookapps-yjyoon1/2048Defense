@@ -11,12 +11,14 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float atkDmg;
     [SerializeField] float atkDist;
     [SerializeField] float moveSpeed;
+    [SerializeField] float def;
     [SerializeField] WallController target;
     
-    public void InitData(float _waveBuff, WallController _target)
+    public void InitData(WallController _target, float _hp , float _def)
     {
         target = _target;
-        nowHp = maxHp * _waveBuff;
+        nowHp = maxHp * _hp;
+        def = _def;
         //atkDmg *= _waveBuff;
         StartCoroutine(CoMove());
     }

@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public EnemyPool enemyPool;
+    public WaveInfo waveInfo;
+    public GameObject gameMgrCanvas;
     //public UnitList unitList;
 
     private void Awake()
@@ -18,20 +22,25 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
-    private void Start()
-    {
-        GameStart();
+        gameMgrCanvas.gameObject.SetActive(true);
     }
 
     public void GameStart()
     {
-        
+        gameMgrCanvas.SetActive(false);
+        enemyPool.GameStart();        
+        waveInfo.GameStart();
     }
 
     public void GameOver()
     {
         
+    }
+
+
+    public void OnClickBtnGameStart()
+    {
+        GameStart();
     }
 }

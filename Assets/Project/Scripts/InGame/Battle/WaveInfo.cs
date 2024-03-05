@@ -6,56 +6,50 @@ using UnityEngine.UI;
 
 public class WaveInfo : MonoBehaviour
 {
-    //[SerializeField] Slider timerSlider;
-    //[SerializeField] TextMeshProUGUI waveInfoText;
-    //[SerializeField] float waveDuration;
+    [SerializeField] Slider timerSlider;
+    [SerializeField] TextMeshProUGUI waveInfoText;
+    [SerializeField] float waveDuration;
     //[SerializeField] WaveData curWaveData;
+
+    public int CurWave {  get; private set; }
 
     //public WaveData CurWaveData { get => curWaveData; private set => curWaveData = value; }
     //public float[] CurWaveEnemyProb { get; private set; }
-    //public bool IsSpawn { get; private set; }
 
-    //public void GameStart()
-    //{
-    //    IsSpawn = true;
-    //    StartCoroutine(CoTimer());
-    //}
+    public void GameStart()
+    {
+        StartCoroutine(CoTimer());
+    }
 
-    //public void GameOver()
-    //{
-    //    StopAllCoroutines();
-    //}
+    public void GameOver()
+    {
+        StopAllCoroutines();
+    }
 
-    //IEnumerator CoTimer()
-    //{
-    //    float waveTime = 0;
-    //    int curWave = 0;
+    IEnumerator CoTimer()
+    {
+        float waveTime = 0;
+        CurWave = 0;
 
-    //    CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
+        //CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
 
-    //    while (true)
-    //    {
-    //        float sliderValue = Mathf.Lerp(0, 1, waveTime / waveDuration);
-    //        timerSlider.value = sliderValue;
+        while (true)
+        {
+            float sliderValue = Mathf.Lerp(0, 1, waveTime / waveDuration);
+            timerSlider.value = sliderValue;
 
-    //        yield return null;
+            yield return null;
 
-    //        waveTime += Time.deltaTime;
+            waveTime += Time.deltaTime;
 
-    //        if (waveTime > waveDuration - 2)
-    //        {
-    //            IsSpawn = false;
-    //        }
-
-    //        if (waveTime > waveDuration)
-    //        {
-    //            waveTime = 0;
-    //            curWave++;
-    //            waveInfoText.text = "WAVE " + curWave;
-    //            IsSpawn = true;
-    //            CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
-    //            //print("Wave : " + CurWaveData.wave + " / Spawn Time : " + CurWaveData.spawnTime + " / Spawn Count : " + CurWaveData.spawnCount + " / buff : " + CurWaveData.buff);
-    //        }
-    //    }
-    //}
+            if (waveTime > waveDuration)
+            {
+                waveTime = 0;
+                CurWave++;
+                waveInfoText.text = "WAVE " + CurWave;
+                //CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
+                //print("Wave : " + CurWaveData.wave + " / Spawn Time : " + CurWaveData.spawnTime + " / Spawn Count : " + CurWaveData.spawnCount + " / buff : " + CurWaveData.buff);
+            }
+        }
+    }
 }

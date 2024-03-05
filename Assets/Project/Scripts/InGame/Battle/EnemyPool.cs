@@ -22,17 +22,17 @@ public class EnemyPool : ObjectPool
     //    }
     //}
 
-    private void Start()
+    public void GameStart()
     {
         StartCoroutine(TestSpawn());
     }
 
-    public void Spawn(float _buff, int _unitIndex)
+    public void Spawn(int _unitIndex, float _hp, float _def)
     {
         float randomX = Random.Range(-randomXvalue, randomXvalue);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
-        unit.InitData(_buff, target);
+        unit.InitData(target, _hp, _def);
         UnitList.enumyList.Add(unit);
     }
 
@@ -40,8 +40,43 @@ public class EnemyPool : ObjectPool
     {
         while (true)
         {
-            Spawn(1, 0);
+            Spawn(0, 1, 1);
             yield return new WaitForSeconds(0.5f);
         }
     }
+
+
+    IEnumerator CoSpawn00()
+    {
+        while (true)
+        {
+            Spawn(0, 1, 1);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    IEnumerator CoSpawn01()
+    {
+        while (true)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Spawn(0, 1, 1);
+            }
+            yield return new WaitForSeconds(3f);
+        }
+    }
+
+    IEnumerator CoSpawn02()
+    {
+        while (true)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Spawn(0, 1, 1);
+            }
+            yield return new WaitForSeconds(3f);
+        }
+    }
+
 }
