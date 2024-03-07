@@ -9,15 +9,17 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] Slider timerSlider;
     [SerializeField] TextMeshProUGUI waveInfoText;
     [SerializeField] float waveDuration;
+    [SerializeField] EnemyPool enemyPool;
     //[SerializeField] WaveData curWaveData;
 
-    public int CurWave {  get; private set; }
+    public int CurWave { get; private set; }
 
     //public WaveData CurWaveData { get => curWaveData; private set => curWaveData = value; }
     //public float[] CurWaveEnemyProb { get; private set; }
 
     public void GameStart()
     {
+        CurWave = 1;
         StartCoroutine(CoTimer());
     }
 
@@ -29,7 +31,6 @@ public class WaveInfo : MonoBehaviour
     IEnumerator CoTimer()
     {
         float waveTime = 0;
-        CurWave = 0;
 
         //CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
 
@@ -49,6 +50,7 @@ public class WaveInfo : MonoBehaviour
                 waveInfoText.text = "WAVE " + CurWave;
                 //CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
                 //print("Wave : " + CurWaveData.wave + " / Spawn Time : " + CurWaveData.spawnTime + " / Spawn Count : " + CurWaveData.spawnCount + " / buff : " + CurWaveData.buff);
+                enemyPool.ChangeWave(CurWave, 1);
             }
         }
     }
