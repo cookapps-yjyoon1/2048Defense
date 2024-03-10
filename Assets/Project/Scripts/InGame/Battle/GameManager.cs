@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     public void OnClickBtnGameStart()
     {
+        SoundManager.Instance.Play(Enum_Sound.Bgm, "InGame", 0,0.5f);
         GameStart();
     }
 }
