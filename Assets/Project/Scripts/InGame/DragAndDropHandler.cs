@@ -14,14 +14,12 @@ public static class DragAndDropHandler
         InGameManager.Instance.DragAndDrop.OnDrag();
         IsDragging = true;
         Block = go;
-        Debug.Log($"{Index} , {Level} Grap");
     }
     
     public static void Drop()
     {
         IsDragging = false;
         InGameManager.Instance.DragAndDrop.OnEndDrag();
-        Debug.Log($"{Index} , {Level} Drop");
     }
 
     public static void Clear()

@@ -72,7 +72,7 @@ public class Block : MonoBehaviour
     public void Setup()
     {
         Numeric = Random.Range(0, 100) < 90 ? 2 : 4;
-        index = Random.Range(0, 5);
+        index = Random.Range(0, 4);
 
         StartCoroutine(OnScaleAnimation(Vector3.one * 0.5f, Vector3.one, 0.15f));
     }

@@ -1,44 +1,75 @@
-using System.Collections;
+
+
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
     public GameObject[] prefab;
-    public List<GameObject>[] pool;
+    protected Dictionary<int, List<GameObject>> pool; // 인덱스 별로 오브젝트 리스트를 관리하는 딕셔너리
 
     private void Awake()
     {
-        pool = new List<GameObject>[prefab.Length];
+        pool = new Dictionary<int, List<GameObject>>();
 
-        for (int i = 0; i < pool.Length; i++)
+        for(int i = 0 ; i < prefab.Length; i++)
         {
-            pool[i] = new List<GameObject>();
+            var item = prefab[i];
+            var objectList = new List<GameObject>();
+
+            for (int j = 0; j < 10; j++)
+            {
+                GameObject newObj = Instantiate(item,transform);
+                newObj.SetActive(false);
+                objectList.Add(newObj);
+            }
+
+            pool.Add(i, objectList);
         }
     }
 
-    public GameObject Get(int index, Vector3 pivotPos)
+    private GameObject CreateNewObject(int index)
     {
-        GameObject select = null;
+        GameObject obj = Instantiate(prefab[index], transform);
+        obj.SetActive(false);
+        return obj;
+    }
 
-        foreach (GameObject item in pool[index])
+    public GameObject Get(int index,Vector3 position)
+    {
+        if (!pool.ContainsKey(index) || pool[index].Count == 0)
         {
-            if (!item.activeSelf)
+            Debug.LogWarning("No object available for key: " + index);
+            return null;
+        }
+
+        foreach (var obj in pool[index])
+        {
+            if (!obj.activeInHierarchy)
             {
-                select = item;
-                select.transform.position = pivotPos;
-                select.SetActive(true);
-                break;
+                obj.transform.position = position;
+                obj.SetActive(true);
+                return obj;
             }
         }
-
-        if (select == null)
+        
+        GameObject newObj = CreateNewObject(index);
+        pool[index].Add(newObj);
+        newObj.transform.position = position;
+        newObj.SetActive(true);
+        
+        return newObj;
+    }
+    
+    public void ReturnObjectToPool(int key, GameObject obj)
+    {
+        if (!pool.ContainsKey(key))
         {
-            select = Instantiate(prefab[index], transform);
-            select.transform.position = pivotPos;
-            pool[index].Add(select);
+            Debug.LogWarning("Invalid pool key: " + key);
+            return;
         }
 
-        return select;
+        obj.SetActive(false);
     }
 }
+

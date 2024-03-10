@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class BulletPool : ObjectPool
 {
@@ -11,5 +6,6 @@ public class BulletPool : ObjectPool
     {
         Bullet bul = Get(_bulType, transform.position).GetComponent<Bullet>();
         bul.InitData(_dir, _dmg);
+        SoundManager.Instance.PlayRandomIndex("Shoot",0.1f,1f);
     }
 }

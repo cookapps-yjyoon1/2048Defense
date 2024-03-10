@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab:
   - {fileID: 1626918750898884845, guid: 49db17e323fa9de488f25c4fd37dfc4c, type: 3}
-  - {fileID: 1626918750898884845, guid: bd0265a888014e647974fbafab471475, type: 3}
-  - {fileID: 1626918750898884845, guid: f1f9716a78653d74a99e8d9a22dd9273, type: 3}
+  - {fileID: 1626918750898884845, guid: 0b8c0a8d795fd5c4d9ba3c16a9561159, type: 3}
+  - {fileID: 1626918750898884845, guid: feb23cdcea0fe1c439eb5559ee965cd9, type: 3}
   - {fileID: 1626918750898884845, guid: e317ed8e3c9f46345be60b5fdc141307, type: 3}
 --- !u!1 &4668296672699689558
 GameObject:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Equip 5
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -534,7 +534,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &4668296674101485178
 MonoBehaviour:
@@ -548,20 +548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853fc2ffd75bda14e8a4f5bdf8bd363d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _txtIndex: {fileID: 4668296673390724983}
-  _txtLevel: {fileID: 4668296674489824736}
-  _txtCount: {fileID: 4668296672699689552}
-  Index: -1
-  Level: -1
-  Count: -1
   bulletPool: {fileID: 1242475955}
-  dmg: 1
-  atkSpeed: 1
   target: {fileID: 0}
-  eqArrow:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &4668296674489824742
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LV.15
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

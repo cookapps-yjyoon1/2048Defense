@@ -67,6 +67,7 @@ public class EnemyController : MonoBehaviour
 
     public void Hit(float _dmg)
     {
+        SoundManager.Instance.Play(Enum_Sound.Effect,"Hit");
         nowHp -= _dmg;
         if (nowHp <= 0)
         {
@@ -76,6 +77,7 @@ public class EnemyController : MonoBehaviour
 
     void Death()
     {
+        CameraManager.Instance.Shake(0.1f,0.1f);
         StopAllCoroutines();
         UnitList.enumyList.Remove(this);
         gameObject.SetActive(false);

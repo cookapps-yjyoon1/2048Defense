@@ -9,15 +9,9 @@ public class TowerController : Tower
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
 
     [SerializeField] BulletPool bulletPool;
-
-    [SerializeField] float dmg;
-    [SerializeField] float atkSpeed;
-
+    
     [SerializeField] Transform target;
     List<Transform> targetGroup = new List<Transform>();
-
-    int curArrowIndexMax;
-    int curArrowIndex;
 
     private void Start()
     {
@@ -26,11 +20,6 @@ public class TowerController : Tower
 
         // 나중에 시트 연동
         dmg = 1;
-        atkSpeed = 1;
-
-        // 화살 추가 할 때마다 리스트에 추가해야함
-        curArrowIndexMax = bulletPool.prefab.Length;
-        atkSpeed /= curArrowIndexMax;
     }
 
     void FirstDistTarget()
@@ -77,21 +66,26 @@ public class TowerController : Tower
                 Shot(target);
             }
 
-            yield return new WaitForSeconds(atkSpeed);
+            yield return new WaitForSeconds(attackSpeed);
         }
     }
 
     void Shot(Transform _target)
     {
+        if (curArrowIndexMax == 0)
+        {
+            return;
+        }
+        
         Vector3 shotDir = (_target.position - bulletPool.transform.position).normalized;
         //bool isCri = Random.value < criChance;
-        bulletPool.Shot(shotDir, curArrowIndex, dmg);
+        bulletPool.Shot(shotDir, curArrow.Index, curArrow.Level);
 
-        curArrowIndex++;
+        _curIndex++;
         
-        if(curArrowIndex == curArrowIndexMax)
+        if(_curIndex == curArrowIndexMax)
         {
-            curArrowIndex = 0;
+            _curIndex = 0;
         }
     }
 
