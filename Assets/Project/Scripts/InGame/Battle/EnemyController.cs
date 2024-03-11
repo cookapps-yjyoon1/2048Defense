@@ -10,23 +10,26 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] DecompositionController _decompositionController;
     [SerializeField] WallController target;
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRendererController spriteCon;
 
     // ĳ�̺���
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
+    WaitForSeconds wfsDeath = new WaitForSeconds(1f);
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
     Vector3 orgTransScale = new Vector3(1, 1, 1);
     Vector3 flipTransScale = new Vector3(-1, 1, 1);
-    
+
     bool isDecomposition1 = false;
-    bool isDecomposition2 = false;
 
     public void InitData(WallController _target, float _correction)
     {
-        isDecomposition1 = false;
-        _decompositionController.Reset();
         target = _target;
         nowHp = maxHp * _correction;
-        StartCoroutine(CoMove());
+        isDecomposition1 = false;
+        //_decompositionController.Reset();
+        
+        spriteCon.Init();
 
         if (Random.Range(0, 2) == 0)
         {
@@ -36,6 +39,8 @@ public class EnemyController : MonoBehaviour
         {
             transform.localScale = flipTransScale;
         }
+
+        StartCoroutine(CoMove());
     }
 
     public void GameOver()
@@ -45,13 +50,22 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator CoMove()
     {
+        if (Random.Range(0, 2) == 0)
+        {
+            animator.Play("walk1_1");
+        }
+        else
+        {
+            animator.Play("walk1_2");
+        }
+
         //transCha.transform.localScale = (transform.position.x > Target.transform.position.x) ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
         while (true)
         {
             if (Mathf.Abs(transform.position.y - target.transform.position.y) > atkDist)
             {
                 transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
-                //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+                spriteCon.MoveOrderInLayer();
             }
             else
             {
@@ -64,11 +78,13 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator CoAtk()
     {
+        animator.Play("atk");
+
         while (true)
         {
             if (Mathf.Abs(transform.position.y - target.transform.position.y) <= atkDist)
             {
-                //target.Hit(atkDmg);
+                target.Hit(atkDmg);
             }
             else
             {
@@ -79,17 +95,23 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    IEnumerator CoDeath()
+    {
+        yield return wfsDeath;
+        gameObject.SetActive(false);
+    }
+
     public void Hit(float _dmg)
     {
-        SoundManager.Instance.Play(Enum_Sound.Effect,"Hit");
+        SoundManager.Instance.Play(Enum_Sound.Effect, "Hit");
         nowHp -= _dmg;
 
         if (!isDecomposition1)
         {
             isDecomposition1 = true;
-            _decompositionController.ActiveRandom();
+            //_decompositionController.ActiveRandom();
         }
-        
+
         if (nowHp <= 0)
         {
             Death();
@@ -98,9 +120,10 @@ public class EnemyController : MonoBehaviour
 
     void Death()
     {
-        CameraManager.Instance.Shake(0.05f,0.04f);
-        StopAllCoroutines();
+        animator.Play("die");
+        CameraManager.Instance.Shake(0.05f, 0.04f);
         UnitList.enumyList.Remove(this);
-        gameObject.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(CoDeath());
     }
 }

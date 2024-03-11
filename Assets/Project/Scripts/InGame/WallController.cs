@@ -6,15 +6,24 @@ using UnityEngine.UI;
 public class WallController : MonoBehaviour
 {
     [SerializeField] Slider hpSlider;
-    public float maxHp;
-    public float curHp;
+    [SerializeField] float maxHp;
+    [SerializeField] float curHp;
+
+    private void Start()
+    {
+        curHp = maxHp;
+        hpSlider.maxValue = maxHp;
+        hpSlider.value = maxHp;
+
+    }
 
     public void Hit(float _dmg)
     {
         curHp -= _dmg;
+        hpSlider.value = curHp;
+
         if (curHp <= 0)
         {
-            //StopCoroutine(CoAtk());
             gameObject.SetActive(false);
         }
     }

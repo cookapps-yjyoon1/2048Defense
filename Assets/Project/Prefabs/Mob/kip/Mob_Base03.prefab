@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -8413350101717917366}
   - component: {fileID: 246183935}
   - component: {fileID: 5429522704513626830}
+  - component: {fileID: -1979380094388814686}
   m_Layer: 0
   m_Name: Mob_Base03
   m_TagString: Enemy
@@ -51,9 +52,11 @@ MonoBehaviour:
   nowHp: 0
   atkDmg: 1
   atkDist: 0.1
-  moveSpeed: 0.1
+  moveSpeed: 0.2
   _decompositionController: {fileID: 5429522704513626830}
   target: {fileID: 0}
+  animator: {fileID: 7650416518708550024}
+  spriteCon: {fileID: -1979380094388814686}
 --- !u!58 &246183935
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -85,6 +88,26 @@ MonoBehaviour:
   _goHead: {fileID: 1219205026745968760}
   _goLeftArm: {fileID: 1564222411645789958}
   _goRightArm: {fileID: 4231764358008384668}
+--- !u!114 &-1979380094388814686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274897996198959854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84a3a3369d68034eac9de877ea32bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArr:
+  - {fileID: 3470730393235602914}
+  - {fileID: 3033394508631006638}
+  - {fileID: 6355782030915087231}
+  - {fileID: 6911390017867426067}
+  - {fileID: 1805927090245457082}
+  - {fileID: 6884548926009495843}
+  - {fileID: 9070571602768746426}
 --- !u!1 &1219205026745968760
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7755679486808583960}
   - component: {fileID: 7650416518708550024}
-  - component: {fileID: 6478913547626256353}
   m_Layer: 0
   m_Name: Mob_Base03
   m_TagString: Untagged
@@ -310,25 +332,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6478913547626256353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2236478844281642101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7130e3dcc16c4c64d98dc52226ac31b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 10
-  nowHp: 0
-  atkDmg: 1
-  atkDist: 1
-  moveSpeed: 0.2
-  _decompositionController: {fileID: 0}
-  target: {fileID: 0}
 --- !u!1 &2773450172746646305
 GameObject:
   m_ObjectHideFlags: 0
