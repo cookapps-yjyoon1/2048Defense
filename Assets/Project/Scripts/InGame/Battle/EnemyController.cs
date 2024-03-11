@@ -3,23 +3,26 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    
-
     [SerializeField] float maxHp;
     [SerializeField] float nowHp;
     [SerializeField] float atkDmg;
     [SerializeField] float atkDist;
     [SerializeField] float moveSpeed;
+    [SerializeField] DecompositionController _decompositionController;
     [SerializeField] WallController target;
 
-    // Ä³½Ìº¯¼ö
+    // Ä³ï¿½Ìºï¿½ï¿½ï¿½
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
     Vector3 orgTransScale = new Vector3(1, 1, 1);
     Vector3 flipTransScale = new Vector3(-1, 1, 1);
+    
+    bool isDecomposition1 = false;
+    bool isDecomposition2 = false;
 
     public void InitData(WallController _target, float _correction)
     {
+        _decompositionController.Reset();
         target = _target;
         nowHp = maxHp * _correction;
         StartCoroutine(CoMove());
@@ -79,6 +82,13 @@ public class EnemyController : MonoBehaviour
     {
         SoundManager.Instance.Play(Enum_Sound.Effect,"Hit");
         nowHp -= _dmg;
+
+        if (!isDecomposition1 && nowHp / maxHp < 0.7f)
+        {
+            isDecomposition1 = true;
+            _decompositionController.ActiveRandom();
+        }
+        
         if (nowHp <= 0)
         {
             Death();
@@ -87,7 +97,7 @@ public class EnemyController : MonoBehaviour
 
     void Death()
     {
-        CameraManager.Instance.Shake(0.1f,0.1f);
+        CameraManager.Instance.Shake(0.05f,0.04f);
         StopAllCoroutines();
         UnitList.enumyList.Remove(this);
         gameObject.SetActive(false);

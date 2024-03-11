@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1115303252452110381}
   - component: {fileID: -8413350101717917366}
   - component: {fileID: 246183935}
+  - component: {fileID: 8942579733230535088}
   m_Layer: 0
   m_Name: Mob_Base02
   m_TagString: Enemy
@@ -51,6 +52,7 @@ MonoBehaviour:
   atkDmg: 1
   atkDist: 0.1
   moveSpeed: 0.1
+  _decompositionController: {fileID: 8942579733230535088}
   target: {fileID: 0}
 --- !u!58 &246183935
 CircleCollider2D:
@@ -68,6 +70,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &8942579733230535088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274897996198959854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f12efa588d346b3b444ba41e34c50be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goHead: {fileID: 8944688743067950597}
+  _goLeftArm: {fileID: 8944688743620141917}
+  _goRightArm: {fileID: 8944688745207532691}
 --- !u!1 &8944688742004687621
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +156,7 @@ MonoBehaviour:
   atkDmg: 1
   atkDist: 1
   moveSpeed: 0.2
+  _decompositionController: {fileID: 0}
   target: {fileID: 0}
 --- !u!1 &8944688742294672911
 GameObject:
