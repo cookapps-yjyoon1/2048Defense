@@ -13,6 +13,8 @@ public class Tower : MonoBehaviour , IDropHandler
     protected int curArrowIndexMax => arrows.Count;
     protected Arrow curArrow => arrows[_curIndex];
     protected int _curIndex = 0;
+    
+    [SerializeField] protected TowerUI _towerUI;
 
     private void Start()
     {
@@ -42,11 +44,12 @@ public class Tower : MonoBehaviour , IDropHandler
         arrows.Add(new Arrow(index,level));
         
         ClearDrop();
+        Refresh();
     }
 
-    private void Refresh()
+    protected void Refresh()
     {
-
+        _towerUI.UpdateUI(curArrowIndexMax,_curIndex);
     }
 
     private void ClearDrop()

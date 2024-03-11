@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 public class TowerController : Tower
 {
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
+    WaitForSeconds wfsReload = new WaitForSeconds(0.5f);
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
 
     [SerializeField] BulletPool bulletPool;
@@ -17,8 +19,8 @@ public class TowerController : Tower
     {
         StartCoroutine(CoFindTarget());
         StartCoroutine(CoAtk());
-
-        // ³ªÁß¿¡ ½ÃÆ® ¿¬µ¿
+        
+        // ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
         dmg = 1;
     }
 
@@ -63,30 +65,34 @@ public class TowerController : Tower
         {
             if (target != null && target.transform.position.y < 2)
             {
-                Shot(target);
+                yield return Shot(target);
             }
 
             yield return new WaitForSeconds(attackSpeed);
         }
     }
 
-    void Shot(Transform _target)
+    YieldInstruction Shot(Transform _target)
     {
-        if (curArrowIndexMax == 0)
+        if (curArrowIndexMax > 0)
         {
-            return;
-        }
-        
-        Vector3 shotDir = (_target.position - bulletPool.transform.position).normalized;
-        //bool isCri = Random.value < criChance;
-        bulletPool.Shot(shotDir, curArrow.Index, curArrow.Level);
+            Vector3 shotDir = (_target.position - bulletPool.transform.position).normalized;
+            //bool isCri = Random.value < criChance;
+            bulletPool.Shot(shotDir, curArrow.Index, curArrow.Level);
 
-        _curIndex++;
-        
-        if(_curIndex == curArrowIndexMax)
-        {
-            _curIndex = 0;
+            _curIndex++;
+
+            Refresh();
+            
+            if (_curIndex == curArrowIndexMax)
+            {
+                _curIndex = 0;
+                _towerUI.Reload();
+                return wfsReload;
+            }
         }
+
+        return null;
     }
 
     //int DmgCalculation(float _dmg, bool _isCri)
