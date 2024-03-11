@@ -33,7 +33,6 @@ public class FadeAwayEffect : MonoBehaviour
             float alpha = Mathf.Lerp(1f, 0f, currentTime / fadeDuration);
             spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
             transform.position += Vector3.up * riseSpeed * Time.deltaTime;
-            transform.DORotate(180f);
             yield return null;
         }
         
