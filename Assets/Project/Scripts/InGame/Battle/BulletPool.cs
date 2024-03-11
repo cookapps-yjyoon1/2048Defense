@@ -6,6 +6,6 @@ public class BulletPool : ObjectPool
     {
         Bullet bul = Get(_bulType, transform.position).GetComponent<Bullet>();
         bul.InitData(_dir, _dmg);
-        SoundManager.Instance.PlayRandomIndex("Shoot",0.1f,1f);
+        SoundManager.Instance.PlayRandomIndex("Shoot",0.7f,1f);
     }
 }

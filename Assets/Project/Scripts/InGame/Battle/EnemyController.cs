@@ -106,10 +106,10 @@ public class EnemyController : MonoBehaviour
         SoundManager.Instance.Play(Enum_Sound.Effect, "Hit");
         nowHp -= _dmg;
 
-        if (!isDecomposition1 && nowHp / maxHp < 0.7f)
+        if (!isDecomposition1)
         {
             isDecomposition1 = true;
-            //_decompositionController.ActiveRandom();
+            _decompositionController.ActiveRandom();
         }
 
         if (nowHp <= 0)

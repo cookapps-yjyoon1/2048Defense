@@ -3,12 +3,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : SingletonBehaviour<ObjectPool>
+public class ObjectPool : MonoBehaviour
 {
     public GameObject[] prefab;
     protected Dictionary<int, List<GameObject>> pool; // 인덱스 별로 오브젝트 리스트를 관리하는 딕셔너리
 
-    private void Awake()
+    protected virtual void Awake()
     {
         pool = new Dictionary<int, List<GameObject>>();
 
