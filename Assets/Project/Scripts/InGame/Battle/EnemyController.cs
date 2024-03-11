@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
 
     public void InitData(WallController _target, float _correction)
     {
+        isDecomposition1 = false;
         _decompositionController.Reset();
         target = _target;
         nowHp = maxHp * _correction;

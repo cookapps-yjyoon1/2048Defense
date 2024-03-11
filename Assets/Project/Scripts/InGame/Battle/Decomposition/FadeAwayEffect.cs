@@ -16,7 +16,7 @@ public class FadeAwayEffect : MonoBehaviour
 
     public void Update()
     {
-        transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime); 
+        transform.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime); 
     }
 
     public void OnEffect(int index)
@@ -37,7 +37,7 @@ public class FadeAwayEffect : MonoBehaviour
         }
         
         currentTime = 0;
-        _index = -1;
         DecompositionPool.Instance.ReturnObjectToPool(_index,gameObject);
+        _index = -1;
     }
 }

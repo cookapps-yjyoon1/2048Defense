@@ -36,7 +36,7 @@ public class TowerUI : MonoBehaviour
         
         _goReloadText.SetActive(true);
         
-        for (int i = _count; i >= 0; i--)
+        for (int i = _count-1; i >= 0; i--)
         {
             _goBullet[i].SetActive(true);
             yield return wfs;
