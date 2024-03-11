@@ -109,7 +109,7 @@ public class EnemyController : MonoBehaviour
         if (!isDecomposition1)
         {
             isDecomposition1 = true;
-            //_decompositionController.ActiveRandom();
+            _decompositionController.ActiveRandom();
         }
 
         if (nowHp <= 0)
