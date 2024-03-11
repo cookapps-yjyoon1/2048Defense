@@ -41,6 +41,7 @@ public class TowerUI : MonoBehaviour
             _goBullet[i].SetActive(true);
             yield return wfs;
         }
+        SoundManager.Instance.Play(Enum_Sound.Effect, "Reload",0,0.7f,1f);
         
         _goReloadText.SetActive(false);
     }

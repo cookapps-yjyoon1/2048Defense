@@ -97,9 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1deefddfda8046a7aba28ccd9ef75491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _index: -1
+  _renderer:
+  - {fileID: 68408182847557253}
+  dropHeight: -0.5
+  dropDuration: 1
   fadeDuration: 2
-  scaleMultiplier: 2
-  riseSpeed: 4
-  rotateSpeed: 1000
-  spriteRenderer: {fileID: 68408182847557253}
