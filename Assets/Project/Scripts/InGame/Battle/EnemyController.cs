@@ -3,27 +3,37 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    WaitForSeconds wfsAtk = new WaitForSeconds(1);
-    WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
+    
 
     [SerializeField] float maxHp;
     [SerializeField] float nowHp;
     [SerializeField] float atkDmg;
     [SerializeField] float atkDist;
     [SerializeField] float moveSpeed;
-    [SerializeField] float def;
     [SerializeField] WallController target;
-    
-    public void InitData(WallController _target, float _increaseHp , float _increaseDef)
+
+    // Ä³½Ìº¯¼ö
+    WaitForSeconds wfsAtk = new WaitForSeconds(1);
+    WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
+    Vector3 orgTransScale = new Vector3(1, 1, 1);
+    Vector3 flipTransScale = new Vector3(-1, 1, 1);
+
+    public void InitData(WallController _target, float _correction)
     {
         target = _target;
-        maxHp += _increaseHp;
-        nowHp = maxHp;
-        def += _increaseDef;
-        //atkDmg *= _waveBuff;
+        nowHp = maxHp * _correction;
         StartCoroutine(CoMove());
+
+        if (Random.Range(0, 2) == 0)
+        {
+            transform.localScale = orgTransScale;
+        }
+        else
+        {
+            transform.localScale = flipTransScale;
+        }
     }
-    
+
     public void GameOver()
     {
         StopAllCoroutines();

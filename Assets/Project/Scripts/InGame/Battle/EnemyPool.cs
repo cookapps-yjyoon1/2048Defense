@@ -24,7 +24,7 @@ public class EnemyPool : ObjectPool
 
     public void GameStart()
     {
-        Wave00(0, 1, 1);
+        StartCoroutine(CoSpawn_3s_1m(4, 1, 1));
     }
 
     public void Spawn(int _unitIndex, float _increaseHp)
@@ -39,114 +39,53 @@ public class EnemyPool : ObjectPool
     public void ChangeWave(int _curWave, float _correction)
     {
         StopAllCoroutines();
+        int repeat = (_curWave / 10) + 1;
 
-        switch (_curWave%10)
+        switch (_curWave % 10)
         {
             case 0:
-                Wave00(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(0, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(1, _correction, repeat));
                 break;
             case 1:
-                Wave01(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(3, _correction, repeat));
                 break;
             case 2:
-                Wave02(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(4, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(0, _correction, repeat));
                 break;
             case 3:
-                Wave03(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_1s_1m(1, _correction, repeat));
                 break;
             case 4:
-                Wave04(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(3, _correction, repeat));
                 break;
             case 5:
-                Wave05(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(4, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(0, _correction, repeat));
                 break;
             case 6:
-                Wave06(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(1, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(2, _correction, repeat));
                 break;
             case 7:
-                Wave07(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_1s_1m(3, _correction, repeat));
                 break;
             case 8:
-                Wave08(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_3s_1m(4, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(0, _correction, repeat));
                 break;
             case 9:
-                Wave09(0, 1 * _correction, 1);
+                StartCoroutine(CoSpawn_1s_1m(1, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_3m(2, _correction, repeat));
                 break;
         }
     }
 
-    #region Wave
-    public void Wave00(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-    }
-
-    public void Wave01(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-    }
-
-    public void Wave02(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-    }
-
-
-    public void Wave03(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-    }
-
-
-    public void Wave04(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-    }
-
-
-    public void Wave05(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeC(_unitIndex, _increaseHp, _repeat));
-    }
-
-    public void Wave06(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeC(_unitIndex, _increaseHp, _repeat));
-    }
-
-
-    public void Wave07(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeC(_unitIndex, _increaseHp, _repeat));
-    }
-
-
-    public void Wave08(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        StartCoroutine(CoSpawnTypeA(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeB(_unitIndex, _increaseHp, _repeat));
-        StartCoroutine(CoSpawnTypeC(_unitIndex, _increaseHp, _repeat));
-    }
-
-
-    public void Wave09(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        SpawnBoss(_unitIndex, _increaseHp);
-    }
-    #endregion
-
     #region CoSpawnType
-    IEnumerator CoSpawnTypeA(int _unitIndex, float _increaseHp, int _repeat)
+    IEnumerator CoSpawn_3s_1m(int _unitIndex, float _increaseHp, int _repeat)
     {
         while (true)
         {
@@ -158,7 +97,7 @@ public class EnemyPool : ObjectPool
         }
     }
 
-    IEnumerator CoSpawnTypeB(int _unitIndex, float _increaseHp, int _repeat)
+    IEnumerator CoSpawn_3s_3m(int _unitIndex, float _increaseHp, int _repeat)
     {
         while (true)
         {
@@ -169,12 +108,13 @@ public class EnemyPool : ObjectPool
                 Spawn(_unitIndex, _increaseHp);
                 yield return new WaitForSeconds(0.5f);
                 Spawn(_unitIndex, _increaseHp);
+                yield return new WaitForSeconds(0.5f);
             }
             yield return new WaitForSeconds(3f);
         }
     }
 
-    IEnumerator CoSpawnTypeC(int _unitIndex, float _increaseHp, int _repeat)
+    IEnumerator CoSpawn_1s_1m(int _unitIndex, float _increaseHp, int _repeat)
     {
         while (true)
         {
@@ -189,7 +129,7 @@ public class EnemyPool : ObjectPool
     void SpawnBoss(int _unitIndex, float _increaseHp)
     {
         Spawn(_unitIndex, _increaseHp);
-        
+
     }
     #endregion
 }
