@@ -6530,7 +6530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 993057315}
   waveInfoText: {fileID: 623446890}
-  waveDuration: 15
+  waveDuration: 10
   enemyPool: {fileID: 1896274145}
 --- !u!1 &785066594
 GameObject:
@@ -9607,7 +9607,7 @@ MonoBehaviour:
   - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
   - {fileID: 274897996198959854, guid: b6fe4a834c5c07a4b850c191f94cc3a1, type: 3}
   target: {fileID: 1058227966}
-  randomXvalue: 1.9
+  randomXvalue: 2.2
 --- !u!1 &1907668623
 GameObject:
   m_ObjectHideFlags: 0
