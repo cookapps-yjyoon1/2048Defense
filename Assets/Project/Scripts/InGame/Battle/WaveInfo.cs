@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,16 +11,15 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] TextMeshProUGUI waveInfoText;
     [SerializeField] float waveDuration;
     [SerializeField] EnemyPool enemyPool;
-    //[SerializeField] WaveData curWaveData;
 
-    public int CurWave { get; private set; }
-
-    //public WaveData CurWaveData { get => curWaveData; private set => curWaveData = value; }
-    //public float[] CurWaveEnemyProb { get; private set; }
+    float correction;
+    int curWave;
 
     public void GameStart()
     {
-        CurWave = 1;
+        correction = 1; // 나중에 스테이지 마다 보정 값 넣어줘야함
+        curWave = 1;
+        waveInfoText.text = "WAVE " + curWave;
         StartCoroutine(CoTimer());
     }
 
@@ -31,8 +31,6 @@ public class WaveInfo : MonoBehaviour
     IEnumerator CoTimer()
     {
         float waveTime = 0;
-
-        //CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
 
         while (true)
         {
@@ -46,11 +44,10 @@ public class WaveInfo : MonoBehaviour
             if (waveTime > waveDuration)
             {
                 waveTime = 0;
-                CurWave++;
-                waveInfoText.text = "WAVE " + CurWave;
-                //CurWaveData = GameManager.instance.dataMgr.GetWaveData(curWave);
-                //print("Wave : " + CurWaveData.wave + " / Spawn Time : " + CurWaveData.spawnTime + " / Spawn Count : " + CurWaveData.spawnCount + " / buff : " + CurWaveData.buff);
-                enemyPool.ChangeWave(CurWave, 1);
+                curWave++;
+                correction += 0.2f;
+                waveInfoText.text = "WAVE " + curWave;
+                enemyPool.ChangeWave(curWave, correction);
             }
         }
     }
