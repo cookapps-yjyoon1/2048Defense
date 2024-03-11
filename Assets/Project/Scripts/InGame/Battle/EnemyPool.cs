@@ -52,7 +52,7 @@ public class EnemyPool : ObjectPool
                 break;
             case 2:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_5s_1m(2, _correction, repeat));
                 break;
             case 3:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
@@ -60,7 +60,7 @@ public class EnemyPool : ObjectPool
                 break;
             case 4:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_5s_1m(2, _correction, repeat));
                 break;
             case 5:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
@@ -68,7 +68,7 @@ public class EnemyPool : ObjectPool
                 break;
             case 6:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_5s_1m(2, _correction, repeat));
                 break;
             case 7:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
@@ -76,12 +76,12 @@ public class EnemyPool : ObjectPool
                 break;
             case 8:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_5s_1m(2, _correction, repeat));
                 break;
             case 9:
                 StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_1s_1m(1, _correction, repeat));
-                StartCoroutine(CoSpawn_1s_1m(2, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_1m(1, _correction, repeat));
+                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
                 break;
         }
     }
@@ -110,6 +110,19 @@ public class EnemyPool : ObjectPool
                 yield return new WaitForSeconds(0.1f);
             }
             yield return new WaitForSeconds(3f);
+        }
+    }
+
+    IEnumerator CoSpawn_5s_1m(int _unitIndex, float _increaseHp, int _repeat)
+    {
+        while (true)
+        {
+            for (int i = 0; i < _repeat; i++)
+            {
+                Spawn(_unitIndex, _increaseHp);
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(5f);
         }
     }
 
