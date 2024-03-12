@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
         target = _target;
         nowHp = maxHp * _correction;
         isDecomposition1 = false;
-        //_decompositionController.Reset();
+        _decompositionController.BodyReset();
         
         spriteCon.Init();
 

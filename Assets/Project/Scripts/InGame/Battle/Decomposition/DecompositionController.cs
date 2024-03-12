@@ -6,7 +6,7 @@ public class DecompositionController : MonoBehaviour
     [SerializeField] private GameObject _goLeftArm;
     [SerializeField] private GameObject _goRightArm;
 
-    public void Reset()
+    public void BodyReset()
     {
         _goHead.SetActive(true);
         _goLeftArm.SetActive(true);

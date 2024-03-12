@@ -30,7 +30,7 @@ public class FadeAwayEffect : MonoBehaviour
         transform.DOMoveX(transform.position.x + RandomX, 0.5f).OnComplete(() =>
         {
             // 1초 대기 후 페이드 아웃
-            DOVirtual.DelayedCall(1f, () =>
+            DOVirtual.DelayedCall(0.5f, () =>
             {
                 _renderer[0].DOFade(0f, fadeDuration).OnComplete(() =>
                 {
