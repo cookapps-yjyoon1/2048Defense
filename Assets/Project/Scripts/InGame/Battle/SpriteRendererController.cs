@@ -17,22 +17,13 @@ public class SpriteRendererController : MonoBehaviour
     //[SerializeField] SpriteRenderer back_arm;
     //[SerializeField] SpriteRenderer front_arm;
 
-
+    Color color = new Color(1f, 1f, 1f, 1f);
 
     public void MoveOrderInLayer()
     {
         foreach (SpriteRenderer renderer in spriteArr)
         {
-            int newSortingOrder = -Mathf.RoundToInt(transform.position.y * 10f);
-            renderer.sortingOrder = newSortingOrder;
-        }
-    }
-
-    public void AtkOrderInLayer()
-    {
-        foreach (SpriteRenderer renderer in spriteArr)
-        {
-            int newSortingOrder = -Mathf.RoundToInt(transform.position.y * 10f);
+            int newSortingOrder = -Mathf.RoundToInt(transform.position.y * 1000f) + Mathf.RoundToInt(transform.position.x*10);
             renderer.sortingOrder = newSortingOrder;
         }
     }
@@ -44,8 +35,6 @@ public class SpriteRendererController : MonoBehaviour
 
         foreach (SpriteRenderer renderer in spriteArr)
         {
-            Color color = renderer.color;
-            color.a = 1f;
             renderer.color = color;
         }
     }

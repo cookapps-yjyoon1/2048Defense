@@ -20,7 +20,6 @@ public class TowerController : Tower
         StartCoroutine(CoFindTarget());
         StartCoroutine(CoAtk());
         
-        // ���߿� ��Ʈ ����
         dmg = 1;
     }
 

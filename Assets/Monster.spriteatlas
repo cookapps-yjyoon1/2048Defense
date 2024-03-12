@@ -105,6 +105,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e83627938c99448358802a226a134b2d, type: 3}
   - {fileID: 21300000, guid: 390dc9a37dce3437faf8bbdaa6bfaa51, type: 3}
   - {fileID: 21300000, guid: d60584b3675154eceb4b86e347bc1408, type: 3}
+  - {fileID: 21300000, guid: 51d59bc35c75ff549b9ca926a1f0f07a, type: 3}
   - {fileID: 21300000, guid: 8ae2a4d3f77574894b63b2b6da76e6f7, type: 3}
   - {fileID: 21300000, guid: 2782c3f3f306944b783ada6a69416164, type: 3}
   - {fileID: 21300000, guid: eedc69f3715524bb696719328a35575d, type: 3}
@@ -296,6 +297,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b8c594dc1d89f4d45aaf3efb24699b6e, type: 3}
   - {fileID: 21300000, guid: fc8104ec7204e45ae88ac0780c3b041b, type: 3}
   - {fileID: 21300000, guid: d3170bec69bca46788a93d53395824c4, type: 3}
+  - {fileID: 21300000, guid: 80c4b10d0f1998945b56c6a30a2bfb67, type: 3}
   - {fileID: 21300000, guid: 05dc411dd0f1e4e94a6c10e825636547, type: 3}
   - {fileID: 21300000, guid: 5826c71d0c8214040a2f9c1fc9a87bb9, type: 3}
   - {fileID: 21300000, guid: 53dd1d1db8fa5435890585166d6db727, type: 3}
@@ -354,6 +356,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ecffb8ef8017b407eb1393169f39679b, type: 3}
   - {fileID: 21300000, guid: 54976fef20da34f6db41b274e816aa22, type: 3}
   - {fileID: 21300000, guid: b9e618ff8dd484e4a95a6d72c1434aa2, type: 3}
+  - {fileID: 21300000, guid: 53a8aaffe7ba7fa4fae54385117a9320, type: 3}
   - {fileID: 21300000, guid: 4fa80dffeae9d49288d130fa57dfbd48, type: 3}
   m_PackedSpriteNamesToIndex:
   - hair05
@@ -423,6 +426,7 @@ SpriteAtlas:
   - body-run2
   - hair01
   - body-walk4
+  - w_hair01
   - hat09
   - head
   - hair06
@@ -530,7 +534,7 @@ SpriteAtlas:
   - body-run2
   - face01-4
   - face-decor03-1
-  - hair04
+  - w_hair05
   - front-arm1
   - body-walk2
   - body-idle
@@ -614,6 +618,7 @@ SpriteAtlas:
   - body-run2
   - face02-3
   - hat05
+  - w_hair04
   - body-hurt
   - hair10
   - face-decor03-2
@@ -672,6 +677,7 @@ SpriteAtlas:
   - front-arm-longgun
   - hair10
   - longgun05
+  - w_hair02
   - back-arm1
   m_RenderDataMap: {}
   m_Tag: Monster
