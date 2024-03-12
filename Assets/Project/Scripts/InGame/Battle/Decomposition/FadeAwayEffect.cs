@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FadeAwayEffect : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class FadeAwayEffect : MonoBehaviour
     public float fadeDuration = 1f; // 페이드 아웃 시간
     
     public readonly Color whiteColor = new Color(1f, 1f, 1f, 1f);
-
+    
     public void OnEffect(int index)
     {
         for (int i = 0; i < _renderer.Length; i++)
@@ -22,8 +23,11 @@ public class FadeAwayEffect : MonoBehaviour
         // DoTween 초기화
         DOTween.Init();
 
-        // 떨어지는 애니메이션
-        transform.DOMoveY(transform.position.y + dropHeight, dropDuration).OnComplete(() =>
+        var randomY = Random.Range(dropHeight, -dropHeight);
+        var RandomX = Random.Range(-1, 1);
+
+        transform.DOMoveY(transform.position.y + randomY, 0.5f); // 떨어지는 애니메이션
+        transform.DOMoveX(transform.position.x + RandomX, 0.5f).OnComplete(() =>
         {
             // 1초 대기 후 페이드 아웃
             DOVirtual.DelayedCall(1f, () =>
