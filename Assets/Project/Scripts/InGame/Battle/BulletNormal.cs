@@ -34,7 +34,6 @@ public class BulletNormal : Bullet
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyController>().Hit(Dmg);
-            print("hit");
             gameObject.SetActive(false);
         }
     }

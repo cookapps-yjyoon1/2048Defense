@@ -13,7 +13,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRendererController spriteCon;
 
-    // ĳ�̺���
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
     WaitForSeconds wfsDeath = new WaitForSeconds(1f);
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();

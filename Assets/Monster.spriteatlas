@@ -206,6 +206,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 64569a18c6f7e4e0ab1544bf3afe1b8c, type: 3}
   - {fileID: 21300000, guid: b2869f18a95df4fd5a06040d000a759e, type: 3}
   - {fileID: 21300000, guid: 13f1fd28b530f422286e953af64cbdad, type: 3}
+  - {fileID: 21300000, guid: 90975f28f9606f248afd5a8a745ad8e2, type: 3}
   - {fileID: 21300000, guid: c44733386063b4c049c46265fd3ebddf, type: 3}
   - {fileID: 21300000, guid: 424e25485c6044b1a89a3e1cab84c7c7, type: 3}
   - {fileID: 21300000, guid: 978f1c482552d4148a15c44809af9a8f, type: 3}
@@ -528,6 +529,7 @@ SpriteAtlas:
   - body-run1
   - hat07
   - body-walk4
+  - "\uC880\uBE44\uAC9C_0313"
   - m_hair05
   - melee03
   - m_hair04

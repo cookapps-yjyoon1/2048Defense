@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public EnemyPool enemyPool;
     public WaveInfo waveInfo;
+    public VFXPool vfxPool;
+    public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
 
     private int maxNumber = 2;
