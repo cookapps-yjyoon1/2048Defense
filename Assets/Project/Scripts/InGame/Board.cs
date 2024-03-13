@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public enum State
 {
@@ -55,17 +56,26 @@ public class Board : MonoBehaviour
 
         SpawnBlockToRandomNode();
         SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
+        SpawnBlockToRandomNode();
     }
 
     private void Update()
     {
         if (state == State.Wait)
         {
-            if (DragAndDropHandler.IsDragging)
-            {
-                return;
-            }
-            
             Direction direction = touchController.UpdateTouch();
 
             if (direction != Direction.None)
@@ -81,7 +91,15 @@ public class Board : MonoBehaviour
 
     private void SpawnBlockToRandomNode()
     {
-        List<Node> emptyNodes = NodeList.FindAll(x => x.placedBlock == null);
+        List<Node> emptyNodes = ListPool<Node>.Get();
+
+        foreach (var node in NodeList)
+        {
+            if (node.placedBlock == null)
+            {
+                emptyNodes.Add(node);
+            }
+        }
 
         if (emptyNodes.Count != 0)
         {
@@ -89,13 +107,8 @@ public class Board : MonoBehaviour
             Vector2Int point = emptyNodes[index].Point;
             SpawnBlock(point.x, point.y);
         }
-        else
-        {
-            if (IsGameOver())
-            {
-                OnGameOver();
-            }
-        }
+        
+        ListPool<Node>.Release(emptyNodes);
     }
 
     private void SpawnBlock(int x, int y)
@@ -166,11 +179,6 @@ public class Board : MonoBehaviour
                 state = State.Processing;
                 block.StartMove();
             }
-        }
-
-        if (IsGameOver())
-        {
-            OnGameOver();
         }
     }
 
@@ -282,15 +290,5 @@ public class Board : MonoBehaviour
         }
 
         return true;
-    }
-
-    private void OnGameOver()
-    {
-        if (currentScore > highScore)
-        {
-            PlayerPrefs.SetInt("HighScore", currentScore);
-        }
-
-        uiController.OnGameOver();
     }
 }

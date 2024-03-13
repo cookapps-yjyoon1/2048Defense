@@ -12,12 +12,12 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] float waveDuration;
     [SerializeField] EnemyPool enemyPool;
 
-    float correction;
+    public float correction;
     int curWave;
 
     public void GameStart()
     {
-        correction = 1; // ³ªÁß¿¡ ½ºÅ×ÀÌÁö ¸¶´Ù º¸Á¤ °ª ³Ö¾îÁà¾ßÇÔ
+        correction = 1; // ë‚˜ì¤‘ì— ìŠ¤í…Œì´ì§€ ë§ˆë‹¤ ë³´ì • ê°’ ë„£ì–´ì¤˜ì•¼í•¨
         curWave = 1;
         waveInfoText.text = "WAVE " + curWave;
         StartCoroutine(CoTimer());

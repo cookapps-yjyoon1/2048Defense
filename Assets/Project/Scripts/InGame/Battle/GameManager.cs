@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameMgrCanvas;
     //public UnitList unitList;
 
+    public int MoveCount = 10;
+
     private void Awake()
     {
         if (instance == null)
@@ -43,5 +45,21 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.Instance.Play(Enum_Sound.Bgm, "InGame", 0,0.5f);
         GameStart();
+    }
+
+    public void MoveNode()
+    {
+        MoveCount--;
+
+        if (MoveCount == 0)
+        {
+            SpawnBossMonster();
+            MoveCount = 10;
+        }
+    }
+
+    public void SpawnBossMonster()
+    {
+        enemyPool.Spawn(1,waveInfo.correction * 2f);
     }
 }

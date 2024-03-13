@@ -72,7 +72,7 @@ public class Block : MonoBehaviour
     public void Setup()
     {
         Numeric = Random.Range(0, 100) < 90 ? 2 : 4;
-        index = Random.Range(0, 4);
+        index = Random.Range(0, 3);
 
         StartCoroutine(OnScaleAnimation(Vector3.one * 0.5f, Vector3.one, 0.15f));
     }
@@ -81,6 +81,7 @@ public class Block : MonoBehaviour
     {
         Target = to;
         combine = false;
+        GameManager.instance.MoveNode();
     }
 
     public void CombineToNode(Node to)

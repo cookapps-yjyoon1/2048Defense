@@ -128,7 +128,7 @@ public class EnemyPool : ObjectPool
 
     void SpawnBoss(int _unitIndex, float _increaseHp)
     {
-        Spawn(_unitIndex, _increaseHp);
+        Spawn(_unitIndex, ChangeWave());
 
     }
     #endregion
