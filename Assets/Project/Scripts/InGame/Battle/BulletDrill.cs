@@ -43,6 +43,7 @@ public class BulletDrill : Bullet
     {
         if (other.CompareTag("Enemy"))
         {
+            GameManager.instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
             other.GetComponent<EnemyController>().Hit(Dmg);
         }
     }
