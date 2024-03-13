@@ -107,6 +107,7 @@ MonoBehaviour:
   - {fileID: 9054060437852157370}
   - {fileID: 9054060432674604322}
   - {fileID: 9054060434565782054}
+  - {fileID: 9054060434178199304}
   hairArr:
   - {fileID: 21300000, guid: 51d59bc35c75ff549b9ca926a1f0f07a, type: 3}
   - {fileID: 21300000, guid: 53a8aaffe7ba7fa4fae54385117a9320, type: 3}

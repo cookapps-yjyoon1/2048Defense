@@ -95,6 +95,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 10317ce2b15a04efc82dea49e6160306, type: 3}
   - {fileID: 21300000, guid: 2fa9ece2e9d054a2099286382d58edeb, type: 3}
   - {fileID: 21300000, guid: a43daaf21a86e4bf4a64fd45878fbcc0, type: 3}
+  - {fileID: 21300000, guid: 324a8c03cc42c874ca667f7bbb61c7d3, type: 3}
   - {fileID: 21300000, guid: 5db6c01315e4443e1b26bdc01cc75515, type: 3}
   - {fileID: 21300000, guid: 5de88713e9abf4bccbb606a7276b8bea, type: 3}
   - {fileID: 21300000, guid: 805f1913beb1a435e91aed6ae45dee03, type: 3}
@@ -359,7 +360,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 53a8aaffe7ba7fa4fae54385117a9320, type: 3}
   - {fileID: 21300000, guid: 4fa80dffeae9d49288d130fa57dfbd48, type: 3}
   m_PackedSpriteNamesToIndex:
-  - hair05
+  - m_hair02
   - pistal01
   - front-arm-longgun
   - chest
@@ -416,6 +417,7 @@ SpriteAtlas:
   - longgun02
   - longgun01
   - body-hurt
+  - t_hair03
   - face01-2
   - melee06
   - back-arm2
@@ -429,14 +431,14 @@ SpriteAtlas:
   - w_hair01
   - hat09
   - head
-  - hair06
+  - m_hair03
   - body-run3
   - hair05
   - arm2
   - body-run3
   - face-decor02-1
   - longgun03
-  - hair07
+  - t_hair04
   - hat08
   - face-decor04-2
   - arm2
@@ -526,9 +528,9 @@ SpriteAtlas:
   - body-run1
   - hat07
   - body-walk4
-  - hair09
+  - m_hair05
   - melee03
-  - hair08
+  - m_hair04
   - extra-front-arm1
   - body-walk2
   - body-run2
@@ -541,7 +543,7 @@ SpriteAtlas:
   - intestine
   - hat06
   - front-arm-pistal
-  - hair02
+  - m_hair01
   - body-run1
   - body-idle
   - arm1
@@ -572,7 +574,7 @@ SpriteAtlas:
   - body-fire
   - front-arm2
   - body-idle
-  - hair03
+  - t_hair02
   - body-idle
   - back-arm1
   - body-fire
@@ -668,14 +670,14 @@ SpriteAtlas:
   - body-run1
   - body-walk1
   - arm2
-  - hair01
+  - t_hair01
   - face-decor02-2
   - body-walk4
   - front-arm-longgun
   - face-decor02-3
   - body-run3
   - front-arm-longgun
-  - hair10
+  - m_hair06
   - longgun05
   - w_hair02
   - back-arm1
