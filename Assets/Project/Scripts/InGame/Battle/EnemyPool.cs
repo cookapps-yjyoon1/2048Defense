@@ -125,11 +125,5 @@ public class EnemyPool : ObjectPool
             yield return new WaitForSeconds(5f);
         }
     }
-
-    void SpawnBoss(int _unitIndex, float _increaseHp)
-    {
-        Spawn(_unitIndex, ChangeWave());
-
-    }
     #endregion
 }
