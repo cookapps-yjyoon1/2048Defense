@@ -45,7 +45,7 @@ public class WaveInfo : MonoBehaviour
             {
                 waveTime = 0;
                 curWave++;
-                correction += 1f;
+                correction += 0.3f;
                 waveInfoText.text = "WAVE " + curWave;
                 enemyPool.ChangeWave(curWave, correction);
             }
