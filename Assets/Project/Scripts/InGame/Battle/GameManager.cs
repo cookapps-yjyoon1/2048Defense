@@ -12,13 +12,13 @@ public class GameManager : MonoBehaviour
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
 
-    private int maxNumber = 2;
+    private int maxNumber = 4;
     public int Numberic
     {
         get
         {
             var num = maxNumber / 64;
-            Mathf.Clamp(num, 2, num);
+            num = Mathf.Clamp(num, 2, num);
 
             if (maxNumber == 2048)
             {
