@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
             var num = maxNumber / 64;
             Mathf.Clamp(num, 2, num);
 
+            if (maxNumber == 2048)
+            {
+                SpawnLastBossMonster();
+            }
+
             return num;
         }
         set
@@ -75,6 +80,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void SpawnBossMonster()
+    {
+        enemyPool.Spawn(1,waveInfo.correction * 2f);
+    }
+    
+    public void SpawnLastBossMonster()
     {
         enemyPool.Spawn(1,waveInfo.correction * 2f);
     }
