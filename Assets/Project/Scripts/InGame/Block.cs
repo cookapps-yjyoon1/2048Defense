@@ -71,7 +71,8 @@ public class Block : MonoBehaviour
 
     public void Setup()
     {
-        Numeric = Random.Range(0, 100) < 90 ? 2 : 4;
+        Numeric = Random.Range(0, 100) < 90 ? GameManager.instance.Numberic : GameManager.instance.Numberic * 2;
+        
         index = Random.Range(0, 3);
 
         StartCoroutine(OnScaleAnimation(Vector3.one * 0.5f, Vector3.one, 0.15f));
@@ -84,7 +85,7 @@ public class Block : MonoBehaviour
         GameManager.instance.MoveNode();
     }
 
-    public void CombineToNode(Node to)
+    public void CombineTo Node(Node to)
     {
         Target = to;
         combine = true;
@@ -103,6 +104,8 @@ public class Block : MonoBehaviour
             if (combine)
             {
                 Target.placedBlock.Numeric *= 2;
+
+                GameManager.instance.SetMaxBlock(Target.placedBlock.Numeric);
 
                 Target.placedBlock.StartPunchScale(Vector3.one * 0.25f, 0.15f, OnAfterPunchScale);
 

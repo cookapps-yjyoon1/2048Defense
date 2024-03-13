@@ -9,6 +9,22 @@ public class GameManager : MonoBehaviour
     public EnemyPool enemyPool;
     public WaveInfo waveInfo;
     public GameObject gameMgrCanvas;
+
+    private int maxNumber = 2;
+    public int Numberic
+    {
+        get
+        {
+            var num = maxNumber / 8;
+            Mathf.Clamp(num, 2, num);
+
+            return num;
+        }
+        set
+        {
+            maxNumber = value;
+        }
+    }
     //public UnitList unitList;
 
     public int MoveCount = 10;
@@ -61,5 +77,10 @@ public class GameManager : MonoBehaviour
     public void SpawnBossMonster()
     {
         enemyPool.Spawn(1,waveInfo.correction * 2f);
+    }
+
+    public void SetMaxBlock(int num)
+    {
+        maxNumber = Mathf.Max(maxNumber, num);
     }
 }
