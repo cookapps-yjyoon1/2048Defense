@@ -13,7 +13,6 @@ public class Board : MonoBehaviour
 {
     [SerializeField] private NodeSpawner nodeSpawner;
     [SerializeField] private TouchController touchController;
-    [SerializeField] private UIController uiController;
     [SerializeField] private GameObject blockPrefab;
     [SerializeField] private Transform blockRect;
 
@@ -33,13 +32,7 @@ public class Board : MonoBehaviour
         BlockCount = new Vector2Int(count, count);
 
         blockSize = (1080 - 85 - 25 * (BlockCount.x - 1)) / BlockCount.x;
-
-        currentScore = 0;
-        uiController.UpdateCurrentScore(currentScore);
-
-        highScore = PlayerPrefs.GetInt("HighScore");
-        uiController.UpdateHighScore(highScore);
-
+        
         NodeList = nodeSpawner.SpawnNodes(this, BlockCount, blockSize);
 
         blockList = new List<Block>();
@@ -260,35 +253,6 @@ public class Board : MonoBehaviour
             state = State.Wait;
             SpawnBlockToRandomNode();
             NodeList.ForEach(x => x.combined = false);
-            uiController.UpdateCurrentScore(currentScore);
         }
-    }
-
-    private bool IsGameOver()
-    {
-        foreach (Node node in NodeList)
-        {
-            if (node.placedBlock == null) return false;
-
-            for (int i = 0; i < node.NeighborNodes.Length; ++i)
-            {
-                if (node.NeighborNodes[i] == null) continue;
-
-
-                Vector2Int point = node.NeighborNodes[i].Value;
-                Node neighborNode = NodeList[point.y * BlockCount.x + point.x];
-
-
-                if (node.placedBlock != null && neighborNode.placedBlock != null)
-                {
-                    if (node.placedBlock.Numeric == neighborNode.placedBlock.Numeric)
-                    {
-                        return false;
-                    }
-                }
-            }
-        }
-
-        return true;
     }
 }
