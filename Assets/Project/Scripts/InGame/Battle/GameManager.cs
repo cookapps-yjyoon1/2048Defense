@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            var num = maxNumber / 8;
+            var num = maxNumber / 64;
             Mathf.Clamp(num, 2, num);
 
             return num;

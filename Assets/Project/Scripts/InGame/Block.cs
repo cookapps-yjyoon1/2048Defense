@@ -85,7 +85,7 @@ public class Block : MonoBehaviour
         GameManager.instance.MoveNode();
     }
 
-    public void CombineTo Node(Node to)
+    public void CombineToNode(Node to)
     {
         Target = to;
         combine = true;
