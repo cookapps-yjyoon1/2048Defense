@@ -23,17 +23,21 @@ SpriteAtlas:
     platformSettings: []
     packingSettings:
       serializedVersion: 2
-      padding: 4
+      padding: 8
       blockOffset: 1
       allowAlphaSplitting: 0
-      enableRotation: 1
-      enableTightPacking: 1
+      enableRotation: 0
+      enableTightPacking: 0
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 102900000, guid: 586f3d2f8214242458563d7e5f0bb675, type: 3}
-    bindAsDefault: 1
+    - {fileID: 102900000, guid: e580b722a4d344ad7825ca56e6f9d0c3, type: 3}
+    - {fileID: 102900000, guid: ae63eef9b1de74b22ad155fd764e4c9b, type: 3}
+    - {fileID: 102900000, guid: 97908afb611f731488fb94c8cbbf4cba, type: 3}
+    - {fileID: 102900000, guid: 7e277fb7fe33f473799d39226fbcca77, type: 3}
+    - {fileID: 102900000, guid: 7fe437aa3526b704ab87fc9f67752a26, type: 3}
+    bindAsDefault: 0
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
@@ -208,7 +212,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 64569a18c6f7e4e0ab1544bf3afe1b8c, type: 3}
   - {fileID: 21300000, guid: b2869f18a95df4fd5a06040d000a759e, type: 3}
   - {fileID: 21300000, guid: 13f1fd28b530f422286e953af64cbdad, type: 3}
-  - {fileID: 21300000, guid: 90975f28f9606f248afd5a8a745ad8e2, type: 3}
   - {fileID: 21300000, guid: c44733386063b4c049c46265fd3ebddf, type: 3}
   - {fileID: 21300000, guid: 424e25485c6044b1a89a3e1cab84c7c7, type: 3}
   - {fileID: 21300000, guid: 978f1c482552d4148a15c44809af9a8f, type: 3}
@@ -536,7 +539,6 @@ SpriteAtlas:
   - body-run1
   - hat07
   - body-walk4
-  - "\uC880\uBE44\uAC9C_0313"
   - m_hair05
   - melee03
   - m_hair04
