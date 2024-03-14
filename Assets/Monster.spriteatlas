@@ -156,6 +156,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 83efae26dce0f4edc8a88ec79bc6d9f4, type: 3}
   - {fileID: 21300000, guid: 41b0033616e0d4407a231430a0a6ea77, type: 3}
   - {fileID: 21300000, guid: cfd09b36414e04a1ab0b0845207f5217, type: 3}
+  - {fileID: 21300000, guid: f72d3056ec0ef174d9bd35ecdbe25b79, type: 3}
   - {fileID: 21300000, guid: c90bfa6672b364c679389911d0364f55, type: 3}
   - {fileID: 21300000, guid: 70b28f66c5d574405850440fde74f6ff, type: 3}
   - {fileID: 21300000, guid: a18ec276c7c014a229df4cd1d9b889f5, type: 3}
@@ -298,6 +299,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: eef7759c005b2441287d0b4bb1220172, type: 3}
   - {fileID: 21300000, guid: 1b6cd69c4322542eebc2bb6f81deaa07, type: 3}
   - {fileID: 21300000, guid: 279b489c569a24ccd90b211c447e53c2, type: 3}
+  - {fileID: 21300000, guid: 62c4d6bc49e655f4ead1c18ae28182af, type: 3}
   - {fileID: 21300000, guid: 8baa61dc2665c44cfa37707acb1b8472, type: 3}
   - {fileID: 21300000, guid: b8c594dc1d89f4d45aaf3efb24699b6e, type: 3}
   - {fileID: 21300000, guid: fc8104ec7204e45ae88ac0780c3b041b, type: 3}
@@ -482,6 +484,7 @@ SpriteAtlas:
   - hat02
   - face-decor04-3
   - arm2
+  - Bullet
   - front-arm2
   - body-run4
   - body-run4
@@ -624,6 +627,7 @@ SpriteAtlas:
   - body-run1
   - body-idle
   - back-arm2
+  - BulletSlot
   - body-fire
   - body-run2
   - face02-3
