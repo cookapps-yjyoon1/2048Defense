@@ -1,3 +1,4 @@
+using Google.Apis.Sheets.v4.Data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,7 +40,9 @@ public class BulletMult : Bullet
 
         while (timer < 2)
         {
-            rb.velocity = _dir * speed;
+            var curSpeed = Mathf.Lerp(speed, speed / 2, timer/2);
+            rb.velocity = _dir * curSpeed;
+
             timer += Time.deltaTime;
             yield return null;
         }
