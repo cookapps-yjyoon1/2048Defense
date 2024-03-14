@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -52,6 +53,7 @@ public class Block : MonoBehaviour
     // 포인터가 버튼에서 떨어질 때 호출됩니다.
     public void OnPointerUp()
     {
+        transform.DOKill();
         transform.localScale = Vector3.one;
         DragAndDropHandler.Drop();
         isButtonHeld = false;
@@ -65,7 +67,7 @@ public class Block : MonoBehaviour
             
             if (timer > holdTime)
             {
-                transform.localScale *= 1.5f;
+                transform.DOShakeScale(999f, 0.1f, 10, 90f);
                 DragAndDropHandler.Grap(gameObject,index,Numeric);
                 isButtonHeld = false;
             }
