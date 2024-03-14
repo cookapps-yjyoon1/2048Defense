@@ -745,6 +745,7 @@ GameObject:
   - component: {fileID: 246183935}
   - component: {fileID: 5646612727292581518}
   - component: {fileID: 444134117749361033}
+  - component: {fileID: 168965795800431352}
   m_Layer: 0
   m_Name: Mob_Base
   m_TagString: Enemy
@@ -854,3 +855,24 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2fd009cd0580d41749d913b986ceb6c0, type: 3}
   - {fileID: 21300000, guid: 597d2ec5186de44518be2291360de5ec, type: 3}
   - {fileID: 21300000, guid: b4f64f759d286456aa5c6f5f4c25d966, type: 3}
+--- !u!50 &168965795800431352
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274897996198959854}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

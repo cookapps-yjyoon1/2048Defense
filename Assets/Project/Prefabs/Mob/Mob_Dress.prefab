@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9042923260718857955}
   - component: {fileID: 3684549847250542482}
   - component: {fileID: 8887584947082805397}
+  - component: {fileID: -3241754610657052310}
   m_Layer: 0
   m_Name: Mob_Dress
   m_TagString: Enemy
@@ -121,6 +122,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2fd009cd0580d41749d913b986ceb6c0, type: 3}
   - {fileID: 21300000, guid: 597d2ec5186de44518be2291360de5ec, type: 3}
   - {fileID: 21300000, guid: b4f64f759d286456aa5c6f5f4c25d966, type: 3}
+--- !u!50 &-3241754610657052310
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128313270053639154}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &9175198704455564744
 GameObject:
   m_ObjectHideFlags: 0
