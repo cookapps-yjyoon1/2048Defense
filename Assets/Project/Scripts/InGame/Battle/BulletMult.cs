@@ -5,21 +5,32 @@ using static UnityEngine.GraphicsBuffer;
 
 public class BulletMult : Bullet
 {
+    enum Enum_VFX_Type
+    {
+        Bullet00,
+        Bullet01,
+        Bullet02,
+    }
+
     public float speed = 10f;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Enum_VFX_Type vfxType;
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
         Dmg = _dmg;
+        
         transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
-
-        StartCoroutine(CoShot(_dir));
 
         for (int i = 0; i < 5; i++)
         {
-            _dir = new Vector3(_dir.x + Random.Range(-1.0f, 1f), _dir.y + Random.Range(-1.0f, 1f), 0);
-            GameManager.instance.commonBulletPool.Shot(_dir, 0, Dmg);
+            _dir = new Vector3(_dir.x + Random.Range(-0.2f, 0.2f), _dir.y + Random.Range(-0.2f, 0.2f), 0);
+            GameManager.instance.commonBulletPool.Shot(_dir, 0, Dmg, transform);
         }
+
+        StartCoroutine(CoShot(_dir));
+
+        
     }
 
     IEnumerator CoShot(Vector3 _dir)
@@ -41,6 +52,7 @@ public class BulletMult : Bullet
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyController>().Hit(Dmg);
+            GameManager.instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
             gameObject.SetActive(false);
         }
     }

@@ -48,7 +48,6 @@ MonoBehaviour:
   - {fileID: 1626918750898884845, guid: 49db17e323fa9de488f25c4fd37dfc4c, type: 3}
   - {fileID: 1626918750898884845, guid: 0b8c0a8d795fd5c4d9ba3c16a9561159, type: 3}
   - {fileID: 1626918750898884845, guid: feb23cdcea0fe1c439eb5559ee965cd9, type: 3}
-  - {fileID: 1626918750898884845, guid: e317ed8e3c9f46345be60b5fdc141307, type: 3}
 --- !u!1 &246443017649356838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1037,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1118051321
   m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &4668296673562926990
@@ -1155,9 +1154,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1698833603
+  m_SortingLayer: 2
+  m_SortingOrder: 1001
   m_Sprite: {fileID: 21300000, guid: 1848eb5107d23144dac4dcfb6bdcb3a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
