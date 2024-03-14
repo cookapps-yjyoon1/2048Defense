@@ -170,3 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rb: {fileID: 8862341938123286355}
+  vfxType: 2
