@@ -47,15 +47,14 @@ public class Block : MonoBehaviour
     {
         isButtonHeld = true;
         timer = 0;
-        imageGauze.gameObject.SetActive(true);
     }
 
     // 포인터가 버튼에서 떨어질 때 호출됩니다.
     public void OnPointerUp()
     {
+        transform.localScale = Vector3.one;
         DragAndDropHandler.Drop();
         isButtonHeld = false;
-        imageGauze.gameObject.SetActive(false);
     }
 
     void Update()
@@ -63,9 +62,10 @@ public class Block : MonoBehaviour
         if (isButtonHeld)
         {
             timer += Time.deltaTime;
-            imageGauze.fillAmount = timer / holdTime;
+            
             if (timer > holdTime)
             {
+                transform.localScale *= 1.5f;
                 DragAndDropHandler.Grap(gameObject,index,Numeric);
                 isButtonHeld = false;
             }

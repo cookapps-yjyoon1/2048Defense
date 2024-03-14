@@ -6,146 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/arms-eat 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/arms-eat 1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/arms-walk1 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/arms-walk1 1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/arms-walk2 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/arms-walk2 1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/head-attack2 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/head-attack2 1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/walk1 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/walk1 1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/walk2 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Custom/walk2 1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/Human.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/Human.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-attack-longgun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-attack-longgun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-attack-pistal.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-attack-pistal.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle-longgun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle-longgun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle-melee.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle-melee.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle-pistal.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle-pistal.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-melee-in-combat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-melee-in-combat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run-longgun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run-longgun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run-melee.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run-melee.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run-pistal.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run-pistal.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/arm-run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/attack-gun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/attack-gun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/attack-melee.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/attack-melee.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/die.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/die.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-attack-gun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-attack-gun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-attack-melee.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-attack-melee.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-hurt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-hurt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-talk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/face-talk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/head-attack-gun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/head-attack-gun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/head-idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/head-idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/head-run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/head-run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/hurt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/hurt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/idle-in-combat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/idle-in-combat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Human/run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/Zombie.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/Zombie.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-eat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-eat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-idle1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-idle1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-idle2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-idle2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-walk1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-walk1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-walk2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/arms-walk2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/die.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/die.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-angry.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-angry.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-bite.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-bite.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-eat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-eat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-hurt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-hurt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/face-idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-attack1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-attack1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-attack2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-attack2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-eat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-eat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-idle1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-idle1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-idle2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-idle2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-idle3.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/head-idle3.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/hurt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/hurt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/walk1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/walk1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/walk2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Animation/Zombie/walk2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork/Weapon.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork/Weapon.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork/Zombu.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork/Zombu.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork/survivor.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Original artwork/survivor.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Prefab/org.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Prefab/org/Human.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Prefab/org/Human.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Prefab/org/Zombie.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Prefab/org/Zombie.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Scene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Scene/character-display.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Scene/character-display.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Scene/character-displaySettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/Scene/character-displaySettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/readme.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Zombie Apocalypse Character Graphic + Animation/readme.rtf.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Monster.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Monster.spriteatlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Block.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/bullet_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/bullet_02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/02Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/02Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Weapon/Weapon_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Weapon/Weapon_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Weapon/Weapon_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Weapon/Weapon_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Weapon/Weapon_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Weapon/Weapon_2.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +124,7 @@
       <updated>1706750050411</updated>
       <workItem from="1706750051584" duration="215000" />
       <workItem from="1709129763396" duration="2000" />
-      <workItem from="1710390625576" duration="399000" />
+      <workItem from="1710390625576" duration="1720000" />
     </task>
     <servers />
   </component>

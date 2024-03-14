@@ -25,18 +25,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72252729815519138}
-  m_LocalRotation: {x: -0, y: -0, z: -0.33932188, w: 0.9406703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1718901976794497035}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -39.671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.7, y: -8.6}
-  m_SizeDelta: {x: 75, y: 33.61445}
+  m_AnchoredPosition: {x: -31.4, y: -30.7}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2682092422565045763
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fb29e313aa568d341abd6336f67f7966, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 812b6335fa9aafa41b325d022c8b9077, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -398,9 +398,9 @@ MonoBehaviour:
   imageWeapon: {fileID: 8175398474382036451}
   textBlockNumeric: {fileID: 7962203967470669593}
   weaponSprites:
-  - {fileID: 21300000, guid: ef60b7734bc70b445932c5b234041920, type: 3}
-  - {fileID: 21300000, guid: 5ee1599025c429d41a66452d99fd545d, type: 3}
-  - {fileID: 21300000, guid: fb29e313aa568d341abd6336f67f7966, type: 3}
+  - {fileID: 21300000, guid: 812b6335fa9aafa41b325d022c8b9077, type: 3}
+  - {fileID: 21300000, guid: 442b87db147addc4b85ade51baa89830, type: 3}
+  - {fileID: 21300000, guid: bf15a2c868aa5e34e8062da6a50369b2, type: 3}
   holdTime: 0.5
 --- !u!114 &55472433928540270
 MonoBehaviour:
