@@ -47,6 +47,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2cdea5802762d4bbe9208cbd65df6fca, type: 3}
   - {fileID: 21300000, guid: 08092490f07624ccab9ae2fa78e50ec1, type: 3}
   - {fileID: 21300000, guid: 781fd690ec72e475388a772b4668458f, type: 3}
+  - {fileID: 21300000, guid: 5ee1599025c429d41a66452d99fd545d, type: 3}
   - {fileID: 21300000, guid: 6644af905167b4cc1b80a56fe7128de5, type: 3}
   - {fileID: 21300000, guid: bd1794a06bfc0467a9c17e1f254d0645, type: 3}
   - {fileID: 21300000, guid: 536280c07423c4e999df4eff4f1a521f, type: 3}
@@ -97,9 +98,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a43daaf21a86e4bf4a64fd45878fbcc0, type: 3}
   - {fileID: 21300000, guid: 324a8c03cc42c874ca667f7bbb61c7d3, type: 3}
   - {fileID: 21300000, guid: 5db6c01315e4443e1b26bdc01cc75515, type: 3}
+  - {fileID: 21300000, guid: fb29e313aa568d341abd6336f67f7966, type: 3}
   - {fileID: 21300000, guid: 5de88713e9abf4bccbb606a7276b8bea, type: 3}
   - {fileID: 21300000, guid: 805f1913beb1a435e91aed6ae45dee03, type: 3}
   - {fileID: 21300000, guid: 0b06885395ba141cb8cf9576d6b48d93, type: 3}
+  - {fileID: 21300000, guid: ef60b7734bc70b445932c5b234041920, type: 3}
   - {fileID: 21300000, guid: 7fe7c183f5379445b8f2e748101bccb2, type: 3}
   - {fileID: 21300000, guid: df441c833a08d479e8b15a14b838ef73, type: 3}
   - {fileID: 21300000, guid: b6e3869356a2a4580a8e3f6a296ae62c, type: 3}
@@ -370,6 +373,7 @@ SpriteAtlas:
   - back-arm1
   - face-decor01-2
   - melee02
+  - Weapon_1
   - face-decor01-1
   - face-decor02-1
   - face-decor02-4
@@ -420,9 +424,11 @@ SpriteAtlas:
   - body-hurt
   - t_hair03
   - face01-2
+  - Weapon_2
   - melee06
   - back-arm2
   - face02-2
+  - Weapon_0
   - body-hurt
   - body-attack
   - body-attack

@@ -71,7 +71,7 @@ public class Board : MonoBehaviour
         {
             Direction direction = touchController.UpdateTouch();
 
-            if (direction != Direction.None)
+            if (direction != Direction.None && !DragAndDropHandler.IsDragging)
             {
                 AllBlocksProcess(direction);
             }
