@@ -259,9 +259,9 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9a61f4b474f01400195e1164cc05a1ec, type: 3}
+      value: {fileID: 21300000, guid: f1ec81548c00f45cdabbba8d4f7c1643, type: 3}
     - time: 1
-      value: {fileID: 21300000, guid: 9a61f4b474f01400195e1164cc05a1ec, type: 3}
+      value: {fileID: 21300000, guid: f1ec81548c00f45cdabbba8d4f7c1643, type: 3}
     attribute: m_Sprite
     path: body/back-arm
     classID: 212
@@ -344,8 +344,8 @@ AnimationClip:
     - {fileID: 21300000, guid: bcdcf1fd9956c4d0bb0917c60fab6fe0, type: 3}
     - {fileID: 21300000, guid: d60584b3675154eceb4b86e347bc1408, type: 3}
     - {fileID: 21300000, guid: d33b903d8dc254fdea8960b56bbb1450, type: 3}
-    - {fileID: 21300000, guid: 9a61f4b474f01400195e1164cc05a1ec, type: 3}
-    - {fileID: 21300000, guid: 9a61f4b474f01400195e1164cc05a1ec, type: 3}
+    - {fileID: 21300000, guid: f1ec81548c00f45cdabbba8d4f7c1643, type: 3}
+    - {fileID: 21300000, guid: f1ec81548c00f45cdabbba8d4f7c1643, type: 3}
     - {fileID: 21300000, guid: 9a61f4b474f01400195e1164cc05a1ec, type: 3}
     - {fileID: 21300000, guid: 9a61f4b474f01400195e1164cc05a1ec, type: 3}
   m_AnimationClipSettings:

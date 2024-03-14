@@ -783,9 +783,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 10
   nowHp: 0
-  atkDmg: 1
+  atkDmg: 2
   atkDist: 0.1
-  moveSpeed: 0.2
+  moveSpeed: 0.5
   _decompositionController: {fileID: 8712516588310041431}
   target: {fileID: 0}
   animator: {fileID: 3877001291805530913}

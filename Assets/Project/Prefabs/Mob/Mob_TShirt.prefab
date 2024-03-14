@@ -783,7 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 10
   nowHp: 0
-  atkDmg: 1
+  atkDmg: 2
   atkDist: 0.1
   moveSpeed: 0.2
   _decompositionController: {fileID: 2033705332750166962}

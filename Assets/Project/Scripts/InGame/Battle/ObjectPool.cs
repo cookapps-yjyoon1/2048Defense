@@ -11,15 +11,18 @@ public class ObjectPool : MonoBehaviour
     protected virtual void Awake()
     {
         pool = new Dictionary<int, List<GameObject>>();
+    }
 
-        for(int i = 0 ; i < prefab.Length; i++)
+    public void PreCreatePoolObject()
+    {
+        for (int i = 0; i < prefab.Length; i++)
         {
             var item = prefab[i];
             var objectList = new List<GameObject>();
 
             for (int j = 0; j < 10; j++)
             {
-                GameObject newObj = Instantiate(item,transform);
+                GameObject newObj = Instantiate(item, transform);
                 newObj.SetActive(false);
                 objectList.Add(newObj);
             }

@@ -6,5 +6,6 @@ public class DecompositionPool : ObjectPool
     {
         base.Awake();
         Instance = this;
+        PreCreatePoolObject();
     }
 }

@@ -630,7 +630,7 @@ Transform:
   - {fileID: 12154124}
   - {fileID: 507476489}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188463959
 GameObject:
@@ -725,7 +725,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &230237537 stripped
 Transform:
@@ -5855,7 +5855,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -6074,7 +6074,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &581284451
 GameObject:
@@ -6837,11 +6837,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f8b7fc9f01b3941b374b9f79e2d480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPool: {fileID: 1896274145}
   waveInfo: {fileID: 741306573}
+  stageData: {fileID: 1375789526}
+  enemyPool: {fileID: 1896274145}
   vfxPool: {fileID: 108407641}
   commonBulletPool: {fileID: 1810756986}
   gameMgrCanvas: {fileID: 661600132}
+  curStage: 0
   MoveCount: 10
 --- !u!4 &889187071
 Transform:
@@ -6858,8 +6860,9 @@ Transform:
   - {fileID: 661600133}
   - {fileID: 108407642}
   - {fileID: 1810756987}
+  - {fileID: 1375789525}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894394592
 GameObject:
@@ -7694,7 +7697,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1032275149
 MonoBehaviour:
@@ -8556,6 +8559,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ff1e105bbbd1ae4bb3c06e160758682, type: 3}
+--- !u!1 &1375789524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375789525}
+  - component: {fileID: 1375789526}
+  m_Layer: 0
+  m_Name: StageData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1375789525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375789524}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 889187071}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1375789526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375789524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd9e69f1762e20408defdc6f756e01f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage:
+  - correction: 1
+    mob:
+    - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
+    - {fileID: 3107140141544593971, guid: 5e469ed6f22e42a4b9f9d3577ad3a5c9, type: 3}
+    - {fileID: 3107140141544593971, guid: 5e469ed6f22e42a4b9f9d3577ad3a5c9, type: 3}
+    mob_boss:
+    - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
+  - correction: 1.2
+    mob: []
+    mob_boss: []
+  - correction: 1.4
+    mob: []
+    mob_boss: []
+  - correction: 1.6
+    mob: []
+    mob_boss: []
+  - correction: 1.8
+    mob: []
+    mob_boss: []
+  - correction: 2
+    mob: []
+    mob_boss: []
+  - correction: 2.2
+    mob: []
+    mob_boss: []
+  - correction: 2.4
+    mob: []
+    mob_boss: []
+  - correction: 2.6
+    mob: []
+    mob_boss: []
 --- !u!1 &1390612173
 GameObject:
   m_ObjectHideFlags: 0
@@ -8670,7 +8749,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1416723768
 MonoBehaviour:
@@ -8978,7 +9057,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1502859959}
-  - component: {fileID: 1502859960}
   m_Layer: 0
   m_Name: Ally
   m_TagString: Untagged
@@ -9005,18 +9083,6 @@ Transform:
   m_Father: {fileID: 507476489}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1502859960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502859958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4779a434f73270c46a2c5abfcba3d41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1511854745
 GameObject:
   m_ObjectHideFlags: 0
@@ -9670,8 +9736,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810756985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0256593, y: -2.311161, z: 14.99557}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 889187071}
@@ -10118,11 +10184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab:
-  - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
-  - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
-  - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
-  - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
-  - {fileID: 3847619667622731575, guid: a4a88e9ca66054e46adfccb00cd817ad, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  prefabBoss:
+  - {fileID: 0}
   target: {fileID: 1058227966}
   randomXvalue: 2.2
 --- !u!1 &1907668623

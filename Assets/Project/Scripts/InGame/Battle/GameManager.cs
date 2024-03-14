@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public EnemyPool enemyPool;
     public WaveInfo waveInfo;
+    public StageData stageData;
+    public EnemyPool enemyPool;
     public VFXPool vfxPool;
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
+
+    public int curStage = 0; // 로비에서 데이터 가져와야 함
 
     private int maxNumber = 4;
     public int Numberic
@@ -54,8 +57,8 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         gameMgrCanvas.SetActive(false);
-        enemyPool.GameStart();        
-        waveInfo.GameStart();
+        waveInfo.GameStart(curStage);
+        enemyPool.GameStart(curStage);
     }
 
     public void GameOver()

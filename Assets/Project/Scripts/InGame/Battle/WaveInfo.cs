@@ -15,9 +15,9 @@ public class WaveInfo : MonoBehaviour
     public float correction;
     int curWave;
 
-    public void GameStart()
+    public void GameStart(int _stage)
     {
-        correction = 1; // 나중에 스테이지 마다 보정 값 넣어줘야함
+        correction = GameManager.instance.stageData.GetStageCorrection(_stage);
         curWave = 1;
         waveInfoText.text = "WAVE " + curWave;
         StartCoroutine(CoTimer());
@@ -45,7 +45,7 @@ public class WaveInfo : MonoBehaviour
             {
                 waveTime = 0;
                 curWave++;
-                correction += 0.3f;
+                correction += 0.5f;
                 waveInfoText.text = "WAVE " + curWave;
                 enemyPool.ChangeWave(curWave, correction);
             }
