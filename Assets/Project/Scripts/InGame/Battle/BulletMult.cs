@@ -52,7 +52,7 @@ public class BulletMult : Bullet
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyController>().Hit(Dmg);
-            GameManager.instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
+            GameManager.instance.vfxPool.Spawn((int)vfxType, 0, transform.position);
             gameObject.SetActive(false);
         }
     }

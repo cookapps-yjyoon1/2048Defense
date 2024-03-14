@@ -171,6 +171,14 @@ PrefabInstance:
       value: explosion_4
       objectReference: {fileID: 0}
     - target: {fileID: 2222380438074847087, guid: bcb5008d8bd41ee40aec26b7391d5a90, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222380438074847087, guid: bcb5008d8bd41ee40aec26b7391d5a90, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -818140941
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222380438074847087, guid: bcb5008d8bd41ee40aec26b7391d5a90, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}

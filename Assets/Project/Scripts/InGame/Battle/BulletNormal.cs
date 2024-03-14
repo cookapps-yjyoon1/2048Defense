@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class BulletNormal : Bullet
 {
+    enum Enum_VFX_Type
+    {
+        Bullet00,
+        Bullet01,
+        Bullet02,
+    }
+
     public float speed = 10f;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Enum_VFX_Type vfxType;
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
@@ -34,6 +42,7 @@ public class BulletNormal : Bullet
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyController>().Hit(Dmg);
+            GameManager.instance.vfxPool.Spawn((int)vfxType, 0, transform.position);
             gameObject.SetActive(false);
         }
     }
