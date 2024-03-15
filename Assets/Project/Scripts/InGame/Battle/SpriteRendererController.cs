@@ -5,8 +5,12 @@ using UnityEngine;
 public class SpriteRendererController : MonoBehaviour
 {
     [SerializeField] SpriteRenderer[] spriteArr = new SpriteRenderer[8]; // 0 => hair, 1 => face
+
+    [SerializeField] bool useRandomCostume;
     [SerializeField] Sprite[] hairArr;
     [SerializeField] Sprite[] faceArr;
+
+    
 
     //[SerializeField] SpriteRenderer body;
     //[SerializeField] SpriteRenderer head;
@@ -30,8 +34,11 @@ public class SpriteRendererController : MonoBehaviour
 
     public void Init()
     {
-        spriteArr[0].sprite = hairArr[Random.Range(0, hairArr.Length)];
-        spriteArr[1].sprite = faceArr[Random.Range(0, faceArr.Length)];
+        if (useRandomCostume == true)
+        {
+            spriteArr[0].sprite = hairArr[Random.Range(0, hairArr.Length)];    
+            spriteArr[1].sprite = faceArr[Random.Range(0, faceArr.Length)];
+        }
 
         foreach (SpriteRenderer renderer in spriteArr)
         {

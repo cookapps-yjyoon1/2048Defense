@@ -840,6 +840,7 @@ MonoBehaviour:
   - {fileID: 6098527915277535072}
   - {fileID: 6098527909718194168}
   - {fileID: 6098527907825969404}
+  useRandomCostume: 1
   hairArr:
   - {fileID: 21300000, guid: b4c5e56f2df9b4b26b829f5c0e6e1d0b, type: 3}
   - {fileID: 21300000, guid: a0e6f67ac15cf409fb3a56a440f23472, type: 3}
