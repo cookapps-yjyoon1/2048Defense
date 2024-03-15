@@ -13,6 +13,7 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] EnemyPool enemyPool;
 
     public float correction;
+    //float increaseCorrection;
     int curWave;
 
     public void GameStart(int _stage)
@@ -45,7 +46,7 @@ public class WaveInfo : MonoBehaviour
             {
                 waveTime = 0;
                 curWave++;
-                correction += 0.5f;
+                correction += 1;
                 waveInfoText.text = "WAVE " + curWave;
                 enemyPool.ChangeWave(curWave, correction);
             }
