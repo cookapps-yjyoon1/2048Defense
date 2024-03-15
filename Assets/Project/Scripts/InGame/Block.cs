@@ -1,16 +1,21 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 public class Block : MonoBehaviour
 {
     [SerializeField] private Color[] blockColors;
     [SerializeField] private Image imageBlock;
     [SerializeField] private Image imageGauze;
+    [SerializeField] private Image imageWeapon;
     [SerializeField] private TextMeshProUGUI textBlockNumeric;
+    
+    [SerializeField] private Sprite[] weaponSprites;
 
     private int numeric;
     private bool combine = false;
@@ -41,18 +46,17 @@ public class Block : MonoBehaviour
     // 포인터가 버튼 위로 내려갈 때 호출됩니다.
     public void OnPointerDown()
     {
-        DragAndDropHandler.IsDragging = true;
         isButtonHeld = true;
         timer = 0;
-        imageGauze.gameObject.SetActive(true);
     }
 
     // 포인터가 버튼에서 떨어질 때 호출됩니다.
     public void OnPointerUp()
     {
+        transform.DOKill();
+        transform.localScale = Vector3.one;
         DragAndDropHandler.Drop();
         isButtonHeld = false;
-        imageGauze.gameObject.SetActive(false);
     }
 
     void Update()
@@ -60,9 +64,10 @@ public class Block : MonoBehaviour
         if (isButtonHeld)
         {
             timer += Time.deltaTime;
-            imageGauze.fillAmount = timer / holdTime;
+            
             if (timer > holdTime)
             {
+                transform.DOShakeScale(999f, 0.1f, 10, 90f);
                 DragAndDropHandler.Grap(gameObject,index,Numeric);
                 isButtonHeld = false;
             }
@@ -74,6 +79,8 @@ public class Block : MonoBehaviour
         Numeric = Random.Range(0, 100) < 90 ? GameManager.instance.Numberic : GameManager.instance.Numberic * 2;
         
         index = Random.Range(0, 3);
+        
+        imageWeapon.sprite = weaponSprites[index];
 
         StartCoroutine(OnScaleAnimation(Vector3.one * 0.5f, Vector3.one, 0.15f));
     }
@@ -104,6 +111,10 @@ public class Block : MonoBehaviour
             if (combine)
             {
                 Target.placedBlock.Numeric *= 2;
+                
+                index = Random.Range(0, 3);
+                
+                imageWeapon.sprite = weaponSprites[index];
 
                 GameManager.instance.SetMaxBlock(Target.placedBlock.Numeric);
 
