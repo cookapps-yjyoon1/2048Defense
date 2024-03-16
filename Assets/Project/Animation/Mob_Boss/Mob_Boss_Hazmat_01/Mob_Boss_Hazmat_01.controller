@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mob_Boss_Stage02_1
+  m_Name: Mob_Boss_Hazmat_01
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

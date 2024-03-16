@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 2194115699930398325}
   - component: {fileID: 2194115699930398324}
   m_Layer: 0
-  m_Name: Mob_Boss_Stage05
+  m_Name: Mob_Boss_Suit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

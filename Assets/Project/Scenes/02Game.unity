@@ -8711,16 +8711,16 @@ MonoBehaviour:
   - correction: 1.8
     mob: []
     mob_boss: []
-  - correction: 2
+  - correction: 2.1
     mob: []
     mob_boss: []
-  - correction: 2.2
+  - correction: 2.5
     mob: []
     mob_boss: []
-  - correction: 2.4
+  - correction: 2.7
     mob: []
     mob_boss: []
-  - correction: 2.6
+  - correction: 3
     mob: []
     mob_boss: []
 --- !u!1 &1390612173

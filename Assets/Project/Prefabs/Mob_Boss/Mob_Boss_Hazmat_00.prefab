@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1552611162214446503}
   - component: {fileID: 1552611162214446502}
   m_Layer: 0
-  m_Name: Mob_Boss_Stage02_1
+  m_Name: Mob_Boss_Hazmat_00
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
