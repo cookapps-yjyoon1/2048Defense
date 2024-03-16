@@ -10,6 +10,9 @@ public class EnemyPool : ObjectPool
     [SerializeField] WallController target;
     [SerializeField] float randomXvalue;
 
+    int mobType;
+    int eliteMobType;
+
     float correction;
     int repeat;
 
@@ -31,6 +34,9 @@ public class EnemyPool : ObjectPool
     {
         correction = 1;
         repeat = 1;
+
+        mobType;
+        eliteMobType = GameManager.instance.stageData.mob
 
         prefab[0] = GameManager.instance.stageData.GetMobType(_stage, 0);
         prefab[1] = GameManager.instance.stageData.GetMobType(_stage, 1);
@@ -109,7 +115,7 @@ public class EnemyPool : ObjectPool
         {
             for (int i = 0; i < repeat; i++)
             {
-                Spawn(Random.Range(0, 2), correction);
+                Spawn(Random.Range(0, 3), correction);
                 yield return new WaitForSeconds(0.1f);
             }
             yield return new WaitForSeconds(1f);

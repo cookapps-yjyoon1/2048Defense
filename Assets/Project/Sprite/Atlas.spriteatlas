@@ -187,6 +187,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1ee3590685ca54d3caa6751bf1ad4b66, type: 3}
   - {fileID: 21300000, guid: 68acad069effc48308cdc518bc3b8a30, type: 3}
   - {fileID: 21300000, guid: f1d37f062077847a29bc4056047af73b, type: 3}
+  - {fileID: 21300000, guid: 41b9031606737b547bf13d87ac5acdeb, type: 3}
   - {fileID: 21300000, guid: 879052269e38342b8a4e5a3bee9fde11, type: 3}
   - {fileID: 21300000, guid: 9de1dc268bdce46de83695a4fc39850f, type: 3}
   - {fileID: 21300000, guid: 83efae26dce0f4edc8a88ec79bc6d9f4, type: 3}
@@ -289,6 +290,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: dbd8de0a63c184f949aa1b16f1983ad2, type: 3}
   - {fileID: 21300000, guid: 93eaef1a290a54532b2f38ab06b6ef44, type: 3}
   - {fileID: 21300000, guid: 01161f2a14dba4c7083e80d5bb46dec5, type: 3}
+  - {fileID: 21300000, guid: 6359ea3ab74f877479ceae0246d67760, type: 3}
   - {fileID: 21300000, guid: 3d8f0d3ae05f8e1419209b4f050436ff, type: 3}
   - {fileID: 21300000, guid: 4fd3754adeb2349db980bdf2bfb981aa, type: 3}
   - {fileID: 21300000, guid: 528af64ab6d7b4b7588443480998d1d1, type: 3}
@@ -305,6 +307,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 130288aa07d6c475f9c4b618b7883902, type: 3}
   - {fileID: 21300000, guid: 903dbabaec7324db2b9a6c7585ccf10b, type: 3}
   - {fileID: 21300000, guid: 71e193ca38a7444cbb8df40d3c6811b4, type: 3}
+  - {fileID: 21300000, guid: e1edaeca5063da44da53bce112ac9ff3, type: 3}
   - {fileID: 21300000, guid: 592be1da6b59e47e9b74eb02e6ee1d1f, type: 3}
   - {fileID: 21300000, guid: 74c5a8dad9a414e3698af208cd3a41e8, type: 3}
   - {fileID: 21300000, guid: ebee51fa70e174e1c9da10c7eea06233, type: 3}
@@ -552,6 +555,7 @@ SpriteAtlas:
   - body-fire
   - back-arm1
   - hair06
+  - 2048_board_panel
   - body-walk1
   - body-walk4
   - hat02
@@ -654,6 +658,7 @@ SpriteAtlas:
   - body-walk3
   - body-run3
   - back-arm2
+  - 2048_board_BG
   - bg_pattern_icon_01
   - face-decor02-2
   - front-arm2
@@ -670,6 +675,7 @@ SpriteAtlas:
   - body-run1
   - body-idle
   - body-run3
+  - 2048_board_block
   - body-walk3
   - body-attack
   - body-run3

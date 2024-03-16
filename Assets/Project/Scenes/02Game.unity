@@ -335,7 +335,7 @@ RectTransform:
   m_GameObject: {fileID: 125225045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89000005, y: 0.89000005, z: 0.89000005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1476947724}
@@ -346,8 +346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -876}
-  m_SizeDelta: {x: 1080, y: 1080}
+  m_AnchoredPosition: {x: 210, y: -865}
+  m_SizeDelta: {x: 960, y: 930}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125225047
 MonoBehaviour:
@@ -362,14 +362,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.73333335, g: 0.6784314, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 41b9031606737b547bf13d87ac5acdeb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8696,32 +8696,42 @@ MonoBehaviour:
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
-    - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
+    - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
+    mob_elite:
+    - {fileID: 0}
     mob_boss:
     - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
   - correction: 1.2
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 1.4
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 1.6
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 1.8
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 2.1
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 2.5
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 2.7
     mob: []
+    mob_elite: []
     mob_boss: []
   - correction: 3
     mob: []
+    mob_elite: []
     mob_boss: []
 --- !u!1 &1390612173
 GameObject:
@@ -9089,7 +9099,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 125225046}
   m_RootOrder: 0
@@ -9112,15 +9122,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: -14
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 6
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 180, y: 180}
-  m_Spacing: {x: 25, y: 25}
+  m_CellSize: {x: 240, y: 240}
+  m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 4
 --- !u!114 &1476947726
@@ -10134,14 +10144,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5580278, b: 0.5580278, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6359ea3ab74f877479ceae0246d67760, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
