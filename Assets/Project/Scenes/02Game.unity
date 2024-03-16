@@ -6926,7 +6926,7 @@ MonoBehaviour:
   vfxPool: {fileID: 108407641}
   commonBulletPool: {fileID: 1810756986}
   gameMgrCanvas: {fileID: 661600132}
-  curStage: 0
+  curStage: 3
   MoveCount: 10
 --- !u!4 &889187071
 Transform:
@@ -8698,21 +8698,44 @@ MonoBehaviour:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
     mob_elite:
-    - {fileID: 0}
+    - {fileID: 3010068123255698868, guid: 06290baf43a8ccd438d2d2fd0040a4ef, type: 3}
+    - {fileID: 3010068123255698868, guid: 06290baf43a8ccd438d2d2fd0040a4ef, type: 3}
+    - {fileID: 7424252898201414748, guid: 1e9817bfe46bbd646a958cd1ba67c523, type: 3}
     mob_boss:
-    - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
+    - {fileID: 8491345864846289548, guid: dfaf05132d96e254eafd65272af28048, type: 3}
   - correction: 1.2
-    mob: []
-    mob_elite: []
-    mob_boss: []
+    mob:
+    - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
+    - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
+    - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
+    mob_elite:
+    - {fileID: 3010068123255698868, guid: 06290baf43a8ccd438d2d2fd0040a4ef, type: 3}
+    - {fileID: 7424252898201414748, guid: 1e9817bfe46bbd646a958cd1ba67c523, type: 3}
+    - {fileID: 7876516748129695385, guid: 4c97e38a70cfcd74aba6ffdf0457fd36, type: 3}
+    mob_boss:
+    - {fileID: 6896268832580764500, guid: c3452229ee7be874eaa35abc083b3ed7, type: 3}
   - correction: 1.4
-    mob: []
-    mob_elite: []
-    mob_boss: []
+    mob:
+    - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
+    - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
+    - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
+    mob_elite:
+    - {fileID: 3010068123255698868, guid: 06290baf43a8ccd438d2d2fd0040a4ef, type: 3}
+    - {fileID: 7424252898201414748, guid: 1e9817bfe46bbd646a958cd1ba67c523, type: 3}
+    - {fileID: 3343891280402670418, guid: 78f865bf054fe5b44a681cc83d7dc2d5, type: 3}
+    mob_boss:
+    - {fileID: 3999968486082146707, guid: 543b84d3422d0ac4a9f0f55278a285b3, type: 3}
   - correction: 1.6
-    mob: []
-    mob_elite: []
-    mob_boss: []
+    mob:
+    - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
+    - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
+    - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
+    mob_elite:
+    - {fileID: 7424252898201414748, guid: 1e9817bfe46bbd646a958cd1ba67c523, type: 3}
+    - {fileID: 7876516748129695385, guid: 4c97e38a70cfcd74aba6ffdf0457fd36, type: 3}
+    - {fileID: 3343891280402670418, guid: 78f865bf054fe5b44a681cc83d7dc2d5, type: 3}
+    mob_boss:
+    - {fileID: 4355502652166624174, guid: ebe4ce44135921f42b94c5b1ddc4b135, type: 3}
   - correction: 1.8
     mob: []
     mob_elite: []
@@ -9050,7 +9073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1466624609
 Transform:
   m_ObjectHideFlags: 0
@@ -10325,8 +10348,6 @@ MonoBehaviour:
   prefab:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  prefabBoss:
   - {fileID: 0}
   target: {fileID: 1058227966}
   randomXvalue: 2.2

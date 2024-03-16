@@ -18,7 +18,7 @@ public class WaveInfo : MonoBehaviour
 
     public void GameStart(int _stage)
     {
-        incrCorrection = GameManager.instance.stageData.GetStageCorrection(_stage);
+        incrCorrection = GameManager.instance.stageData.stage[_stage].correction;
         correction = incrCorrection;
         curWave = 1;
         waveInfoText.text = "WAVE " + curWave;

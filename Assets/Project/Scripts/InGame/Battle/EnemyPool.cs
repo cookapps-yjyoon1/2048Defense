@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class EnemyPool : ObjectPool
 {
-    public GameObject[] prefabBoss;
-
     [SerializeField] WallController target;
     [SerializeField] float randomXvalue;
 
     int mobType;
-    int eliteMobType;
 
     float correction;
     int repeat;
@@ -35,15 +32,13 @@ public class EnemyPool : ObjectPool
         correction = 1;
         repeat = 1;
 
-        mobType;
-        eliteMobType = GameManager.instance.stageData.mob
+        mobType = GameManager.instance.stageData.stage[_stage].mob.Count;
 
-        prefab[0] = GameManager.instance.stageData.GetMobType(_stage, 0);
-        prefab[1] = GameManager.instance.stageData.GetMobType(_stage, 1);
-        prefab[2] = GameManager.instance.stageData.GetMobType(_stage, 2);
+        for (int i = 0; i < mobType; i++)
+        {
+            prefab[i] = GameManager.instance.stageData.stage[_stage].mob[i];
+        }
 
-        prefabBoss[0] = GameManager.instance.stageData.GetMobType(_stage, 0);
-    
         PreCreatePoolObject();
         StartCoroutine(CoSpawn());
 
@@ -56,14 +51,11 @@ public class EnemyPool : ObjectPool
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction);
         UnitList.enumyList.Add(unit);
-
     }
 
     public void ChangeWave(int _curWave, float _correction)
     {
-        //StopAllCoroutines();
         correction = _correction;
-        //StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
 
         switch (_curWave % 10)
         {
@@ -74,7 +66,6 @@ public class EnemyPool : ObjectPool
             case 2:
                 break;
             case 3:
-                
                 break;
             case 4:
                 repeat++;
@@ -93,34 +84,16 @@ public class EnemyPool : ObjectPool
         }
     }
 
-    #region CoSpawnType
-
-    // 스테이지 메인이 되는 기본 유닛
-    IEnumerator CoSpawn_1s_1m(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        while (true)
-        {
-            for (int i = 0; i < _repeat; i++)
-            {
-                Spawn(_unitIndex, _increaseHp);
-                yield return new WaitForSeconds(0.1f);
-            }
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
     IEnumerator CoSpawn()
     {
         while (true)
         {
             for (int i = 0; i < repeat; i++)
             {
-                Spawn(Random.Range(0, 3), correction);
+                Spawn(Random.Range(0, mobType), correction);
                 yield return new WaitForSeconds(0.1f);
             }
             yield return new WaitForSeconds(1f);
         }
     }
-
-    #endregion
 }

@@ -14,19 +14,4 @@ public struct Stage
 public class StageData : MonoBehaviour
 {
     public List<Stage> stage;
-
-    public float GetStageCorrection(int _stage)
-    {
-        return stage[_stage].correction;
-    }
-
-    public GameObject GetMobType(int _stage, int _mobType)
-    {
-        return stage[_stage].mob[_mobType];
-    }
-
-    public GameObject GetBossMobType(int _stage, int _bossMobType)
-    {
-        return stage[_stage].mob_boss[_bossMobType];
-    }
 }
