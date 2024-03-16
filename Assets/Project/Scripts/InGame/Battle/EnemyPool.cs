@@ -10,6 +10,8 @@ public class EnemyPool : ObjectPool
     [SerializeField] WallController target;
     [SerializeField] float randomXvalue;
 
+    float correction;
+    int repeat;
 
     //public void GameOver()
     //{
@@ -27,14 +29,18 @@ public class EnemyPool : ObjectPool
 
     public void GameStart(int _stage)
     {
+        correction = 1;
+        repeat = 1;
+
         prefab[0] = GameManager.instance.stageData.GetMobType(_stage, 0);
         prefab[1] = GameManager.instance.stageData.GetMobType(_stage, 1);
         prefab[2] = GameManager.instance.stageData.GetMobType(_stage, 2);
 
         prefabBoss[0] = GameManager.instance.stageData.GetMobType(_stage, 0);
-        PreCreatePoolObject();
     
-        StartCoroutine(CoSpawn_1s_1m(0, 1, 1));
+        PreCreatePoolObject();
+        StartCoroutine(CoSpawn());
+
     }
 
     public void Spawn(int _unitIndex, float _correction)
@@ -44,57 +50,39 @@ public class EnemyPool : ObjectPool
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction);
         UnitList.enumyList.Add(unit);
+
     }
 
     public void ChangeWave(int _curWave, float _correction)
     {
-        StopAllCoroutines();
-        int repeat = (_curWave / 10) + 1;
+        //StopAllCoroutines();
+        correction = _correction;
+        //StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
 
         switch (_curWave % 10)
         {
             case 0:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
                 break;
             case 1:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
                 break;
             case 2:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_1s_1m(1, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
                 break;
             case 3:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                
                 break;
             case 4:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_1s_1m(1, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                repeat++;
                 break;
             case 5:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
                 break;
             case 6:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
                 break;
             case 7:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_1s_1m(1, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
                 break;
             case 8:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
-
                 break;
             case 9:
-                StartCoroutine(CoSpawn_1s_1m(0, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
-                StartCoroutine(CoSpawn_3s_1m(2, _correction, repeat));
+                repeat++;
                 break;
         }
     }
@@ -115,32 +103,18 @@ public class EnemyPool : ObjectPool
         }
     }
 
-    // Æ¯¼ö À¯´Ö
-    IEnumerator CoSpawn_3s_1m(int _unitIndex, float _increaseHp, int _repeat)
+    IEnumerator CoSpawn()
     {
         while (true)
         {
-            for (int i = 0; i < _repeat; i++)
+            for (int i = 0; i < repeat; i++)
             {
-                Spawn(_unitIndex, _increaseHp);
+                Spawn(Random.Range(0, 2), correction);
                 yield return new WaitForSeconds(0.1f);
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
         }
     }
 
-    
-    IEnumerator CoSpawn_5s_1m(int _unitIndex, float _increaseHp, int _repeat)
-    {
-        while (true)
-        {
-            for (int i = 0; i < _repeat; i++)
-            {
-                Spawn(_unitIndex, _increaseHp);
-                yield return new WaitForSeconds(0.1f);
-            }
-            yield return new WaitForSeconds(5f);
-        }
-    }
     #endregion
 }

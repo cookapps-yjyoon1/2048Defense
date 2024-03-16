@@ -7,6 +7,7 @@ public struct Stage
 {
     public float correction;
     public List<GameObject> mob;
+    public List<GameObject> mob_elite;
     public List<GameObject> mob_boss;
 }
 
