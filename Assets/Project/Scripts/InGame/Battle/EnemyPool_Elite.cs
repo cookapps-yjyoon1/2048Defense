@@ -36,7 +36,7 @@ public class EnemyPool_Elite : ObjectPool
         PreCreatePoolObject();
     }
 
-    public void Spawn(int _unitIndex, float _correction, int _curWave)
+    public void Spawn(float _correction, int _curWave)
     {
         int repeat = (_curWave / 10) + 1;
 
@@ -44,7 +44,7 @@ public class EnemyPool_Elite : ObjectPool
         {
             float randomX = Random.Range(-randomXvalue, randomXvalue);
             Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
-            EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
+            EnemyController unit = Get(Random.Range(0, mobType), spawnPos).GetComponent<EnemyController>();
             unit.InitData(target, _correction);
             UnitList.enumyList.Add(unit);
         }

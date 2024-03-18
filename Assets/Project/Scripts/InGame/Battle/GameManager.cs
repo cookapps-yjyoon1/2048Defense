@@ -92,12 +92,12 @@ public class GameManager : MonoBehaviour
 
     public void SpawnBossMonster()
     {
-        enemyPool_Elite.Spawn(1, waveInfo.correction * 2f, waveInfo.curWave);
+        enemyPool_Elite.Spawn(waveInfo.correction * 2f, waveInfo.curWave);
     }
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(1, waveInfo.correction * 2f);
+        enemyPool_Boss.Spawn(waveInfo.correction * 2f);
     }
 
     public void SetMaxBlock(int num)

@@ -36,11 +36,11 @@ public class EnemyPool_Boss : ObjectPool
         PreCreatePoolObject();
     }
 
-    public void Spawn(int _unitIndex, float _correction)
+    public void Spawn(float _correction)
     {
         float randomX = Random.Range(-randomXvalue, randomXvalue);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
-        EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
+        EnemyController unit = Get(0, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction);
         UnitList.enumyList.Add(unit);
     }
