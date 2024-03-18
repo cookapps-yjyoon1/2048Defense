@@ -101,7 +101,7 @@ public class EnemyPool : ObjectPool
 
     #region CoSpawnType
 
-    // ½ºÅ×ÀÌÁö ¸ŞÀÎÀÌ µÇ´Â ±âº» À¯´Ö
+    // ìŠ¤í…Œì´ì§€ ë©”ì¸ì´ ë˜ëŠ” ê¸°ë³¸ ìœ ë‹›
     IEnumerator CoSpawn_1s_1m(int _unitIndex, float _increaseHp, int _repeat)
     {
         while (true)
@@ -115,7 +115,7 @@ public class EnemyPool : ObjectPool
         }
     }
 
-    // Æ¯¼ö À¯´Ö
+    // íŠ¹ìˆ˜ ìœ ë‹›
     IEnumerator CoSpawn_3s_1m(int _unitIndex, float _increaseHp, int _repeat)
     {
         while (true)
