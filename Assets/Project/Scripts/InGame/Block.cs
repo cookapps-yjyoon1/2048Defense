@@ -14,8 +14,6 @@ public class Block : MonoBehaviour
     [SerializeField] private Image imageGauze;
     [SerializeField] private Image imageWeapon;
     [SerializeField] private TextMeshProUGUI textBlockNumeric;
-    
-    [SerializeField] private Sprite[] weaponSprites;
 
     private int numeric;
     private bool combine = false;
@@ -39,7 +37,7 @@ public class Block : MonoBehaviour
     }
     
     
-    public float holdTime = 2.0f;
+    private float holdTime = 1.0f;
     private float timer = 0;
     private bool isButtonHeld = false;
 
@@ -78,11 +76,18 @@ public class Block : MonoBehaviour
     {
         Numeric = Random.Range(0, 100) < 90 ? GameManager.instance.Numberic : GameManager.instance.Numberic * 2;
         
-        index = Random.Range(0, 3);
+        index = Random.Range(0, GameManager.instance.WeaponSprite.Length);
         
-        imageWeapon.sprite = weaponSprites[index];
+        imageWeapon.sprite = GameManager.instance.WeaponSprite[index];
 
         StartCoroutine(OnScaleAnimation(Vector3.one * 0.5f, Vector3.one, 0.15f));
+    }
+
+    public void SetNewWeapon()
+    {
+        index = Random.Range(0, 3);
+
+        imageWeapon.sprite = GameManager.instance.WeaponSprite[index];
     }
 
     public void MoveToNode(Node to)
@@ -111,10 +116,8 @@ public class Block : MonoBehaviour
             if (combine)
             {
                 Target.placedBlock.Numeric *= 2;
-                
-                index = Random.Range(0, 3);
-                
-                imageWeapon.sprite = weaponSprites[index];
+
+                Target.placedBlock.SetNewWeapon();
 
                 GameManager.instance.SetMaxBlock(Target.placedBlock.Numeric);
 

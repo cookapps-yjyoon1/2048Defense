@@ -18,8 +18,11 @@ public static class DragAndDropHandler
     
     public static void Drop()
     {
-        IsDragging = false;
-        InGameManager.Instance.DragAndDrop.OnEndDrag();
+        if (IsDragging)
+        {
+            IsDragging = false;
+            InGameManager.Instance.DragAndDrop.OnEndDrag();
+        }
     }
 
     public static void Clear()

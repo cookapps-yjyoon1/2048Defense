@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour
     public VFXPool vfxPool;
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
+    public Sprite[] WeaponSprite;
 
-    public int curStage = 0; // ·Îºñ¿¡¼­ µ¥ÀÌÅÍ °¡Á®¿Í¾ß ÇÔ
+    public int curStage = 0; // ï¿½Îºñ¿¡¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¾ï¿½ ï¿½ï¿½
 
     private int maxNumber = 4;
     public int Numberic
