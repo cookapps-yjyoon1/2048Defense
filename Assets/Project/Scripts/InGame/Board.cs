@@ -31,7 +31,7 @@ public class Board : MonoBehaviour
         int count = 4;
         BlockCount = new Vector2Int(count, count);
 
-        blockSize = (1080 - 85 - 25 * (BlockCount.x - 1)) / BlockCount.x;
+        blockSize = (940 - 50 - 10 * (BlockCount.x - 1)) / BlockCount.x;
         
         NodeList = nodeSpawner.SpawnNodes(this, BlockCount, blockSize);
 
