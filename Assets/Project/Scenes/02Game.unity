@@ -6783,6 +6783,7 @@ MonoBehaviour:
   waveDuration: 10
   enemyPool: {fileID: 1896274145}
   correction: 0
+  curWave: 0
 --- !u!1 &785066594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6923,9 +6924,15 @@ MonoBehaviour:
   waveInfo: {fileID: 741306573}
   stageData: {fileID: 1375789526}
   enemyPool: {fileID: 1896274145}
+  enemyPool_Elite: {fileID: 1896274147}
+  enemyPool_Boss: {fileID: 1896274146}
   vfxPool: {fileID: 108407641}
   commonBulletPool: {fileID: 1810756986}
   gameMgrCanvas: {fileID: 661600132}
+  WeaponSprite:
+  - {fileID: 21300000, guid: 812b6335fa9aafa41b325d022c8b9077, type: 3}
+  - {fileID: 21300000, guid: 442b87db147addc4b85ade51baa89830, type: 3}
+  - {fileID: 21300000, guid: bf15a2c868aa5e34e8062da6a50369b2, type: 3}
   curStage: 3
   MoveCount: 10
 --- !u!4 &889187071
