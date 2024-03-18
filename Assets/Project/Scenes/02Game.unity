@@ -6782,7 +6782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 993057315}
   waveInfoText: {fileID: 623446890}
-  waveDuration: 10
+  waveDuration: 30
   enemyPool: {fileID: 1896274145}
   correction: 0
   curWave: 0
@@ -6935,7 +6935,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 812b6335fa9aafa41b325d022c8b9077, type: 3}
   - {fileID: 21300000, guid: 442b87db147addc4b85ade51baa89830, type: 3}
   - {fileID: 21300000, guid: bf15a2c868aa5e34e8062da6a50369b2, type: 3}
-  curStage: 1
+  curStage: 2
   MoveCount: 10
 --- !u!4 &889187071
 Transform:
