@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2682092422565045763
 CanvasRenderer:
@@ -397,11 +397,6 @@ MonoBehaviour:
   imageGauze: {fileID: 544631288304448268}
   imageWeapon: {fileID: 8175398474382036451}
   textBlockNumeric: {fileID: 7962203967470669593}
-  weaponSprites:
-  - {fileID: 21300000, guid: 812b6335fa9aafa41b325d022c8b9077, type: 3}
-  - {fileID: 21300000, guid: 442b87db147addc4b85ade51baa89830, type: 3}
-  - {fileID: 21300000, guid: bf15a2c868aa5e34e8062da6a50369b2, type: 3}
-  holdTime: 0.5
 --- !u!114 &55472433928540270
 MonoBehaviour:
   m_ObjectHideFlags: 0
