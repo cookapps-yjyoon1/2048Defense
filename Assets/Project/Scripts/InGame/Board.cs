@@ -112,7 +112,6 @@ public class Board : MonoBehaviour
         Block block = clone.GetComponent<Block>();
         Node node = NodeList[y * BlockCount.x + x];
 
-        clone.GetComponent<RectTransform>().sizeDelta = new Vector2(blockSize, blockSize);
         clone.GetComponent<RectTransform>().localPosition = node.localPosition;
 
         block.Setup();

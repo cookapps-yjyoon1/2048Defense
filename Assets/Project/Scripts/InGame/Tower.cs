@@ -33,7 +33,7 @@ public class Tower : MonoBehaviour , IDropHandler
 
     public void Equip()
     {
-        if (arrows.Count > 10)
+        if (arrows.Count > 5)
         {
             return;
         }
