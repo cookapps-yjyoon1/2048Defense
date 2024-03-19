@@ -111,7 +111,7 @@ public class Block : MonoBehaviour
 
     private void OnAfterMove()
     {
-        if (Target != null)
+        if (Target != null && Target.placedBlock != null)
         {
             if (combine)
             {

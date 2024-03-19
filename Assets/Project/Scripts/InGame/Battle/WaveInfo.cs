@@ -14,7 +14,7 @@ public class WaveInfo : MonoBehaviour
 
     public float correction;
     float incrCorrection;
-    int curWave;
+    public int curWave;
 
     public void GameStart(int _stage)
     {

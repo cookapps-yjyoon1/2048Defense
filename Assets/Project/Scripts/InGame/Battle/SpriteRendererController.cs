@@ -40,9 +40,9 @@ public class SpriteRendererController : MonoBehaviour
             spriteArr[1].sprite = faceArr[Random.Range(0, faceArr.Length)];
         }
 
-        foreach (SpriteRenderer renderer in spriteArr)
-        {
-            renderer.color = color;
-        }
+        //foreach (SpriteRenderer renderer in spriteArr)
+        //{
+        //    renderer.color = color;
+        //}
     }
 }

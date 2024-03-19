@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public WaveInfo waveInfo;
     public StageData stageData;
     public EnemyPool enemyPool;
+    public EnemyPool_Elite enemyPool_Elite;
+    public EnemyPool_Boss enemyPool_Boss;
+
     public VFXPool vfxPool;
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
@@ -60,17 +63,19 @@ public class GameManager : MonoBehaviour
         gameMgrCanvas.SetActive(false);
         waveInfo.GameStart(curStage);
         enemyPool.GameStart(curStage);
+        enemyPool_Elite.GameStart(curStage);
+        enemyPool_Boss.GameStart(curStage);
     }
 
     public void GameOver()
     {
-        
+
     }
 
 
     public void OnClickBtnGameStart()
     {
-        SoundManager.Instance.Play(Enum_Sound.Bgm, "InGame", 0,0.5f);
+        SoundManager.Instance.Play(Enum_Sound.Bgm, "InGame", 0, 0.5f);
         GameStart();
     }
 
@@ -87,12 +92,12 @@ public class GameManager : MonoBehaviour
 
     public void SpawnBossMonster()
     {
-        enemyPool.Spawn(1,waveInfo.correction * 2f);
+        enemyPool_Elite.Spawn(waveInfo.correction * 2f, waveInfo.curWave);
     }
-    
+
     public void SpawnLastBossMonster()
     {
-        enemyPool.Spawn(1,waveInfo.correction * 2f);
+        enemyPool_Boss.Spawn(waveInfo.correction * 2f);
     }
 
     public void SetMaxBlock(int num)
