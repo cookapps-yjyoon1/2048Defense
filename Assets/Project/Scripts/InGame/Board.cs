@@ -132,6 +132,7 @@ public class Board : MonoBehaviour
                     BlockProcess(NodeList[y * BlockCount.x + x], direction);
                 }
             }
+            GameManager.instance.MoveNode();
         }
         else if (direction == Direction.Down)
         {
@@ -142,6 +143,7 @@ public class Board : MonoBehaviour
                     BlockProcess(NodeList[y * BlockCount.x + x], direction);
                 }
             }
+            GameManager.instance.MoveNode();
         }
         else if (direction == Direction.Left)
         {
@@ -152,6 +154,7 @@ public class Board : MonoBehaviour
                     BlockProcess(NodeList[y * BlockCount.x + x], direction);
                 }
             }
+            GameManager.instance.MoveNode();
         }
         else if (direction == Direction.Up)
         {
@@ -162,6 +165,7 @@ public class Board : MonoBehaviour
                     BlockProcess(NodeList[y * BlockCount.x + x], direction);
                 }
             }
+            GameManager.instance.MoveNode();
         }
 
         foreach (Block block in blockList)

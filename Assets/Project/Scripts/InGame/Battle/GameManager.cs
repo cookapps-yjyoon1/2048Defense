@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
     public Sprite[] WeaponSprite;
+    public Text txtCount;
 
     public int curStage = 0; // �κ񿡼� ������ �����;� ��
 
@@ -88,6 +89,8 @@ public class GameManager : MonoBehaviour
             SpawnBossMonster();
             MoveCount = 10;
         }
+
+        txtCount.text = MoveCount.ToString();
     }
 
     public void SpawnBossMonster()
