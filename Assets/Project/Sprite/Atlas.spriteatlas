@@ -160,6 +160,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 59971444fe04d4cacb3b1b907d2cecc7, type: 3}
   - {fileID: 21300000, guid: 3f338744f0bbd44cca9769cb3f4bab08, type: 3}
   - {fileID: 21300000, guid: e4b1a94414902473da5fe003095434e7, type: 3}
+  - {fileID: 21300000, guid: 71f31a447a02447fdb4f83dc8517a5e5, type: 3}
   - {fileID: 21300000, guid: 5c424a440b6e649d2a1b0ff0e0c80176, type: 3}
   - {fileID: 21300000, guid: f1ec81548c00f45cdabbba8d4f7c1643, type: 3}
   - {fileID: 21300000, guid: df20335400ec545b29a2d7ff134edbe3, type: 3}
@@ -308,6 +309,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a9cd1ba9141f74bc8a6997feea1d99fa, type: 3}
   - {fileID: 21300000, guid: e52ec0b9e1b6e40ef8819e3a163fb935, type: 3}
   - {fileID: 21300000, guid: 14778ec9ad9b846abb64305a0c486711, type: 3}
+  - {fileID: 21300000, guid: 9d70f3e96d7ad45ab9995c4879744154, type: 3}
   - {fileID: 21300000, guid: 74c5faf967b0d4a15a426eb4fc53b613, type: 3}
   - {fileID: 21300000, guid: 9b63a10a9e4134380b1ae42f99014bc1, type: 3}
   - {fileID: 21300000, guid: 355ac40a341e347a7a5f7027e25849aa, type: 3}
@@ -371,6 +373,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5c11ee3c409b8ca4da012e801605b000, type: 3}
   - {fileID: 21300000, guid: 47b8425c977c94021b2ed55e4ff2db2e, type: 3}
   - {fileID: 21300000, guid: b772f45c512030241850dbb1e194b92b, type: 3}
+  - {fileID: 21300000, guid: 31fa885cdd5de45fd820283efe6a5b0d, type: 3}
   - {fileID: 21300000, guid: 91a3a85ccc6194869b5e9e7317deb566, type: 3}
   - {fileID: 21300000, guid: f75b8c5c704df4b02b487d7647058b1d, type: 3}
   - {fileID: 21300000, guid: 2d86f77c81a7e4556b73a872061a171f, type: 3}
@@ -565,6 +568,7 @@ SpriteAtlas:
   - longgun03
   - t_hair04
   - hat08
+  - fill6_icon_full_energy
   - face-decor04-2
   - arm2
   - body-run3
@@ -713,6 +717,7 @@ SpriteAtlas:
   - arm1
   - body-idle
   - arm2
+  - fill6_icon_full_skull2
   - complete_featherwhite2
   - front-arm1
   - body-fire
@@ -776,6 +781,7 @@ SpriteAtlas:
   - environment_background
   - back-arm1
   - btn10_outsq_lightgreen
+  - fill6_icon_brown_energy
   - face01-1
   - body-hurt
   - face-decor01-1
