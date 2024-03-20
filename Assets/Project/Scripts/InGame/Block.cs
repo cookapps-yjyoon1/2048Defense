@@ -74,7 +74,7 @@ public class Block : MonoBehaviour
 
     public void Setup()
     {
-        Numeric = Random.Range(0, 100) < 90 ? GameManager.instance.Numberic : GameManager.instance.Numberic * 2;
+        Numeric = GameManager.instance.Numberic;
         
         index = Random.Range(0, GameManager.instance.WeaponSprite.Length);
         

@@ -7439,7 +7439,6 @@ MonoBehaviour:
   DrillCrrection: 1
   MoveCount: 10
   EenergyCount: 10
-  CurEnergy: 88
 --- !u!4 &889187071
 Transform:
   m_ObjectHideFlags: 0

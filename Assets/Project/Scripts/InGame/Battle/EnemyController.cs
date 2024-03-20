@@ -139,7 +139,7 @@ public class EnemyController : MonoBehaviour
         {
             case 0:
             case 1:
-                GameManager.instance.MoveEnergy(3);
+                GameManager.instance.MoveEnergy();
                 break;
             case 3:
                 GameManager.instance.MoveEnergyFull(30);

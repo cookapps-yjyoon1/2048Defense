@@ -62,31 +62,22 @@ public class EnemyPool : ObjectPool
         correction = _correction;
         //repeat = 1 + (int)_curWave / 10;
 
-        switch (_curWave % 10)
+        switch (_curWave % 5)
         {
             case 0:
-                repeat++;
                 break;
             case 1:
+                StartCoroutine(CoSpawn02(9));
                 break;
             case 2:
                 break;
             case 3:
+                StartCoroutine(CoSpawn02(9));
                 break;
             case 4:
-                bossPool.Spawn(_correction * 5f);
                 break;
             case 5:
-                repeat++;
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                bossPool.Spawn(_correction * 5f);
+                bossPool.Spawn(correction * 5f);
                 break;
         }
     }
@@ -95,12 +86,24 @@ public class EnemyPool : ObjectPool
     {
         while (true)
         {
-            for (int i = 0; i < repeat; i++)
-            {
-                Spawn(Random.Range(0, mobType), correction);
-                yield return new WaitForSeconds(0.1f);
-            }
+            Spawn(Random.Range(0, mobType), correction);
             yield return new WaitForSeconds(1f);
+        }
+    }
+
+    IEnumerator CoSpawn02(int _repeat)
+    {
+        for (int i = 0; i < _repeat; i++)
+        {
+            Spawn(Random.Range(0, mobType), correction);
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(7.5f);
+
+        for (int i = 0; i < _repeat; i++)
+        {
+            Spawn(Random.Range(0, mobType), correction);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
