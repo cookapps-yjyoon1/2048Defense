@@ -13,6 +13,7 @@ public class TowerController : Tower
     [SerializeField] BulletPool bulletPool;
     
     [SerializeField] Transform target;
+    [SerializeField] Transform gun;
     List<Transform> targetGroup = new List<Transform>();
 
     private void Start()
@@ -77,6 +78,7 @@ public class TowerController : Tower
         {
             Vector3 shotDir = (_target.position - bulletPool.transform.position).normalized;
             //bool isCri = Random.value < criChance;
+            gun.rotation = Quaternion.LookRotation(Vector3.forward, shotDir);
             bulletPool.Shot(shotDir, curArrow.Index, curArrow.Level);
 
             _curIndex++;

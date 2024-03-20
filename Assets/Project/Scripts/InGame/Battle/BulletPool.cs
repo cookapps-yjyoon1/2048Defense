@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BulletPool : ObjectPool
 {
+    [SerializeField] private Transform pivot;
+    
     protected override void Awake()
     {
         base.Awake();
@@ -10,7 +12,7 @@ public class BulletPool : ObjectPool
 
     public void Shot(Vector2 _dir, int _bulType, float _dmg)
     {
-        Bullet bul = Get(_bulType, transform.position).GetComponent<Bullet>();
+        Bullet bul = Get(_bulType, pivot.position).GetComponent<Bullet>();
         bul.InitData(_dir, _dmg);
         SoundManager.Instance.PlayRandomIndex("Shoot",0.7f,1f);
     }

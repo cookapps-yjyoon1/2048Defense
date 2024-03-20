@@ -333,6 +333,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5394f0dbec19d461098c8fe6a7aaa3d6, type: 3}
   - {fileID: 21300000, guid: 442b87db147addc4b85ade51baa89830, type: 3}
   - {fileID: 21300000, guid: 92ac0adb4c4584d3f9525795727d11a9, type: 3}
+  - {fileID: 21300000, guid: 855cfb0c5cedd34479e59c3e675595ac, type: 3}
   - {fileID: 21300000, guid: 5919a22cfd6204068801aedba3021790, type: 3}
   - {fileID: 21300000, guid: 90fb192c8b26046a7954c734ed191140, type: 3}
   - {fileID: 21300000, guid: 57cc0a3cb10624adeae74883a56a4b85, type: 3}
@@ -701,6 +702,7 @@ SpriteAtlas:
   - body-idle
   - Icon_bullet_01
   - arm1
+  - Icon_skull
   - body-walk4
   - front-arm-pistal
   - hair08
