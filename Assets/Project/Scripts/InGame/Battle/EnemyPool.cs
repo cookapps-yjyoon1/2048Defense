@@ -40,8 +40,6 @@ public class EnemyPool : ObjectPool
             int key = pair.Key;
             List<GameObject> gameObjectList = pair.Value;
 
-            Console.WriteLine($"Key: {key}");
-
             foreach (GameObject gameObject in gameObjectList)
             {
                 gameObject.GetComponent<EnemyController>().GameOver();
@@ -61,7 +59,7 @@ public class EnemyPool : ObjectPool
     public void ChangeWave(int _curWave, float _correction)
     {
         correction = _correction;
-        repeat = (int)_curWave / 10;
+        repeat = 1 + (int)_curWave / 10;
 
         //switch (_curWave % 10)
         //{

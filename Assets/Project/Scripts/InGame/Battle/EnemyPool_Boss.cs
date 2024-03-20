@@ -10,20 +10,6 @@ public class EnemyPool_Boss : ObjectPool
 
     int mobType;
 
-    //public void GameOver()
-    //{
-    //    foreach (var item1 in pool)
-    //    {
-    //        foreach (GameObject item2 in item1)
-    //        {
-    //            if (item2.activeSelf)
-    //            {
-    //                item2.GetComponent<EnemyController>().GameOver();
-    //            }
-    //        }
-    //    }
-    //}
-
     public void GameStart(int _stage)
     {
         mobType = GameManager.instance.stageData.stage[_stage].mob_boss.Count;
@@ -34,6 +20,21 @@ public class EnemyPool_Boss : ObjectPool
         }
 
         PreCreatePoolObject();
+    }
+
+    public void GameOver()
+    {
+
+        foreach (var pair in pool)
+        {
+            int key = pair.Key;
+            List<GameObject> gameObjectList = pair.Value;
+
+            foreach (GameObject gameObject in gameObjectList)
+            {
+                gameObject.GetComponent<EnemyController>().GameOver();
+            }
+        }
     }
 
     public void Spawn(float _correction)

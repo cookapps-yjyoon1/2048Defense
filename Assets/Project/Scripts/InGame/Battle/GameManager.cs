@@ -70,7 +70,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        waveInfo.GameOver();
+        enemyPool.GameOver();
+        enemyPool_Elite.GameOver();
+        enemyPool_Boss.GameOver();
     }
 
 
