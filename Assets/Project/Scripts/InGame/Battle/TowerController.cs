@@ -20,8 +20,6 @@ public class TowerController : Tower
     {
         StartCoroutine(CoFindTarget());
         StartCoroutine(CoAtk());
-        
-        dmg = 1;
     }
 
     void FirstDistTarget()

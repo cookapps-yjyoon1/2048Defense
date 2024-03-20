@@ -17,7 +17,7 @@ public class BulletDrill : Bullet
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
-        Dmg = _dmg;
+        Dmg = _dmg * GameManager.instance.DrillCrrection;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
 
         StartCoroutine(CoShot(_dir));

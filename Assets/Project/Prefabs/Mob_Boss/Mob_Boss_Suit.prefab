@@ -388,11 +388,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7130e3dcc16c4c64d98dc52226ac31b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  maxHp: 10
   nowHp: 0
   atkDmg: 1
   atkDist: 0.2
-  moveSpeed: 0.2
+  moveSpeed: 0.3
   _decompositionController: {fileID: 2194115699930398322}
   target: {fileID: 0}
   animator: {fileID: 2194115700761841806}

@@ -42,7 +42,7 @@ public class EnemyPool_Boss : ObjectPool
         float randomX = Random.Range(-randomXvalue, randomXvalue);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(0, spawnPos).GetComponent<EnemyController>();
-        unit.InitData(target, _correction);
+        unit.InitData(target, _correction, 2);
         UnitList.enumyList.Add(unit);
     }
 }

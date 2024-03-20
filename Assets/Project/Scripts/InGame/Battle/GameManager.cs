@@ -16,11 +16,21 @@ public class GameManager : MonoBehaviour
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
     public Sprite[] WeaponSprite;
-    public Text txtCount;
+
+    public Slider eliteGauge;
+    public Slider energyGauge;
+    public Text txtEnergyCount;
 
     public int curStage = 0;
+    [HideInInspector] public int ExplosionCrrection = 1;
+    [HideInInspector] public int MultCrrection = 1;
+    [HideInInspector] public int DrillCrrection = 1;
+    [HideInInspector] public int MoveCount = 10;
+    [HideInInspector] public int EenergyCount = 10;
+    [HideInInspector] public int CurEnergy = 88;
 
     private int maxNumber = 4;
+
     public int Numberic
     {
         get
@@ -42,7 +52,6 @@ public class GameManager : MonoBehaviour
     }
     //public UnitList unitList;
 
-    public int MoveCount = 10;
 
     private void Awake()
     {
@@ -66,6 +75,14 @@ public class GameManager : MonoBehaviour
         enemyPool.GameStart(curStage);
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
+
+
+        eliteGauge.maxValue = MoveCount;
+        eliteGauge.value = MoveCount;
+
+        energyGauge.maxValue = EenergyCount;
+        energyGauge.value = EenergyCount;
+        txtEnergyCount.text = CurEnergy.ToString();
     }
 
     public void GameOver()
@@ -92,18 +109,46 @@ public class GameManager : MonoBehaviour
             SpawnBossMonster();
             MoveCount = 10;
         }
+        eliteGauge.value = MoveCount;
 
-        txtCount.text = MoveCount.ToString();
+        //txtCount.text = MoveCount.ToString();
     }
+    
+    public void MoveEnergy()
+    {
+        EenergyCount--;
+
+        if (EenergyCount == 0)
+        {
+            CurEnergy++;
+            txtEnergyCount.text = CurEnergy.ToString();
+            EenergyCount = 10;
+        }
+        energyGauge.value = EenergyCount;
+    }
+
+    public void MoveEnergyFull()
+    {
+        CurEnergy++;
+        txtEnergyCount.text = CurEnergy.ToString();
+    }
+
+    public void UseEnergy()
+    {
+        CurEnergy--;
+        txtEnergyCount.text = CurEnergy.ToString();
+    }
+
+
 
     public void SpawnBossMonster()
     {
-        enemyPool_Elite.Spawn(waveInfo.correction * 2f, waveInfo.curWave);
+        enemyPool_Elite.Spawn(waveInfo.correction * 4f, waveInfo.curWave);
     }
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(waveInfo.correction * 2f);
+        enemyPool_Boss.Spawn(waveInfo.correction * 10f);
     }
 
     public void SetMaxBlock(int num)

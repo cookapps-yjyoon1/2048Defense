@@ -19,7 +19,7 @@ public class BulletMult : Bullet
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
-        Dmg = _dmg;
+        Dmg = _dmg * 0.7f * GameManager.instance.MultCrrection;
         
         transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
 
