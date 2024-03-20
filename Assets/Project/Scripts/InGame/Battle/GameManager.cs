@@ -18,14 +18,14 @@ public class GameManager : MonoBehaviour
     public Sprite[] WeaponSprite;
     public Text txtCount;
 
-    public int curStage = 0; // �κ񿡼� ������ �����;� ��
+    public int curStage = 0;
 
     private int maxNumber = 4;
     public int Numberic
     {
         get
         {
-            var num = maxNumber / 512;
+            var num = maxNumber / 256;
             num = Mathf.Clamp(num, 2, num);
 
             if (maxNumber == 2048)
