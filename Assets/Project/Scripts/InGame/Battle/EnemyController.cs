@@ -42,6 +42,11 @@ public class EnemyController : MonoBehaviour
             transform.localScale = flipTransScale;
         }
 
+        if (_enemyType == 4)
+        {
+            transform.localScale *= 1.5f;
+        }
+
         StartCoroutine(CoMove());
     }
 
@@ -131,9 +136,12 @@ public class EnemyController : MonoBehaviour
                 GameManager.instance.MoveEnergy();
                 break;
             case 1:
-                GameManager.instance.MoveEnergyFull();
+                GameManager.instance.MoveEnergyFull(2);
                 break;
-            case 2:
+            case 3:
+                GameManager.instance.MoveEnergyFull(30);
+                break;
+            case 4:
                 GameManager.instance.GameOver();
                 break;
         }

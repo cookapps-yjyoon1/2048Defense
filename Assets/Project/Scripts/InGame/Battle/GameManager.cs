@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public EnemyPool enemyPool;
     public EnemyPool_Elite enemyPool_Elite;
     public EnemyPool_Boss enemyPool_Boss;
+    public List<TowerController> tower;
 
     public VFXPool vfxPool;
     public BulletPool commonBulletPool;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
     [HideInInspector] public int EenergyCount = 10;
-    [HideInInspector] public int CurEnergy = 88;
+    [HideInInspector] public int CurEnergy = 100;
 
     private int maxNumber = 4;
 
@@ -91,6 +92,9 @@ public class GameManager : MonoBehaviour
         enemyPool.GameOver();
         enemyPool_Elite.GameOver();
         enemyPool_Boss.GameOver();
+        tower[0].GameOver();
+        tower[1].GameOver();
+        tower[2].GameOver();
     }
 
 
@@ -127,9 +131,9 @@ public class GameManager : MonoBehaviour
         energyGauge.value = EenergyCount;
     }
 
-    public void MoveEnergyFull()
+    public void MoveEnergyFull(int _energy)
     {
-        CurEnergy++;
+        CurEnergy += _energy;
         txtEnergyCount.text = CurEnergy.ToString();
     }
 
@@ -139,11 +143,9 @@ public class GameManager : MonoBehaviour
         txtEnergyCount.text = CurEnergy.ToString();
     }
 
-
-
     public void SpawnBossMonster()
     {
-        enemyPool_Elite.Spawn(waveInfo.correction * 4f, waveInfo.curWave);
+        enemyPool_Elite.Spawn(waveInfo.correction * 2f, waveInfo.curWave);
     }
 
     public void SpawnLastBossMonster()

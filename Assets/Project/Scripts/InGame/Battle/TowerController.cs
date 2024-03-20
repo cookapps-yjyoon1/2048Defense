@@ -22,6 +22,11 @@ public class TowerController : Tower
         StartCoroutine(CoAtk());
     }
 
+    public void GameOver()
+    {
+        StopAllCoroutines();
+    }
+
     void FirstDistTarget()
     {
         float firstDist = 10000;
