@@ -123,6 +123,10 @@ public class Board : MonoBehaviour
 
     private void AllBlocksProcess(Direction direction)
     {
+        if(GameManager.instance.CurEnergy == 0) return;
+
+        GameManager.instance.UseEnergy();
+
         if (direction == Direction.Right)
         {
             for (int y = 0; y < BlockCount.y; ++y)

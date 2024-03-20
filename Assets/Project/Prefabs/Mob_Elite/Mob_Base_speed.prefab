@@ -866,11 +866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7130e3dcc16c4c64d98dc52226ac31b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 5
+  maxHp: 10
   nowHp: 0
   atkDmg: 2
   atkDist: 0.1
-  moveSpeed: 0.8
+  moveSpeed: 1
   _decompositionController: {fileID: 7226455632277109204}
   target: {fileID: 0}
   animator: {fileID: 2985170303209501090}

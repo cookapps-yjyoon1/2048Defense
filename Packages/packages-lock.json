@@ -21,7 +21,7 @@
       "url": "http://packages.tech.cookapps.com"
     },
     "com.cookapps.debug": {
-      "version": "1.1.6",
+      "version": "1.1.7",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -46,6 +46,17 @@
       "depth": 2,
       "source": "registry",
       "dependencies": {},
+      "url": "http://packages.tech.cookapps.com"
+    },
+    "com.cookapps.local.data": {
+      "version": "3.0.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.cookapps.debug": "1.1.7",
+        "com.cookapps.package.window": "1.0.10"
+      },
       "url": "http://packages.tech.cookapps.com"
     },
     "com.cookapps.obfuscator": {

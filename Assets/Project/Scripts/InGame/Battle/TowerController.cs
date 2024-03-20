@@ -20,8 +20,11 @@ public class TowerController : Tower
     {
         StartCoroutine(CoFindTarget());
         StartCoroutine(CoAtk());
-        
-        dmg = 1;
+    }
+
+    public void GameOver()
+    {
+        StopAllCoroutines();
     }
 
     void FirstDistTarget()

@@ -17,7 +17,7 @@ public class BulletExplosion : Bullet
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
-        Dmg = _dmg;
+        Dmg = _dmg * GameManager.instance.ExplosionCrrection;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
 
         StartCoroutine(CoShot(_dir));
