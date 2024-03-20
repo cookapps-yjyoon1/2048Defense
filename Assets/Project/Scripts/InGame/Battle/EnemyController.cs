@@ -43,13 +43,13 @@ public class EnemyController : MonoBehaviour
             transform.localScale = flipTransScale;
         }
 
-        if (_enemyType == 3)
+        if (_enemyType == 2)
         {
-            cha.localScale = Vector3.one * 2f;
+            cha.localScale = Vector3.one * 0.6f;
         }
-        else if (_enemyType == 4)
+        else if (_enemyType == 3)
         {
-            cha.localScale = Vector3.one * 4f;
+            cha.localScale = Vector3.one;
         }
 
         StartCoroutine(CoMove());
@@ -135,21 +135,24 @@ public class EnemyController : MonoBehaviour
         animator.Play("die");
         CameraManager.Instance.Shake(0.05f, 0.04f);
 
-        switch(enemyType)
-        {
-            case 0:
-            case 1:
-                GameManager.instance.MoveEnergy();
-                break;
-            case 3:
-                GameManager.instance.MoveEnergyFull(30);
-                break;
-            case 4:
-                GameManager.instance.GameOver();
-                break;
-        }
-        
+        //switch(enemyType)
+        //{
+        //    case 0:
+        //        GameManager.instance.MoveEnergy();
+        //        break;
+        //    case 1:
+        //        GameManager.instance.MoveEnergy();
+        //        break;
+        //    case 2:
+        //        GameManager.instance.MoveEnergyFull(50);
+        //        break;
+        //    case 3:
+        //        GameManager.instance.GameOver();
+        //        break;
+        //}
+
         UnitList.enumyList.Remove(this);
+
         StopAllCoroutines();
         StartCoroutine(CoDeath());
     }

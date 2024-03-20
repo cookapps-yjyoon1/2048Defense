@@ -475,7 +475,7 @@ MonoBehaviour:
   cha: {fileID: 8491345865151349883}
   maxHp: 10
   nowHp: 0
-  atkDmg: 1
+  atkDmg: 7
   atkDist: 0.2
   moveSpeed: 0.3
   _decompositionController: {fileID: 8491345864846289544}

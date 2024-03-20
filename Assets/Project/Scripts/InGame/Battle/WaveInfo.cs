@@ -30,6 +30,12 @@ public class WaveInfo : MonoBehaviour
         StopAllCoroutines();
     }
 
+    public void WaveStart()
+    {
+        StartCoroutine(CoTimer());
+        enemyPool.ChangeWave(curWave, correction);
+    }
+
     IEnumerator CoTimer()
     {
         float waveTime = 0;
@@ -49,7 +55,9 @@ public class WaveInfo : MonoBehaviour
                 curWave++;
                 correction += incrCorrection;
                 waveInfoText.text = "WAVE " + curWave;
-                enemyPool.ChangeWave(curWave, correction);
+                //enemyPool.ChangeWave(curWave, correction);
+                enemyPool.WaveStop();
+                yield break;
             }
         }
     }

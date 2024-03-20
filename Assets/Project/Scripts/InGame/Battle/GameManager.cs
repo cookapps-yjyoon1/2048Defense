@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
     [HideInInspector] public int EenergyCount = 10;
-    [HideInInspector] private int curEnergy;
+    [HideInInspector] private int curEnergy = 30;
 
     public int CurEnergy { get => curEnergy; }
 
@@ -42,29 +42,24 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            if (maxNumber <= 64)
+            if (maxNumber <= 128)
             {
-                return Random.Range(0, 100) < 80 ? 2 : 4;
-            }
-            else if (maxNumber <= 128)
-            {
-                return Random.Range(0, 100) < 50 ? 2 : 4;
-            }
-            else if (maxNumber <= 256)
-            {
-                return Random.Range(0, 100) < 20 ? 2 : 4;
+                return Random.Range(0, 100) < 90 ? 2 : 4;
             }
             else if (maxNumber <= 512)
             {
-                return Random.Range(0, 100) < 80 ? 4 : 8;
+                return Random.Range(0, 100) < 10 ? 2 : 4;
             }
-            else if (maxNumber <= 1024)
+            else if (maxNumber == 1024)
             {
-                return Random.Range(0, 100) < 50 ? 4 : 8;
+                return Random.Range(0, 100) < 90 ? 4 : 8;
             }
             else
             {
-                SpawnLastBossMonster();
+                if (maxNumber == 2048)
+                {
+                    SpawnLastBossMonster();
+                }
                 return 8;
             }
 
@@ -109,12 +104,12 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         gameMgrCanvas.SetActive(false);
-        waveInfo.GameStart(curStage);
+        //waveInfo.GameStart(curStage);
         enemyPool.GameStart(curStage);
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
 
-        curEnergy = 100;
+        //curEnergy = 70;
 
         eliteGauge.maxValue = MoveCount;
         eliteGauge.value = MoveCount;
@@ -122,6 +117,12 @@ public class GameManager : MonoBehaviour
         energyGauge.maxValue = EenergyCount;
         energyGauge.value = EenergyCount;
         txtEnergyCount.text = CurEnergy.ToString();
+    }
+
+    public void WaveStart()
+    {
+        waveInfo.WaveStart();
+        //enemyPool.WaveStart(waveInfo.curWave, waveInfo.correction);
     }
 
     public void GameClear()
@@ -150,16 +151,16 @@ public class GameManager : MonoBehaviour
 
     public void MoveNode()
     {
-        MoveCount--;
+        //MoveCount--;
 
-        if (MoveCount == 0)
-        {
-            SpawnBossMonster();
-            MoveCount = 10;
-        }
-        eliteGauge.value = MoveCount;
+        //if (MoveCount == 0)
+        //{
+        //    SpawnBossMonster();
+        //    MoveCount = 10;
+        //}
+        //eliteGauge.value = MoveCount;
 
-        //txtCount.text = MoveCount.ToString();
+        ////txtCount.text = MoveCount.ToString();
     }
     
     public void MoveEnergy()
@@ -168,7 +169,7 @@ public class GameManager : MonoBehaviour
 
         if (EenergyCount == 0)
         {
-            MoveEnergyFull(3);
+            MoveEnergyFull(2);
             EenergyCount = 10;
         }
         energyGauge.value = EenergyCount;
@@ -184,6 +185,11 @@ public class GameManager : MonoBehaviour
     {
         curEnergy--;
         txtEnergyCount.text = CurEnergy.ToString();
+
+        if(CurEnergy == 0)
+        {
+            WaveStart();
+        }
     }
 
     public void SpawnBossMonster()

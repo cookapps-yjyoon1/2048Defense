@@ -45,4 +45,13 @@ public class EnemyPool_Boss : ObjectPool
         unit.InitData(target, _correction, 2);
         UnitList.enumyList.Add(unit);
     }
+
+    public IEnumerator CoWaveSpawn(int _repeat, float _correction)
+    {
+        for (int i = 0; i < _repeat; i++)
+        {
+            Spawn(_correction);
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
 }

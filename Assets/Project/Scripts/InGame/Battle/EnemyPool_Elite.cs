@@ -50,4 +50,26 @@ public class EnemyPool_Elite : ObjectPool
             UnitList.enumyList.Add(unit);
         }
     }
+
+    public IEnumerator CoWaveSpawn(int _repeat, float _correction)
+    {
+        for (int i = 0; i < _repeat; i++)
+        {
+            Spawn(_correction, 1);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    public IEnumerator CoWaveSpawn_3wave(int _repeat, float _correction)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < _repeat; j++)
+            {
+                Spawn(_correction, 1);
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(3f);
+        }
+    }
 }
