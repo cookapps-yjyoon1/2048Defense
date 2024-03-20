@@ -74,7 +74,6 @@ public class EnemyPool : ObjectPool
                 break;
             case 4:
                 bossPool.Spawn(_correction * 5f);
-                repeat++;
                 break;
             case 5:
                 break;

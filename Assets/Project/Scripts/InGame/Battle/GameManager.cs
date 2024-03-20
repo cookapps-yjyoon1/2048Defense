@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
     [HideInInspector] public int EenergyCount = 10;
-    [HideInInspector] public int CurEnergy = 100;
+    [HideInInspector] public int CurEnergy = 150;
 
     private int maxNumber = 4;
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            var num = maxNumber / 256;
+            var num = maxNumber / 32;
             num = Mathf.Clamp(num, 2, num);
 
             if (maxNumber == 2048)
@@ -124,8 +124,7 @@ public class GameManager : MonoBehaviour
 
         if (EenergyCount == 0)
         {
-            CurEnergy++;
-            txtEnergyCount.text = CurEnergy.ToString();
+            MoveEnergyFull(4);
             EenergyCount = 10;
         }
         energyGauge.value = EenergyCount;
