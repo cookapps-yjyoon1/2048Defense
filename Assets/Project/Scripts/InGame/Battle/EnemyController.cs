@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] Transform cha;
     [SerializeField] float maxHp;
     [SerializeField] float nowHp;
     [SerializeField] float atkDmg;
@@ -44,11 +45,11 @@ public class EnemyController : MonoBehaviour
 
         if (_enemyType == 3)
         {
-            transform.localScale *= 1.5f;
+            cha.localScale = Vector3.one * 2f;
         }
         else if (_enemyType == 4)
         {
-            transform.localScale *= 2f;
+            cha.localScale = Vector3.one * 4f;
         }
 
         StartCoroutine(CoMove());
@@ -137,10 +138,8 @@ public class EnemyController : MonoBehaviour
         switch(enemyType)
         {
             case 0:
-                GameManager.instance.MoveEnergy();
-                break;
             case 1:
-                GameManager.instance.MoveEnergyFull(4);
+                GameManager.instance.MoveEnergy(3);
                 break;
             case 3:
                 GameManager.instance.MoveEnergyFull(30);

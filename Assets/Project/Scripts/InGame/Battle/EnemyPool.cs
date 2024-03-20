@@ -65,6 +65,7 @@ public class EnemyPool : ObjectPool
         switch (_curWave % 10)
         {
             case 0:
+                repeat++;
                 break;
             case 1:
                 break;
@@ -76,6 +77,7 @@ public class EnemyPool : ObjectPool
                 bossPool.Spawn(_correction * 5f);
                 break;
             case 5:
+                repeat++;
                 break;
             case 6:
                 break;
@@ -85,7 +87,6 @@ public class EnemyPool : ObjectPool
                 break;
             case 9:
                 bossPool.Spawn(_correction * 5f);
-                repeat++;
                 break;
         }
     }

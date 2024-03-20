@@ -30,7 +30,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
     [HideInInspector] public int EenergyCount = 10;
-    [HideInInspector] public int CurEnergy = 150;
+    [HideInInspector] private int curEnergy;
+
+    public int CurEnergy { get => curEnergy; }
 
     private int maxNumber = 4;
 
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            var num = maxNumber / 32;
+            var num = maxNumber / 64;
             num = Mathf.Clamp(num, 2, num);
 
             if (maxNumber == 2048)
@@ -84,6 +86,7 @@ public class GameManager : MonoBehaviour
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
 
+        curEnergy = 80;
 
         eliteGauge.maxValue = MoveCount;
         eliteGauge.value = MoveCount;
@@ -131,13 +134,13 @@ public class GameManager : MonoBehaviour
         //txtCount.text = MoveCount.ToString();
     }
     
-    public void MoveEnergy()
+    public void MoveEnergy(int _energy)
     {
         EenergyCount--;
 
         if (EenergyCount == 0)
         {
-            MoveEnergyFull(4);
+            MoveEnergyFull(_energy);
             EenergyCount = 10;
         }
         energyGauge.value = EenergyCount;
@@ -145,13 +148,13 @@ public class GameManager : MonoBehaviour
 
     public void MoveEnergyFull(int _energy)
     {
-        CurEnergy += _energy;
+        curEnergy += _energy;
         txtEnergyCount.text = CurEnergy.ToString();
     }
 
     public void UseEnergy()
     {
-        CurEnergy--;
+        curEnergy--;
         txtEnergyCount.text = CurEnergy.ToString();
     }
 
