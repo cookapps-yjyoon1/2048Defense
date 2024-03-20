@@ -472,11 +472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7130e3dcc16c4c64d98dc52226ac31b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  maxHp: 10
   nowHp: 0
   atkDmg: 1
   atkDist: 2.5
-  moveSpeed: 0.1
+  moveSpeed: 0.2
   _decompositionController: {fileID: 5700888829929102456}
   target: {fileID: 0}
   animator: {fileID: 5700888830762791556}
@@ -584,8 +584,8 @@ Transform:
   m_GameObject: {fileID: 5700888830762791562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.255, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5700888829485294844}
   m_Father: {fileID: 5700888829929102461}

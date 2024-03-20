@@ -10,6 +10,7 @@ public class EnemyPool : ObjectPool
 {
     [SerializeField] WallController target;
     [SerializeField] float randomXvalue;
+    [SerializeField] EnemyPool_Boss bossPool;
 
     int mobType;
 
@@ -52,39 +53,41 @@ public class EnemyPool : ObjectPool
         float randomX = Random.Range(-randomXvalue, randomXvalue);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
-        unit.InitData(target, _correction);
+        unit.InitData(target, _correction, 0);
         UnitList.enumyList.Add(unit);
     }
 
     public void ChangeWave(int _curWave, float _correction)
     {
         correction = _correction;
-        repeat = 1 + (int)_curWave / 10;
+        //repeat = 1 + (int)_curWave / 10;
 
-        //switch (_curWave % 10)
-        //{
-        //    case 0:
-        //        break;
-        //    case 1:
-        //        break;
-        //    case 2:
-        //        break;
-        //    case 3:
-        //        break;
-        //    case 4:
-        //        break;
-        //    case 5:
-        //        break;
-        //    case 6:
-        //        break;
-        //    case 7:
-        //        break;
-        //    case 8:
-        //        break;
-        //    case 9:
-        //        repeat++;
-        //        break;
-        //}
+        switch (_curWave % 10)
+        {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                bossPool.Spawn(_correction * 5f);
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                bossPool.Spawn(_correction * 5f);
+                repeat++;
+                break;
+        }
     }
 
     IEnumerator CoSpawn()

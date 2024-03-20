@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRendererController spriteCon;
 
+    int enemyType;
+
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
     WaitForSeconds wfsDeath = new WaitForSeconds(1f);
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
@@ -21,13 +23,14 @@ public class EnemyController : MonoBehaviour
 
     bool isDecomposition1 = false;
 
-    public void InitData(WallController _target, float _correction)
+    public void InitData(WallController _target, float _correction, int _enemyType)
     {
         target = _target;
         nowHp = maxHp * _correction;
         isDecomposition1 = false;
         _decompositionController.BodyReset();
-        
+        enemyType = _enemyType;
+
         spriteCon.Init();
 
         if (Random.Range(0, 2) == 0)
@@ -37,6 +40,15 @@ public class EnemyController : MonoBehaviour
         else
         {
             transform.localScale = flipTransScale;
+        }
+
+        if (_enemyType == 3)
+        {
+            transform.localScale *= 1.5f;
+        }
+        else if (_enemyType == 4)
+        {
+            transform.localScale *= 2f;
         }
 
         StartCoroutine(CoMove());
@@ -121,6 +133,23 @@ public class EnemyController : MonoBehaviour
     {
         animator.Play("die");
         CameraManager.Instance.Shake(0.05f, 0.04f);
+
+        switch(enemyType)
+        {
+            case 0:
+                GameManager.instance.MoveEnergy();
+                break;
+            case 1:
+                GameManager.instance.MoveEnergyFull(4);
+                break;
+            case 3:
+                GameManager.instance.MoveEnergyFull(30);
+                break;
+            case 4:
+                GameManager.instance.GameOver();
+                break;
+        }
+        
         UnitList.enumyList.Remove(this);
         StopAllCoroutines();
         StartCoroutine(CoDeath());

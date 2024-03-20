@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,22 +12,33 @@ public class GameManager : MonoBehaviour
     public EnemyPool enemyPool;
     public EnemyPool_Elite enemyPool_Elite;
     public EnemyPool_Boss enemyPool_Boss;
+    public List<TowerController> tower;
 
     public VFXPool vfxPool;
     public BulletPool commonBulletPool;
     public GameObject gameMgrCanvas;
     public Sprite[] WeaponSprite;
-    public Text txtCount;
     public UI_Battle _UIBattle;
 
+    public Slider eliteGauge;
+    public Slider energyGauge;
+    public Text txtEnergyCount;
+
     public int curStage = 0;
+    [HideInInspector] public int ExplosionCrrection = 1;
+    [HideInInspector] public int MultCrrection = 1;
+    [HideInInspector] public int DrillCrrection = 1;
+    [HideInInspector] public int MoveCount = 10;
+    [HideInInspector] public int EenergyCount = 10;
+    [HideInInspector] public int CurEnergy = 150;
 
     private int maxNumber = 4;
+
     public int Numberic
     {
         get
         {
-            var num = maxNumber / 256;
+            var num = maxNumber / 32;
             num = Mathf.Clamp(num, 2, num);
 
             if (maxNumber == 2048)
@@ -43,7 +55,6 @@ public class GameManager : MonoBehaviour
     }
     //public UnitList unitList;
 
-    public int MoveCount = 10;
 
     private void Awake()
     {
@@ -56,10 +67,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        OnClickBtnGameStart();
-
+        
         //gameMgrCanvas.gameObject.SetActive(true);
+    }
+
+    private void Start()
+    {
+        OnClickBtnGameStart();
     }
 
     public void GameStart()
@@ -69,6 +83,14 @@ public class GameManager : MonoBehaviour
         enemyPool.GameStart(curStage);
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
+
+
+        eliteGauge.maxValue = MoveCount;
+        eliteGauge.value = MoveCount;
+
+        energyGauge.maxValue = EenergyCount;
+        energyGauge.value = EenergyCount;
+        txtEnergyCount.text = CurEnergy.ToString();
     }
 
     public void GameClear()
@@ -83,6 +105,9 @@ public class GameManager : MonoBehaviour
         enemyPool_Elite.GameOver();
         enemyPool_Boss.GameOver();
         _UIBattle.FinishGame(false);
+        tower[0].GameOver();
+        tower[1].GameOver();
+        tower[2].GameOver();
     }
 
 
@@ -101,8 +126,33 @@ public class GameManager : MonoBehaviour
             SpawnBossMonster();
             MoveCount = 10;
         }
+        eliteGauge.value = MoveCount;
 
-        txtCount.text = MoveCount.ToString();
+        //txtCount.text = MoveCount.ToString();
+    }
+    
+    public void MoveEnergy()
+    {
+        EenergyCount--;
+
+        if (EenergyCount == 0)
+        {
+            MoveEnergyFull(4);
+            EenergyCount = 10;
+        }
+        energyGauge.value = EenergyCount;
+    }
+
+    public void MoveEnergyFull(int _energy)
+    {
+        CurEnergy += _energy;
+        txtEnergyCount.text = CurEnergy.ToString();
+    }
+
+    public void UseEnergy()
+    {
+        CurEnergy--;
+        txtEnergyCount.text = CurEnergy.ToString();
     }
 
     public void SpawnBossMonster()
@@ -112,7 +162,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(waveInfo.correction * 2f);
+        enemyPool_Boss.Spawn(waveInfo.correction * 10f);
     }
 
     public void SetMaxBlock(int num)
