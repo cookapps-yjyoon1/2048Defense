@@ -1,7 +1,10 @@
 using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
+using Random = UnityEngine.Random;
 
 public class EnemyPool : ObjectPool
 {
@@ -12,20 +15,6 @@ public class EnemyPool : ObjectPool
 
     float correction;
     int repeat;
-
-    //public void GameOver()
-    //{
-    //    foreach (var item1 in pool)
-    //    {
-    //        foreach (GameObject item2 in item1)
-    //        {
-    //            if (item2.activeSelf)
-    //            {
-    //                item2.GetComponent<EnemyController>().GameOver();
-    //            }
-    //        }
-    //    }
-    //}
 
     public void GameStart(int _stage)
     {
@@ -41,7 +30,23 @@ public class EnemyPool : ObjectPool
 
         PreCreatePoolObject();
         StartCoroutine(CoSpawn());
+    }
 
+    public void GameOver()
+    {
+
+        foreach (var pair in pool)
+        {
+            int key = pair.Key;
+            List<GameObject> gameObjectList = pair.Value;
+
+            Console.WriteLine($"Key: {key}");
+
+            foreach (GameObject gameObject in gameObjectList)
+            {
+                gameObject.GetComponent<EnemyController>().GameOver();
+            }
+        }
     }
 
     public void Spawn(int _unitIndex, float _correction)
@@ -56,32 +61,32 @@ public class EnemyPool : ObjectPool
     public void ChangeWave(int _curWave, float _correction)
     {
         correction = _correction;
+        repeat = (int)_curWave / 10;
 
-        switch (_curWave % 10)
-        {
-            case 0:
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                repeat++;
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                repeat++;
-                break;
-        }
+        //switch (_curWave % 10)
+        //{
+        //    case 0:
+        //        break;
+        //    case 1:
+        //        break;
+        //    case 2:
+        //        break;
+        //    case 3:
+        //        break;
+        //    case 4:
+        //        break;
+        //    case 5:
+        //        break;
+        //    case 6:
+        //        break;
+        //    case 7:
+        //        break;
+        //    case 8:
+        //        break;
+        //    case 9:
+        //        repeat++;
+        //        break;
+        //}
     }
 
     IEnumerator CoSpawn()

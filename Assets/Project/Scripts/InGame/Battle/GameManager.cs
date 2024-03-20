@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            var num = maxNumber / 256;
+            var num = maxNumber / 512;
             num = Mathf.Clamp(num, 2, num);
 
             if (maxNumber == 2048)

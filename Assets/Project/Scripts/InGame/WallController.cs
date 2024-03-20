@@ -25,6 +25,7 @@ public class WallController : MonoBehaviour
         if (curHp <= 0)
         {
             gameObject.SetActive(false);
+            GameManager.instance.GameOver();
         }
     }
 }
