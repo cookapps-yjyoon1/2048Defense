@@ -13,7 +13,6 @@ public class MainScenario : MonoBehaviour
 
     public void OnClickGameStart()
     {
-        PlayerPrefs.SetInt("BlockCount", matrixIndex + 3);
         SceneManager.LoadScene("02Game");
     }
 

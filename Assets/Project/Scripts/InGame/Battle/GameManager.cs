@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameMgrCanvas;
     public Sprite[] WeaponSprite;
     public Text txtCount;
+    public UI_Battle _UIBattle;
 
     public int curStage = 0;
 
@@ -56,7 +57,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        gameMgrCanvas.gameObject.SetActive(true);
+        OnClickBtnGameStart();
+
+        //gameMgrCanvas.gameObject.SetActive(true);
     }
 
     public void GameStart()
@@ -68,12 +71,18 @@ public class GameManager : MonoBehaviour
         enemyPool_Boss.GameStart(curStage);
     }
 
+    public void GameClear()
+    {
+        _UIBattle.FinishGame(true);
+    }
+
     public void GameOver()
     {
         waveInfo.GameOver();
         enemyPool.GameOver();
         enemyPool_Elite.GameOver();
         enemyPool_Boss.GameOver();
+        _UIBattle.FinishGame(false);
     }
 
 
