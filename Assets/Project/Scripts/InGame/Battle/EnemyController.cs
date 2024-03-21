@@ -121,7 +121,7 @@ public class EnemyController : MonoBehaviour
 
     public void Hit(float _dmg)
     {
-        SoundManager.Instance.Play(Enum_Sound.Effect, "Hit");
+        SoundManager.Instance.Play(Enum_Sound.Effect, "Hit",0,0.3f);
         nowHp -= _dmg;
 
         // if (!isDecomposition1)

@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -259,5 +260,10 @@ public class GameManager : MonoBehaviour
         _imgBoardRed.gameObject.SetActive(false);
         _trBoard.DOKill();
         _trBoard.position = _originBoardPos;
+    }
+
+    private void OnDestroy()
+    {
+        instance = null;
     }
 }
