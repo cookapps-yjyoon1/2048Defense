@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     private int curEnergy = 20;
     public bool isStart = false;
 
-    public int CurEnergy { get => curEnergy; }
+    public int CurEnergy { get => curEnergy; set => curEnergy = value; }
 
     private int maxNumber = 4;
 
@@ -212,13 +212,13 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < (waveInfo.curWave / 10) + 1; i++)
         {
-            enemyPool_Boss.Spawn(waveInfo.correction * 6f, 1);
+            enemyPool_Boss.Spawn(enemyPool.correction * 5f, 1);
         }
     }
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(waveInfo.correction * 15f, 3);
+        enemyPool_Boss.Spawn(enemyPool.correction * 15f, 3);
     }
 
     public void SetMaxBlock(int num)

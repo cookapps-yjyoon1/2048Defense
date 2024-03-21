@@ -150,13 +150,8 @@ public class EnemyController : MonoBehaviour
                 GameManager.instance.MoveEnergy();
                 break;
             case 2:
-                UnitList.bossCount--;
-                print(UnitList.bossCount);
-                if (UnitList.bossCount == 0)
-                {
-                    GameManager.instance.MoveEnergyFull(20);
-                    GameManager.instance.isStart = false;
-                }
+                GameManager.instance.MoveEnergyFull(20);
+                //GameManager.instance.isStart = false;
                 break;
             case 3:
                 GameManager.instance.GameOver();

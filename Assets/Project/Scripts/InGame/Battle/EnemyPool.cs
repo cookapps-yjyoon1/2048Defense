@@ -16,12 +16,14 @@ public class EnemyPool : ObjectPool
 
     int mobType;
 
-    float correction;
+    public float correction;
+    float increCorrection;
     int repeat;
 
     public void GameStart(int _stage)
     {
-        correction = 1;
+        increCorrection = GameManager.instance.stageData.stage[_stage].correction;
+        correction = increCorrection;
         repeat = 1;
 
         mobType = GameManager.instance.stageData.stage[_stage].mob.Count;
@@ -59,12 +61,12 @@ public class EnemyPool : ObjectPool
         UnitList.enumyList.Add(unit);
     }
 
-    public void WaveStart(int _curWave, float _correction)
+    public void WaveStart(int _curWave)
     {
-        ChangeWave(_curWave, _correction);
+        ChangeWave(_curWave);
     }
 
-    public void ChangeWave(int _curWave, float _correction)
+    public void ChangeWave(int _curWave)
     {
         StopAllCoroutines();
 
@@ -95,9 +97,8 @@ public class EnemyPool : ObjectPool
                 for (int i = 0; i < repeat; i++)
                 {
                     bossPool.Spawn(correction * 6f, 2);
-                    UnitList.bossCount++;
                 }
-                correction += 1;
+                correction += increCorrection;
                 repeat += 2;
                 break;
         }
