@@ -180,8 +180,8 @@ public class GameManager : MonoBehaviour
 
         if (EenergyCount == 0)
         {
-            MoveEnergyFull(20);
-            EenergyCount = 100;
+            MoveEnergyFull(10);
+            EenergyCount = 60;
         }
         energyGauge.value = EenergyCount;
     }
