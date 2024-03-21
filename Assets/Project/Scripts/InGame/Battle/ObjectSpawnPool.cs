@@ -10,8 +10,14 @@ public class ObjectSpawnPool : ObjectPool
         PreCreatePoolObject();
     }
 
-    public void Spawn(int _Index, Vector3 _pos)
+    public void Spawn(int _Index, Vector3 _pos, int _repeat)
     {
-        GameObject obj = Get(_Index, _pos);
+        for (int i = 0; i < _repeat; i++)
+        {
+            ObjectController obj = Get(_Index, _pos).GetComponent<ObjectController>();
+
+            obj.ObjMove();
+
+        }
     }
 }

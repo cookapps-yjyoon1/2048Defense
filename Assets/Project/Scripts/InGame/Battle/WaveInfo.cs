@@ -23,7 +23,7 @@ public class WaveInfo : MonoBehaviour
     {
         //correction = GameManager.instance.stageData.stage[_stage].correction;  
         curWave = 0;
-        waveInfoText.text = "WAVE " + curWave / 5 + " - " + curWave % 5;
+        waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
         //StartCoroutine(CoTimer());
     }
 
@@ -34,7 +34,7 @@ public class WaveInfo : MonoBehaviour
 
     public void WaveStart()
     {
-        waveInfoText.text = "WAVE " + curWave / 5 + " - " + curWave % 5;
+        waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
         StartCoroutine(CoTimer());
         enemyPool.ChangeWave(curWave);
     }
@@ -63,12 +63,12 @@ public class WaveInfo : MonoBehaviour
                 {
                     curWave++;
                     GameManager.instance.isStart = false;
-                    GameManager.instance.MoveEnergyFull(50);
+                    GameManager.instance.MoveEnergyFull(30);
                     yield break;
                 }
                 waveTime = 0;
                 curWave++;
-                waveInfoText.text = "WAVE " + curWave / 5 + " - " + curWave % 5;
+                waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
                 enemyPool.ChangeWave(curWave);
             }
         }

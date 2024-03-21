@@ -29,13 +29,14 @@ public class GameManager : MonoBehaviour
 
     public Text txtBlockProbSmall;
     public Text txtBlockProbBig;
+    public Text txtMaxBlock;
 
     public int curStage = 0;
     [HideInInspector] public int ExplosionCrrection = 1;
     [HideInInspector] public int MultCrrection = 1;
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
-    
+
     private int EenergyCount = 10;
     private int curEnergy = 30;
     public bool isStart = false;
@@ -97,7 +98,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
         //gameMgrCanvas.gameObject.SetActive(true);
     }
 
@@ -106,7 +107,7 @@ public class GameManager : MonoBehaviour
         OnClickBtnGameStart();
 
         _originBoardPos = _trBoard.position;
-        _imgBoardRed.DOFade(35f / 255f,0.5f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.Linear);
+        _imgBoardRed.DOFade(35f / 255f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
         _imgBoardRed.gameObject.SetActive(false);
     }
 
@@ -163,7 +164,7 @@ public class GameManager : MonoBehaviour
         if (!isStart) return;
 
         MoveCount--;
-        
+
         SoundManager.Instance.Play(Enum_Sound.Effect, "2048Move");
         if (MoveCount == 0)
         {
@@ -181,8 +182,19 @@ public class GameManager : MonoBehaviour
 
         if (EenergyCount == 0)
         {
-            obPool.Spawn(0, _tr);
-            
+            if (Random.value < 0.7)
+            {
+                obPool.Spawn(0, _tr, 1);
+            }
+            else if (Random.value < 0.9)
+            {
+                obPool.Spawn(0, _tr, 3);
+            }
+            else
+            {
+                obPool.Spawn(0, _tr, 5);
+            }
+
             //MoveEnergyFull(1);
             EenergyCount = 10;
         }
@@ -200,7 +212,7 @@ public class GameManager : MonoBehaviour
         curEnergy--;
         txtEnergyCount.text = CurEnergy.ToString();
 
-        if(CurEnergy == 0 && !isStart)
+        if (CurEnergy == 0 && !isStart)
         {
             isStart = true;
             WaveStart();
@@ -227,9 +239,11 @@ public class GameManager : MonoBehaviour
     {
         maxNumber = Mathf.Max(maxNumber, num);
 
-        if(maxNumber != maxNumber_tmp)
+        if (maxNumber != maxNumber_tmp)
         {
             maxNumber_tmp = maxNumber;
+
+            txtMaxBlock.text = "Max : " + maxNumber_tmp;
 
             if (maxNumber <= 64)
             {
@@ -267,7 +281,7 @@ public class GameManager : MonoBehaviour
         _imgBoardRed.gameObject.SetActive(true);
         _trBoard.DOShakePosition(0.1f, 0.1f);
     }
-    
+
     public void HitTowerEventEnd()
     {
         _imgBoardRed.gameObject.SetActive(false);
