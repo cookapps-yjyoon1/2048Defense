@@ -50,25 +50,29 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            if (maxNumber <= 64)
+            if (maxNumber <= 32)
             {
                 return Random.Range(0, 100) < 80 ? 2 : 4;
             }
-            else if (maxNumber <= 128)
+            else if (maxNumber <= 64)
             {
                 return Random.Range(0, 100) < 50 ? 2 : 4;
             }
-            else if (maxNumber <= 256)
+            else if (maxNumber <= 128)
             {
                 return Random.Range(0, 100) < 20 ? 2 : 4;
             }
-            else if (maxNumber <= 512)
+            else if (maxNumber <= 256)
             {
                 return Random.Range(0, 100) < 90 ? 4 : 8;
             }
-            else if (maxNumber <= 1024)
+            else if (maxNumber <= 512)
             {
                 return Random.Range(0, 100) < 70 ? 4 : 8;
+            }
+            else if (maxNumber <= 1024)
+            {
+                return Random.Range(0, 100) < 50 ? 4 : 8;
             }
             else
             {
@@ -182,19 +186,18 @@ public class GameManager : MonoBehaviour
 
         if (EenergyCount == 0)
         {
-            if (Random.value < 0.7)
+            if (Random.value < 0.8)
             {
-                obPool.Spawn(0, _tr, 1);
+                obPool.SpawnEnergy(0, _tr, 1);
             }
             else if (Random.value < 0.9)
             {
-                obPool.Spawn(0, _tr, 3);
+                obPool.SpawnEnergy(0, _tr, 2);
             }
             else
             {
-                obPool.Spawn(0, _tr, 5);
+                obPool.SpawnEnergy(0, _tr, 3);
             }
-
             //MoveEnergyFull(1);
             EenergyCount = 10;
         }
@@ -245,30 +248,36 @@ public class GameManager : MonoBehaviour
 
             txtMaxBlock.text = "Max : " + maxNumber_tmp;
 
-            if (maxNumber <= 64)
+
+            if (maxNumber <= 32)
             {
                 txtBlockProbSmall.text = "2\n80%";
                 txtBlockProbBig.text = "4\n20%";
             }
-            else if (maxNumber <= 128)
+            else if (maxNumber <= 64)
             {
                 txtBlockProbSmall.text = "2\n50%";
                 txtBlockProbBig.text = "4\n50%";
             }
-            else if (maxNumber <= 256)
+            else if (maxNumber <= 128)
             {
                 txtBlockProbSmall.text = "2\n20%";
                 txtBlockProbBig.text = "4\n80%";
             }
-            else if (maxNumber <= 512)
+            else if (maxNumber <= 256)
             {
                 txtBlockProbSmall.text = "4\n90%";
                 txtBlockProbBig.text = "8\n10%";
             }
-            else if (maxNumber <= 1024)
+            else if (maxNumber <= 512)
             {
                 txtBlockProbSmall.text = "4\n70%";
                 txtBlockProbBig.text = "8\n30%";
+            }
+            else if (maxNumber <= 1024)
+            {
+                txtBlockProbSmall.text = "4\n50%";
+                txtBlockProbBig.text = "8\n50%";
             }
         }
     }

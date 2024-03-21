@@ -10,14 +10,15 @@ public class ObjectSpawnPool : ObjectPool
         PreCreatePoolObject();
     }
 
-    public void Spawn(int _Index, Vector3 _pos, int _repeat)
+    public void SpawnEnergy(int _Index, Vector3 _pos, int _energy)
     {
-        for (int i = 0; i < _repeat; i++)
-        {
-            ObjectController obj = Get(_Index, _pos).GetComponent<ObjectController>();
+        ObjectEnergy obj = Get(_Index, _pos).GetComponent<ObjectEnergy>();
+        obj.InitData(_energy);
+    }
 
-            obj.ObjMove();
-
-        }
+    public void SpawnTxt(int _Index, Vector3 _pos, string _str)
+    {
+        ObjectTxt obj = Get(_Index, _pos).GetComponent<ObjectTxt>();
+        //obj.InitData(_str, _pos);
     }
 }

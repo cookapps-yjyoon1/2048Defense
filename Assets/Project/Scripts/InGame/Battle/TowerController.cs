@@ -16,6 +16,8 @@ public class TowerController : Tower
     [SerializeField] Transform gun;
     List<Transform> targetGroup = new List<Transform>();
 
+    [SerializeField] ParticleSystem ps;
+
     private void Start()
     {
         StartCoroutine(CoFindTarget());
@@ -66,7 +68,7 @@ public class TowerController : Tower
     {
         while (true)
         {
-            if (target != null && target.transform.position.y < 2)
+            if (target != null && target.transform.position.y < 1.8f)
             {
                 yield return Shot(target);
             }
@@ -79,6 +81,7 @@ public class TowerController : Tower
     {
         if (curArrowIndexMax > 0)
         {
+            ps.Play();
             Vector3 shotDir = (_target.position - bulletPool.transform.position).normalized;
             //bool isCri = Random.value < criChance;
             gun.rotation = Quaternion.LookRotation(Vector3.forward, shotDir);

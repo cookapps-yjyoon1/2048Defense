@@ -62,6 +62,8 @@ public class WaveInfo : MonoBehaviour
                 if (curWave == lastWave)
                 {
                     curWave++;
+                    lastWave += 5;
+                    waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
                     GameManager.instance.isStart = false;
                     GameManager.instance.MoveEnergyFull(30);
                     yield break;
