@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using static UnityEngine.Rendering.DebugUI;
-using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,6 +30,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int MultCrrection = 1;
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
+    
     private int EenergyCount = 50;
     private int curEnergy = 20;
     public bool isStart = false;
@@ -109,6 +108,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         OnClickBtnGameStart();
+
+        _originBoardPos = _trBoard.position;
+        _imgBoardRed.DOFade(35f / 255f,0.5f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.Linear);
+        _imgBoardRed.gameObject.SetActive(false);
     }
 
     public void GameStart()
@@ -224,5 +227,21 @@ public class GameManager : MonoBehaviour
     public void SetMaxBlock(int num)
     {
         maxNumber = Mathf.Max(maxNumber, num);
+    }
+
+    [SerializeField] private Image _imgBoardRed;
+    [SerializeField] private Transform _trBoard;
+    private Vector3 _originBoardPos;
+    public void HitTowerEvent()
+    {
+        _imgBoardRed.gameObject.SetActive(true);
+        _trBoard.DOShakePosition(0.1f, 0.1f);
+    }
+    
+    public void HitTowerEventEnd()
+    {
+        _imgBoardRed.gameObject.SetActive(false);
+        _trBoard.DOKill();
+        _trBoard.position = _originBoardPos;
     }
 }
