@@ -100,6 +100,7 @@ public class EnemyPool : ObjectPool
                     bossPool.Spawn(correction * 10f, 2);
                 }
                 correction += increCorrection;
+                repeat++;
                 break;
         }
     }

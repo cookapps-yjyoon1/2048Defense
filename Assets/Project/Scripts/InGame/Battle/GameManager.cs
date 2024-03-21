@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public Slider energyGauge;
     public Text txtEnergyCount;
 
+    public Text txtBlockProbSmall;
+    public Text txtBlockProbBig;
+
     public int curStage = 0;
     [HideInInspector] public int ExplosionCrrection = 1;
     [HideInInspector] public int MultCrrection = 1;
@@ -222,26 +225,33 @@ public class GameManager : MonoBehaviour
 
         if(maxNumber != maxNumber_tmp)
         {
-            //if (maxNumber <= 64)
-            //{
-            //    Random.Range(0, 100) < 80 ? 2 : 4;
-            //}
-            //else if (maxNumber <= 128)
-            //{
-            //    return Random.Range(0, 100) < 50 ? 2 : 4;
-            //}
-            //else if (maxNumber <= 256)
-            //{
-            //    return Random.Range(0, 100) < 20 ? 2 : 4;
-            //}
-            //else if (maxNumber <= 512)
-            //{
-            //    return Random.Range(0, 100) < 90 ? 4 : 8;
-            //}
-            //else if (maxNumber <= 1024)
-            //{
-            //    return Random.Range(0, 100) < 70 ? 4 : 8;
-            //}
+            maxNumber_tmp = maxNumber;
+
+            if (maxNumber <= 64)
+            {
+                txtBlockProbSmall.text = "2\n80%";
+                txtBlockProbBig.text = "4\n20%";
+            }
+            else if (maxNumber <= 128)
+            {
+                txtBlockProbSmall.text = "2\n50%";
+                txtBlockProbBig.text = "4\n50%";
+            }
+            else if (maxNumber <= 256)
+            {
+                txtBlockProbSmall.text = "2\n20%";
+                txtBlockProbBig.text = "4\n80%";
+            }
+            else if (maxNumber <= 512)
+            {
+                txtBlockProbSmall.text = "4\n90%";
+                txtBlockProbBig.text = "8\n10%";
+            }
+            else if (maxNumber <= 1024)
+            {
+                txtBlockProbSmall.text = "4\n70%";
+                txtBlockProbBig.text = "8\n30%";
+            }
         }
     }
 
