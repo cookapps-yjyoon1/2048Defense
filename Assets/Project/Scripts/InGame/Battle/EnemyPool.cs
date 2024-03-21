@@ -83,6 +83,7 @@ public class EnemyPool : ObjectPool
                 StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
                 break;
             case 2:
+                correction += increCorrection;
                 StartCoroutine(CoWaveSpawn(10 + repeat, correction));
                 StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
                 StartCoroutine(elitePool.CoWaveSpawn_3wave(5 + repeat, correction));
@@ -96,10 +97,9 @@ public class EnemyPool : ObjectPool
             case 4:
                 for (int i = 0; i < repeat; i++)
                 {
-                    bossPool.Spawn(correction * 6f, 2);
+                    bossPool.Spawn(correction * 10f, 2);
                 }
                 correction += increCorrection;
-                repeat += 2;
                 break;
         }
     }

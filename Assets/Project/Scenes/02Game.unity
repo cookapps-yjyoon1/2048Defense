@@ -7433,7 +7433,6 @@ MonoBehaviour:
   waveInfoText: {fileID: 623446890}
   waveDuration: 15
   enemyPool: {fileID: 1896274145}
-  correction: 0
   curWave: 0
 --- !u!1 &785066594
 GameObject:
@@ -9662,7 +9661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage:
-  - correction: 1
+  - correction: 2
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
@@ -11694,6 +11693,7 @@ MonoBehaviour:
   randomXvalue: 2.3
   elitePool: {fileID: 1653925475}
   bossPool: {fileID: 1683953837}
+  correction: 0
 --- !u!1 &1907668623
 GameObject:
   m_ObjectHideFlags: 0

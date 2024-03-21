@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public int CurEnergy { get => curEnergy; set => curEnergy = value; }
 
     private int maxNumber = 4;
+    private int maxNumber_tmp = 4;
 
     public int Numberic
     {
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
         {
             if (maxNumber <= 64)
             {
-                return Random.Range(0, 100) < 90 ? 2 : 4;
+                return Random.Range(0, 100) < 80 ? 2 : 4;
             }
             else if (maxNumber <= 128)
             {
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
             }
             else if (maxNumber <= 256)
             {
-                return Random.Range(0, 100) < 10 ? 4 : 8;
+                return Random.Range(0, 100) < 20 ? 2 : 4;
             }
             else if (maxNumber <= 512)
             {
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour
             }
             else if (maxNumber <= 1024)
             {
-                return Random.Range(0, 100) < 50 ? 4 : 8;
+                return Random.Range(0, 100) < 70 ? 4 : 8;
             }
             else
             {
@@ -72,16 +73,6 @@ public class GameManager : MonoBehaviour
                 }
                 return 8;
             }
-
-            //var num = maxNumber / 64;
-            //num = Mathf.Clamp(num, 2, num);
-
-            //if (maxNumber == 2048)
-            //{
-            //    SpawnLastBossMonster();
-            //}
-
-            //return num;
         }
         set
         {
@@ -182,8 +173,8 @@ public class GameManager : MonoBehaviour
 
         if (EenergyCount == 0)
         {
-            MoveEnergyFull(10);
-            EenergyCount = 50;
+            MoveEnergyFull(20);
+            EenergyCount = 100;
         }
         energyGauge.value = EenergyCount;
     }
@@ -212,17 +203,42 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < (waveInfo.curWave / 10) + 1; i++)
         {
-            enemyPool_Boss.Spawn(enemyPool.correction * 5f, 1);
+            enemyPool_Boss.Spawn(enemyPool.correction * 7f, 1);
         }
     }
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(enemyPool.correction * 15f, 3);
+        enemyPool_Boss.Spawn(enemyPool.correction * 20f, 3);
+        waveInfo.WaveStop();
     }
 
     public void SetMaxBlock(int num)
     {
         maxNumber = Mathf.Max(maxNumber, num);
+
+        if(maxNumber != maxNumber_tmp)
+        {
+            //if (maxNumber <= 64)
+            //{
+            //    Random.Range(0, 100) < 80 ? 2 : 4;
+            //}
+            //else if (maxNumber <= 128)
+            //{
+            //    return Random.Range(0, 100) < 50 ? 2 : 4;
+            //}
+            //else if (maxNumber <= 256)
+            //{
+            //    return Random.Range(0, 100) < 20 ? 2 : 4;
+            //}
+            //else if (maxNumber <= 512)
+            //{
+            //    return Random.Range(0, 100) < 90 ? 4 : 8;
+            //}
+            //else if (maxNumber <= 1024)
+            //{
+            //    return Random.Range(0, 100) < 70 ? 4 : 8;
+            //}
+        }
     }
 }

@@ -150,8 +150,7 @@ public class EnemyController : MonoBehaviour
                 GameManager.instance.MoveEnergy();
                 break;
             case 2:
-                GameManager.instance.MoveEnergyFull(20);
-                //GameManager.instance.isStart = false;
+                GameManager.instance.MoveEnergy();
                 break;
             case 3:
                 GameManager.instance.GameOver();

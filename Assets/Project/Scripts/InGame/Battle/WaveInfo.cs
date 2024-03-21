@@ -39,37 +39,10 @@ public class WaveInfo : MonoBehaviour
         enemyPool.ChangeWave(curWave);
     }
 
-    public void WaveEnd()
+    public void WaveStop()
     {
-        StopCoroutine(CoTimer());
-        StartCoroutine(CoEndTimer());
+        StopAllCoroutines();
     }
-    
-    IEnumerator CoEndTimer()
-    {
-        curWave++;
-        int remainsTime = waveDuration - waveTime > 0? Mathf.FloorToInt(waveDuration - waveTime) : 0;
-        
-        while (true)
-        {
-            float sliderValue = Mathf.Lerp(0, 1, waveTime / waveDuration);
-            timerSlider.value = sliderValue;
-
-            waveTime += Time.deltaTime * 2;
-
-            if (waveTime > waveDuration)
-            {
-                waveInfoText.text = "WAVE " + curWave / 5 + " - " + curWave % 5;
-                break;
-            }
-
-            yield return null;
-        }
-
-        GameManager.instance.CurEnergy += remainsTime;
-        GameManager.instance.isStart = false;
-    }
-
 
     IEnumerator CoTimer()
     {
@@ -88,7 +61,9 @@ public class WaveInfo : MonoBehaviour
             {
                 if (curWave == lastWave)
                 {
-                    StartCoroutine(CoEndTimer());
+                    curWave++;
+                    GameManager.instance.isStart = false;
+                    GameManager.instance.MoveEnergyFull(50);
                     yield break;
                 }
                 waveTime = 0;
