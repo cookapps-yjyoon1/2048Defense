@@ -73,26 +73,26 @@ public class EnemyPool : ObjectPool
         switch (_curWave % 5)
         {
             case 0:
-                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
-                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
-                StartCoroutine(CoWaveSpawn_3wave(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn(10, correction));
+                StartCoroutine(CoWaveSpawn(10, correction));
+                StartCoroutine(CoWaveSpawn_3wave(10, correction));
                 break;
             case 1:
-                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
-                StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
+                StartCoroutine(CoWaveSpawn(10, correction));
+                StartCoroutine(CoWaveSpawn_3wave(5, correction));
                 StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
                 break;
             case 2:
                 correction += increCorrection;
-                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
-                StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
-                StartCoroutine(elitePool.CoWaveSpawn_3wave(5 + repeat, correction));
+                StartCoroutine(CoWaveSpawn(10, correction));
+                StartCoroutine(CoWaveSpawn_3wave(5, correction));
+                StartCoroutine(elitePool.CoWaveSpawn_3wave(5, correction));
                 break;
             case 3:
-                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
-                StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
+                StartCoroutine(CoWaveSpawn(10, correction));
+                StartCoroutine(CoWaveSpawn_3wave(5, correction));
                 StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
-                StartCoroutine(elitePool.CoWaveSpawn_3wave(5 + repeat, correction));
+                StartCoroutine(elitePool.CoWaveSpawn_3wave(5, correction));
                 break;
             case 4:
                 for (int i = 0; i < repeat; i++)
