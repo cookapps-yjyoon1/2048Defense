@@ -55,6 +55,7 @@ public class Block : MonoBehaviour
         transform.localScale = Vector3.one;
         DragAndDropHandler.Drop();
         isButtonHeld = false;
+        imageGauze.fillAmount = 0;
     }
 
     void Update()
@@ -62,6 +63,8 @@ public class Block : MonoBehaviour
         if (isButtonHeld)
         {
             timer += Time.deltaTime;
+
+            imageGauze.fillAmount = timer / holdTime;
             
             if (timer > holdTime)
             {
@@ -74,6 +77,7 @@ public class Block : MonoBehaviour
 
     public void Setup()
     {
+        imageGauze.fillAmount = 0;
         Numeric = GameManager.instance.Numberic;
         
         index = Random.Range(0, GameManager.instance.WeaponSprite.Length);
