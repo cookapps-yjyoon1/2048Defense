@@ -149,22 +149,12 @@ public class EnemyController : MonoBehaviour
                 GameManager.instance.MoveEnergy();
                 break;
             case 2:
-                GameManager.instance.MoveEnergyFull(10);
-
                 UnitList.bossCount--;
-
                 print(UnitList.bossCount);
-
                 if (UnitList.bossCount == 0)
                 {
-                    if(GameManager.instance.CurEnergy == 0)
-                    {
-                        GameManager.instance.WaveStart();
-                    }
-                    else
-                    {
-                        GameManager.instance.isStart = false;
-                    }
+                    GameManager.instance.MoveEnergyFull(20);
+                    GameManager.instance.isStart = false;
                 }
                 break;
             case 3:

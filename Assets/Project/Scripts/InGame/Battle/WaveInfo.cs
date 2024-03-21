@@ -15,7 +15,7 @@ public class WaveInfo : MonoBehaviour
     public float correction;
     //float incrCorrection;
     public int curWave;
-    public bool lastTimer = false;
+    int lastWave = 4;
 
     public void GameStart(int _stage)
     {
@@ -51,6 +51,10 @@ public class WaveInfo : MonoBehaviour
 
             if (waveTime > waveDuration)
             {
+                if (curWave == lastWave)
+                {
+                    yield break;
+                }
                 waveTime = 0;
                 curWave++;
                 //correction += 1;
@@ -58,12 +62,6 @@ public class WaveInfo : MonoBehaviour
                 waveInfoText.text = "WAVE " + ((curWave / 5) + 1) + " - " + curWave % 5;
                 enemyPool.ChangeWave(curWave, correction);
                 //enemyPool.WaveStop();
-                
-                if(lastTimer)
-                {
-                    curWave++;
-                    yield break;
-                }
             }
         }
     }

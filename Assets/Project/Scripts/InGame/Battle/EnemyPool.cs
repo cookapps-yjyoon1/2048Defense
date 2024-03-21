@@ -63,14 +63,6 @@ public class EnemyPool : ObjectPool
     {
         ChangeWave(_curWave, _correction);
     }
-    
-    public void WaveStop()
-    {
-        correction += 1;
-        repeat += 2;
-        GameManager.instance.waveInfo.lastTimer = true;
-        //GameManager.instance.MoveEnergyFull(25);
-    }
 
     public void ChangeWave(int _curWave, float _correction)
     {
@@ -105,7 +97,8 @@ public class EnemyPool : ObjectPool
                     bossPool.Spawn(correction * 6f, 2);
                     UnitList.bossCount++;
                 }
-                WaveStop();
+                correction += 1;
+                repeat += 2;
                 break;
         }
     }
