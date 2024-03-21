@@ -102,6 +102,7 @@ public class EnemyController : MonoBehaviour
             if (Mathf.Abs(transform.position.y - target.transform.position.y) <= atkDist)
             {
                 target.Hit(atkDmg);
+                SoundManager.Instance.Play(Enum_Sound.Effect, "TowerHit", 0, 0.5f);
             }
             else
             {

@@ -164,7 +164,8 @@ public class GameManager : MonoBehaviour
         if (!isStart) return;
 
         MoveCount--;
-
+        
+        SoundManager.Instance.Play(Enum_Sound.Effect, "2048Move");
         if (MoveCount == 0)
         {
             SpawnBossMonster();

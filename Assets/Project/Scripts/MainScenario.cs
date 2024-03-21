@@ -11,6 +11,11 @@ public class MainScenario : MonoBehaviour
 
     private int matrixIndex = 0;
 
+    public void Start()
+    {
+        SoundManager.Instance.Play(Enum_Sound.Bgm, "Lobby");
+    }
+
     public void OnClickGameStart()
     {
         SceneManager.LoadScene("02Game");
@@ -27,6 +32,12 @@ public class MainScenario : MonoBehaviour
 
     public void OnClickLeft()
     {
+        if (matrixIndex == 0)
+        {
+            return;
+        }
+        
+        SoundManager.Instance.Play(Enum_Sound.Effect, "MoveStage");
         matrixIndex = matrixIndex > 0 ? matrixIndex - 1 : spritesMatrix.Length - 1;
 
         imageMatrix.sprite = spritesMatrix[matrixIndex];
@@ -35,6 +46,12 @@ public class MainScenario : MonoBehaviour
 
     public void OnClickRight()
     {
+        if (matrixIndex == spritesMatrix.Length -1)
+        {
+            return;
+        }
+
+        SoundManager.Instance.Play(Enum_Sound.Effect, "MoveStage");
         matrixIndex = matrixIndex < spritesMatrix.Length - 1 ? matrixIndex + 1 : 0;
 
         imageMatrix.sprite = spritesMatrix[matrixIndex];
