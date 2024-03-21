@@ -13,16 +13,16 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] EnemyPool enemyPool;
 
     public float correction;
-    float incrCorrection;
+    //float incrCorrection;
     public int curWave;
+    public bool lastTimer = false;
 
     public void GameStart(int _stage)
     {
-        incrCorrection = GameManager.instance.stageData.stage[_stage].correction;
-        correction = incrCorrection;
-        curWave = 1;
-        waveInfoText.text = "WAVE " + curWave;
-        StartCoroutine(CoTimer());
+        correction = GameManager.instance.stageData.stage[_stage].correction;  
+        curWave = 0;
+        waveInfoText.text = "WAVE " + curWave / 5 + " - " + curWave % 5;
+        //StartCoroutine(CoTimer());
     }
 
     public void GameOver()
@@ -53,11 +53,17 @@ public class WaveInfo : MonoBehaviour
             {
                 waveTime = 0;
                 curWave++;
-                correction += incrCorrection;
-                waveInfoText.text = "WAVE " + curWave;
-                //enemyPool.ChangeWave(curWave, correction);
-                enemyPool.WaveStop();
-                yield break;
+                //correction += 1;
+                //waveInfoText.text = "WAVE " + curWave;
+                waveInfoText.text = "WAVE " + ((curWave / 5) + 1) + " - " + curWave % 5;
+                enemyPool.ChangeWave(curWave, correction);
+                //enemyPool.WaveStop();
+                
+                if(lastTimer)
+                {
+                    curWave++;
+                    yield break;
+                }
             }
         }
     }

@@ -99,6 +99,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6c1882915834f4642a7c9d17e811b3ed, type: 3}
   - {fileID: 21300000, guid: 1e8cc991f84a3c341a349c58c700fe09, type: 3}
   - {fileID: 21300000, guid: b3ec1f91d42f9471885355bae53b9ea0, type: 3}
+  - {fileID: 21300000, guid: 5de3f7a1a66a73847879e2786ed7ea3f, type: 3}
   - {fileID: 21300000, guid: 9094f8a1dba40428fa957f6d69b1accf, type: 3}
   - {fileID: 21300000, guid: 800a62b193e644693886d5010b854a0c, type: 3}
   - {fileID: 21300000, guid: 04e4d7b1407204e118ce41ceaba26121, type: 3}
@@ -507,6 +508,7 @@ SpriteAtlas:
   - front-arm-pistal
   - icon_battle
   - face01-3
+  - head 1
   - no-arm
   - pistal04
   - body-walk2

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using static UnityEngine.Rendering.DebugUI;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,8 +32,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int MultCrrection = 1;
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
-    [HideInInspector] public int EenergyCount = 10;
-    [HideInInspector] private int curEnergy = 30;
+    private int EenergyCount = 50;
+    private int curEnergy = 20;
+    public bool isStart = false;
 
     public int CurEnergy { get => curEnergy; }
 
@@ -42,17 +44,25 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            if (maxNumber <= 128)
+            if (maxNumber <= 64)
             {
                 return Random.Range(0, 100) < 90 ? 2 : 4;
             }
+            else if (maxNumber <= 128)
+            {
+                return Random.Range(0, 100) < 50 ? 2 : 4;
+            }
+            else if (maxNumber <= 256)
+            {
+                return Random.Range(0, 100) < 10 ? 4 : 8;
+            }
             else if (maxNumber <= 512)
             {
-                return Random.Range(0, 100) < 10 ? 2 : 4;
-            }
-            else if (maxNumber == 1024)
-            {
                 return Random.Range(0, 100) < 90 ? 4 : 8;
+            }
+            else if (maxNumber <= 1024)
+            {
+                return Random.Range(0, 100) < 50 ? 4 : 8;
             }
             else
             {
@@ -104,7 +114,7 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         gameMgrCanvas.SetActive(false);
-        //waveInfo.GameStart(curStage);
+        waveInfo.GameStart(curStage);
         enemyPool.GameStart(curStage);
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
@@ -151,27 +161,29 @@ public class GameManager : MonoBehaviour
 
     public void MoveNode()
     {
-        //MoveCount--;
+        if (!isStart) return;
 
-        //if (MoveCount == 0)
-        //{
-        //    SpawnBossMonster();
-        //    MoveCount = 10;
-        //}
-        //eliteGauge.value = MoveCount;
-
-        ////txtCount.text = MoveCount.ToString();
+        MoveCount--;
+        
         SoundManager.Instance.Play(Enum_Sound.Effect, "2048Move");
+        if (MoveCount == 0)
+        {
+            SpawnBossMonster();
+            MoveCount = 10;
+        }
+        eliteGauge.value = MoveCount;
+
+        //txtCount.text = MoveCount.ToString();
     }
-    
+
     public void MoveEnergy()
     {
         EenergyCount--;
 
         if (EenergyCount == 0)
         {
-            MoveEnergyFull(2);
-            EenergyCount = 10;
+            MoveEnergyFull(10);
+            EenergyCount = 50;
         }
         energyGauge.value = EenergyCount;
     }
@@ -187,20 +199,26 @@ public class GameManager : MonoBehaviour
         curEnergy--;
         txtEnergyCount.text = CurEnergy.ToString();
 
-        if(CurEnergy == 0)
+        if(CurEnergy == 0 && !isStart)
         {
+            isStart = true;
             WaveStart();
         }
     }
 
     public void SpawnBossMonster()
     {
-        enemyPool_Elite.Spawn(waveInfo.correction * 2f, waveInfo.curWave);
+        //enemyPool_Elite.Spawn(waveInfo.correction * 2f, waveInfo.curWave);
+
+        for (int i = 0; i < (waveInfo.curWave / 10) + 1; i++)
+        {
+            enemyPool_Boss.Spawn(waveInfo.correction * 6f, 1);
+        }
     }
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(waveInfo.correction * 10f);
+        enemyPool_Boss.Spawn(waveInfo.correction * 15f, 3);
     }
 
     public void SetMaxBlock(int num)
