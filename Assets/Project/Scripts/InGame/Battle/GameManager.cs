@@ -1,10 +1,10 @@
-
-using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 using Random = UnityEngine.Random;
+using Transform = UnityEngine.Transform;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,12 +18,13 @@ public class GameManager : MonoBehaviour
 
     public VFXPool vfxPool;
     public BulletPool commonBulletPool;
+    public ObjectSpawnPool obPool;
     public GameObject gameMgrCanvas;
     public Sprite[] WeaponSprite;
     public UI_Battle _UIBattle;
 
     public Slider eliteGauge;
-    public Slider energyGauge;
+    //public Slider energyGauge;
     public Text txtEnergyCount;
 
     public Text txtBlockProbSmall;
@@ -35,8 +36,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
     
-    private int EenergyCount = 50;
-    private int curEnergy = 20;
+    private int EenergyCount = 10;
+    private int curEnergy = 30;
     public bool isStart = false;
 
     public int CurEnergy { get => curEnergy; set => curEnergy = value; }
@@ -122,8 +123,8 @@ public class GameManager : MonoBehaviour
         eliteGauge.maxValue = MoveCount;
         eliteGauge.value = MoveCount;
 
-        energyGauge.maxValue = EenergyCount;
-        energyGauge.value = EenergyCount;
+        //energyGauge.maxValue = EenergyCount;
+        //energyGauge.value = EenergyCount;
         txtEnergyCount.text = CurEnergy.ToString();
     }
 
@@ -174,16 +175,18 @@ public class GameManager : MonoBehaviour
         //txtCount.text = MoveCount.ToString();
     }
 
-    public void MoveEnergy()
+    public void MoveEnergy(Vector3 _tr)
     {
         EenergyCount--;
 
         if (EenergyCount == 0)
         {
-            MoveEnergyFull(10);
-            EenergyCount = 60;
+            obPool.Spawn(0, _tr);
+            
+            //MoveEnergyFull(1);
+            EenergyCount = 10;
         }
-        energyGauge.value = EenergyCount;
+        //energyGauge.value = EenergyCount;
     }
 
     public void MoveEnergyFull(int _energy)

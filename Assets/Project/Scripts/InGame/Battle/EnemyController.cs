@@ -144,13 +144,13 @@ public class EnemyController : MonoBehaviour
         switch (enemyType)
         {
             case 0:
-                GameManager.instance.MoveEnergy();
+                GameManager.instance.MoveEnergy(transform.position);
                 break;
             case 1:
-                GameManager.instance.MoveEnergy();
+                GameManager.instance.MoveEnergy(transform.position);
                 break;
             case 2:
-                GameManager.instance.MoveEnergy();
+                GameManager.instance.MoveEnergy(transform.position);
                 break;
             case 3:
                 GameManager.instance.GameOver();
