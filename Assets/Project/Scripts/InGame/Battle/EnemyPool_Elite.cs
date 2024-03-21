@@ -53,10 +53,12 @@ public class EnemyPool_Elite : ObjectPool
 
     public IEnumerator CoWaveSpawn(int _repeat, float _correction)
     {
+        int delayTime = 15 / _repeat;
+
         for (int i = 0; i < _repeat; i++)
         {
             Spawn(_correction, 1);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(delayTime);
         }
     }
 

@@ -40,9 +40,8 @@ public class BulletMult : Bullet
 
         while (timer < 2)
         {
-            var curSpeed = Mathf.Lerp(speed, speed / 2, timer/2);
-            rb.velocity = _dir * curSpeed;
-
+            rb.velocity = _dir * speed;
+            
             timer += Time.deltaTime;
             yield return null;
         }

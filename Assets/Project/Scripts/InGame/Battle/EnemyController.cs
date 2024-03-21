@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -42,14 +43,18 @@ public class EnemyController : MonoBehaviour
         {
             transform.localScale = flipTransScale;
         }
-
-        if (_enemyType == 2)
+        
+        if (_enemyType == 1)
         {
-            cha.localScale = Vector3.one * 0.6f;
+            cha.localScale = Vector3.one * 0.45f;
+        }
+        else if (_enemyType == 2)
+        {
+            cha.localScale = Vector3.one * 0.7f;
         }
         else if (_enemyType == 3)
         {
-            cha.localScale = Vector3.one;
+            cha.localScale = Vector3.one * 1.1f;
         }
 
         StartCoroutine(CoMove());
@@ -135,21 +140,37 @@ public class EnemyController : MonoBehaviour
         animator.Play("die");
         CameraManager.Instance.Shake(0.05f, 0.04f);
 
-        //switch(enemyType)
-        //{
-        //    case 0:
-        //        GameManager.instance.MoveEnergy();
-        //        break;
-        //    case 1:
-        //        GameManager.instance.MoveEnergy();
-        //        break;
-        //    case 2:
-        //        GameManager.instance.MoveEnergyFull(50);
-        //        break;
-        //    case 3:
-        //        GameManager.instance.GameOver();
-        //        break;
-        //}
+        switch (enemyType)
+        {
+            case 0:
+                GameManager.instance.MoveEnergy();
+                break;
+            case 1:
+                GameManager.instance.MoveEnergy();
+                break;
+            case 2:
+                GameManager.instance.MoveEnergyFull(10);
+
+                UnitList.bossCount--;
+
+                print(UnitList.bossCount);
+
+                if (UnitList.bossCount == 0)
+                {
+                    if(GameManager.instance.CurEnergy == 0)
+                    {
+                        GameManager.instance.WaveStart();
+                    }
+                    else
+                    {
+                        GameManager.instance.isStart = false;
+                    }
+                }
+                break;
+            case 3:
+                GameManager.instance.GameOver();
+                break;
+        }
 
         UnitList.enumyList.Remove(this);
 

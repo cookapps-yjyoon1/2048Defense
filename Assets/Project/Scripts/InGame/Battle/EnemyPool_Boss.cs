@@ -37,20 +37,20 @@ public class EnemyPool_Boss : ObjectPool
         }
     }
 
-    public void Spawn(float _correction)
+    public void Spawn(float _correction, int _enemyType)
     {
         float randomX = Random.Range(-randomXvalue, randomXvalue);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(0, spawnPos).GetComponent<EnemyController>();
-        unit.InitData(target, _correction, 2);
+        unit.InitData(target, _correction, _enemyType);
         UnitList.enumyList.Add(unit);
     }
 
-    public IEnumerator CoWaveSpawn(int _repeat, float _correction)
+    public IEnumerator CoWaveSpawn(int _repeat, float _correction, int _enemyType)
     {
         for (int i = 0; i < _repeat; i++)
         {
-            Spawn(_correction);
+            Spawn(_correction, _enemyType);
             yield return new WaitForSeconds(0.5f);
         }
     }

@@ -2,6 +2,7 @@ using DG.Tweening.Core.Easing;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.Progress;
 using Random = UnityEngine.Random;
@@ -62,98 +63,61 @@ public class EnemyPool : ObjectPool
     {
         ChangeWave(_curWave, _correction);
     }
+    
     public void WaveStop()
     {
-        StopAllCoroutines();
-        GameManager.instance.MoveEnergyFull(25);
+        correction += 1;
+        repeat += 2;
+        GameManager.instance.waveInfo.lastTimer = true;
+        //GameManager.instance.MoveEnergyFull(25);
     }
 
     public void ChangeWave(int _curWave, float _correction)
     {
-        correction = _correction;
-        
-        
+        StopAllCoroutines();
 
         switch (_curWave % 5)
         {
             case 0:
-                StartCoroutine(CoWaveSpawn(15, correction));
-                StartCoroutine(CoWaveSpawn_3wave(10, correction));
-                StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn_3wave(10 + repeat, correction));
                 break;
             case 1:
-                StartCoroutine(CoWaveSpawn(15, correction));
-                StartCoroutine(CoWaveSpawn_3wave(10, correction));
-                StartCoroutine(elitePool.CoWaveSpawn_3wave(5 + repeat, correction));
-                break;
-            case 2:
-                StartCoroutine(CoWaveSpawn(15, correction));
-                StartCoroutine(CoWaveSpawn_3wave(10, correction));
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
                 StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
                 break;
+            case 2:
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
+                StartCoroutine(elitePool.CoWaveSpawn_3wave(5 + repeat, correction));
+                break;
             case 3:
-                StartCoroutine(CoWaveSpawn(15, correction));
-                StartCoroutine(CoWaveSpawn_3wave(10, correction));
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn_3wave(5 + repeat, correction));
+                StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
                 StartCoroutine(elitePool.CoWaveSpawn_3wave(5 + repeat, correction));
                 break;
             case 4:
                 for (int i = 0; i < repeat; i++)
                 {
-                    bossPool.Spawn(correction * 6f);
+                    bossPool.Spawn(correction * 6f, 2);
+                    UnitList.bossCount++;
                 }
-                repeat++;
+                WaveStop();
                 break;
-        }
-
-        //switch (_curWave % 10)
-        //{
-        //    case 0:
-        //        repeat++;
-        //        break;
-        //    case 1:
-        //        break;
-        //    case 2:
-        //        StartCoroutine(CoSpawn02(10, correction * 2));
-        //        break;
-        //    case 3:
-        //        break;
-        //    case 4:
-        //        bossPool.Spawn(correction * 6f);
-        //        break;
-        //    case 5:
-        //        repeat++;
-        //        break;
-        //    case 6:
-        //        break;
-        //    case 7:
-        //        StartCoroutine(CoSpawn02(10, correction * 2));
-        //        break;
-        //    case 8:
-        //        break;
-        //    case 9:
-        //        bossPool.Spawn(correction * 6f);
-        //        break;
-        //}
-    }
-
-    IEnumerator CoSpawn()
-    {
-        while (true)
-        {
-            for (int i = 0; i < repeat; i++)
-            {
-                Spawn(Random.Range(0, mobType), correction);
-            }
-            yield return new WaitForSeconds(1f);
         }
     }
 
     IEnumerator CoWaveSpawn(int _repeat, float _correction)
     {
+        int delayTime = 15 / _repeat;
+
         for (int i = 0; i < _repeat; i++)
         {
             Spawn(Random.Range(0, mobType), _correction);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(delayTime);
         }
     }
 
@@ -167,24 +131,6 @@ public class EnemyPool : ObjectPool
                 yield return new WaitForSeconds(0.1f);
             }
             yield return new WaitForSeconds(3f);
-        }
-    }
-
-
-    IEnumerator CoSpawn02(int _repeat, float _correction)
-    {
-        for (int i = 0; i < _repeat; i++)
-        {
-            Spawn(Random.Range(0, mobType), _correction);
-            yield return new WaitForSeconds(0.1f);
-        }
-        
-        yield return new WaitForSeconds(8f);
-
-        for (int i = 0; i < _repeat; i++)
-        {
-            Spawn(Random.Range(0, mobType), _correction);
-            yield return new WaitForSeconds(0.2f);
         }
     }
 }
