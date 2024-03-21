@@ -14,7 +14,7 @@ public class VFXController_Dmg : VFXController
 
     IEnumerator CoVFX(float _dmg)
     {
-        SoundManager.Instance.Play(Enum_Sound.Effect, "Boom",0,0.5f);
+        SoundManager.Instance.Play(Enum_Sound.Effect, "Boom",0,0.2f);
         vfx.Play();
         dmg = _dmg;
         col.enabled = true;
