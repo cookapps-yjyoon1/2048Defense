@@ -14,12 +14,12 @@ public class UIScene_Title : MonoBehaviour
         {
             _lastProgress = 0f;
             _isStartLoading = true;
-
             StartCoroutine(Initialize());
         }
 
         public void OnClickButton()
         {
+            SoundManager.Instance.Play(Enum_Sound.Effect, "Reload");
             SceneManager.LoadScene("01Main");
         }
 
@@ -127,6 +127,8 @@ public class UIScene_Title : MonoBehaviour
         {
             Progress = 0.1f;
             yield return null;
+
+            SoundManager.Instance.Play(Enum_Sound.Bgm, "Loading");
 
             // //페이스북 초기화
             // if (!InitFaceBookSDk())

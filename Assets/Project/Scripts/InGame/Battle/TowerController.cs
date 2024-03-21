@@ -83,6 +83,7 @@ public class TowerController : Tower
             //bool isCri = Random.value < criChance;
             gun.rotation = Quaternion.LookRotation(Vector3.forward, shotDir);
             bulletPool.Shot(shotDir, curArrow.Index, curArrow.Level);
+            SoundManager.Instance.Play(Enum_Sound.Effect, $"Shoot_{curArrow.Index}",0,0.5f);
 
             _curIndex++;
 

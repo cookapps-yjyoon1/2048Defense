@@ -5,88 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/2048/fill6_icon_brown_energy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/2048/fill6_icon_brown_energy.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/2048/fill6_icon_full_energy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/2048/fill6_icon_full_energy.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/2048/fill6_icon_full_skull2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/2048/fill6_icon_full_skull2.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Base.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Coat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Coat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Dress.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Dress.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Fat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Fat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Pajamas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Pajamas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Police.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Police.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Shirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_Shirt.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_TShirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob/Mob_TShirt.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Boy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Boy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Doctor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Doctor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Farmer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Farmer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Farmer_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Farmer_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Guard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Guard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Hazmat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Hazmat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Hazmat_00.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Hazmat_00.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Sheriff.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Sheriff.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Suit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Suit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Swat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Boss/Mob_Boss_Swat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Base_speed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Base_speed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Coat_speed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Coat_speed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Dress_dmg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Dress_dmg.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Fat_hp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Fat_hp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Pajamas_dmg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Pajamas_dmg.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Police_balance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Police_balance.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Shirt_hp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_Shirt_hp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_TShirt_balance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Mob_Elite/Mob_TShirt_balance.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/00Title.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/00Title.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/02Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/02Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletDrill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletDrill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletMult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletMult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool_Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool_Boss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool_Elite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool_Elite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/Reflection.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/Reflection.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/btn10_outsq_red.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/btn10_outsq_red.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_cup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_cup.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherdark4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly7.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly8.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherfly9.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_featherwhite4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_mask_cup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_mask_cup.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_mask_skull.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_mask_skull.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbondark4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbonred2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_ribbonred2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_riibbonred1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_riibbonred1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_skull.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_skull.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_star_dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_star_dark.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_star_slot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/complete_star_slot.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/icon_home.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/icon_home.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/panel3_tallround_black.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/panel3_tallround_black.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/panel3_tallround_yellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Popup/panel3_tallround_yellow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cookapps.local.data@3.0.6/Runtime/CookAppsLocalData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.8/Editor/Volume/VolumeEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Samples~/Customization/Tween/TweenMixerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Slider/SliderTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/8b/0843141d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/f1/38d4c569/Transform.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -201,6 +127,7 @@
       <workItem from="1706750051584" duration="215000" />
       <workItem from="1709129763396" duration="2000" />
       <workItem from="1710390625576" duration="2516000" />
+      <workItem from="1711003095906" duration="647000" />
     </task>
     <servers />
   </component>

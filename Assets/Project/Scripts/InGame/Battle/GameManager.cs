@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
         //eliteGauge.value = MoveCount;
 
         ////txtCount.text = MoveCount.ToString();
+        SoundManager.Instance.Play(Enum_Sound.Effect, "2048Move");
     }
     
     public void MoveEnergy()
