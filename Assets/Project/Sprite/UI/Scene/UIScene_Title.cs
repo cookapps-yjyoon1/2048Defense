@@ -15,6 +15,8 @@ public class UIScene_Title : MonoBehaviour
             _lastProgress = 0f;
             _isStartLoading = true;
             StartCoroutine(Initialize());
+            
+            _trTitle.localScale = Vector3.zero;
         }
 
         public void OnClickButton()
@@ -37,18 +39,19 @@ public class UIScene_Title : MonoBehaviour
 
         [SerializeField] private GameObject _goPrgressBar;
         [SerializeField] private GameObject _goStart;
+        [SerializeField] private Transform _trTitle;
 
         private readonly string[] loadingString = new string[]
         {
             "Make Zombies.",
+            "Make Zombies..",
+            "Make Zombies...",
             "Make Zombies.",
+            "Make Zombies..",
+            "Make Zombies...",
             "Make Zombies.",
-            "Make Zombies.",
-            "Make Zombies.",
-            "Make Zombies.",
-            "Make Zombies.",
-            "Make Zombies.",
-            "Make Zombies.",
+            "Make Zombies..",
+            "Make Zombies...",
             "Make Zombies.",
         };
 
@@ -71,7 +74,7 @@ public class UIScene_Title : MonoBehaviour
 
             if (isDone)
             {
-                _txtLoading.text = "Let's go!";
+                _txtLoading.text = "They are coming...";
             }
             else
             {
@@ -138,6 +141,10 @@ public class UIScene_Title : MonoBehaviour
 
             Progress = 0.2f;
             yield return null;
+
+            _trTitle.DOScale(new Vector3(1.2f, 1.2f, 1), 0.4f).OnComplete(() =>
+                    _trTitle.DOScale(new Vector3(1f, 1f, 1), 0.2f).SetEase(Ease.OutBack))
+                .SetEase(Ease.OutBack);
             
             Progress = 0.3f;
             yield return null;

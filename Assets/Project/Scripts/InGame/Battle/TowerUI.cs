@@ -20,10 +20,10 @@ public class TowerUI : MonoBehaviour
         }
         
         _count = count;
-        for (int i = 0; i < _goBulletSlot.Count; i++)
-        {
-            _goBulletSlot[i].SetActive(i < count);
-        }
+        // for (int i = 0; i < _goBulletSlot.Count; i++)
+        // {
+        //     _goBulletSlot[i].SetActive(i < count);
+        // }
 
         for (int i = 0; i < _goBullet.Count; i++)
         {

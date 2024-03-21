@@ -7,10 +7,9 @@
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/00Title.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/00Title.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Sound/sfx_2048Move.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Sound/sfx_2048Move.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +25,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cookapps.local.data@3.0.6/Runtime/CookAppsLocalData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.8/Editor/Volume/VolumeEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Samples~/Customization/Tween/TweenMixerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRebuildTracker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/SetPropertyUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Slider/SliderTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/8b/0843141d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/f1/38d4c569/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -127,7 +129,7 @@
       <workItem from="1706750051584" duration="215000" />
       <workItem from="1709129763396" duration="2000" />
       <workItem from="1710390625576" duration="2516000" />
-      <workItem from="1711003095906" duration="647000" />
+      <workItem from="1711003095906" duration="4463000" />
     </task>
     <servers />
   </component>
@@ -147,10 +149,10 @@
           <line>45</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\InGame\Battle\TowerUI.cs" initialLine="45" containingFunctionPresentation="Method 'CoReload'">
             <startOffsets>
-              <option value="1104" />
+              <option value="1116" />
             </startOffsets>
             <endOffsets>
-              <option value="1139" />
+              <option value="1151" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
