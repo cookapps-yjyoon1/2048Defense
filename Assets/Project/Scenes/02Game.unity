@@ -9790,7 +9790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage:
-  - correction: 2
+  - correction: 1
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
