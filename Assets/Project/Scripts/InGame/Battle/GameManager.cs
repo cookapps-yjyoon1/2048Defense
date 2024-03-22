@@ -37,7 +37,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     [HideInInspector] public int MoveCount = 10;
 
     private int EenergyCount = 10;
-    private int curEnergy = 5;
+    private int curEnergy = 30;
     public bool isStart = false;
 
     public int CurEnergy { get => curEnergy; set => curEnergy = value; }
@@ -46,6 +46,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     private int maxNumber_tmp = 4;
 
     public int _towerGunCount = 0;
+    bool isLastBossSpawn = false;
 
     public int TowerGunCount
     {
@@ -58,7 +59,11 @@ public class GameManager : SingletonBehaviour<GameManager>
         {
             if (_towerGunCount == 15)
             {
-                SpawnLastBossMonster();
+                if(!isLastBossSpawn)
+                {
+                    isLastBossSpawn = true;
+                    SpawnLastBossMonster();
+                }
             }
 
             _towerGunCount = value;
@@ -84,21 +89,25 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 256)
             {
-                return Random.Range(0, 100) < 90 ? 4 : 8;
+                return Random.Range(0, 100) < 80 ? 4 : 8;
             }
             else if (maxNumber <= 512)
             {
-                return Random.Range(0, 100) < 70 ? 4 : 8;
+                return Random.Range(0, 100) < 50 ? 4 : 8;
             }
             else if (maxNumber <= 1024)
             {
-                return Random.Range(0, 100) < 50 ? 4 : 8;
+                return Random.Range(0, 100) < 20 ? 4 : 8;
             }
             else
             {
                 if (maxNumber == 2048)
                 {
-                    SpawnLastBossMonster();
+                    if(!isLastBossSpawn)
+                    {
+                        isLastBossSpawn = true;
+                        SpawnLastBossMonster();
+                    }
                 }
                 
                 return 8;
@@ -271,18 +280,18 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 256)
             {
-                txtBlockProbSmall.text = "4\n90%";
-                txtBlockProbBig.text = "8\n10%";
+                txtBlockProbSmall.text = "4\n80%";
+                txtBlockProbBig.text = "8\n20%";
             }
             else if (maxNumber <= 512)
             {
-                txtBlockProbSmall.text = "4\n70%";
-                txtBlockProbBig.text = "8\n30%";
+                txtBlockProbSmall.text = "4\n50%";
+                txtBlockProbBig.text = "8\n50%";
             }
             else if (maxNumber <= 1024)
             {
-                txtBlockProbSmall.text = "4\n50%";
-                txtBlockProbBig.text = "8\n50%";
+                txtBlockProbSmall.text = "4\n20%";
+                txtBlockProbBig.text = "8\n80%";
             }
         }
     }
