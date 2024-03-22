@@ -11,11 +11,11 @@
       "url": "http://packages.tech.cookapps.com"
     },
     "com.cookapps.analytics-lite": {
-      "version": "1.2.3",
+      "version": "1.2.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.cookapps.debug": "1.1.6",
+        "com.cookapps.debug": "1.1.7",
         "com.unity.nuget.newtonsoft-json": "3.0.2"
       },
       "url": "http://packages.tech.cookapps.com"
@@ -25,6 +25,16 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "http://packages.tech.cookapps.com"
+    },
+    "com.cookapps.facebook": {
+      "version": "1.1.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.cookapps.link-xml-resolver": "1.0.0",
+        "com.cookapps.package.window": "1.0.3"
+      },
       "url": "http://packages.tech.cookapps.com"
     },
     "com.cookapps.google.apis.helper": {

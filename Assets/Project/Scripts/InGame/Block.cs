@@ -64,6 +64,11 @@ public class Block : MonoBehaviour
         {
             timer += Time.deltaTime;
 
+            if (timer > 0.3f)
+            {
+                DragAndDropHandler.IsDragging = true;
+            }
+
             imageGauze.fillAmount = timer / holdTime;
             
             if (timer > holdTime)
