@@ -617,7 +617,7 @@ MonoBehaviour:
   nowHp: 0
   atkDmg: 7
   atkDist: 1.5
-  moveSpeed: 0.2
+  moveSpeed: 0.1
   _decompositionController: {fileID: 4382105738976346173}
   target: {fileID: 0}
   animator: {fileID: 4382105738736299713}
@@ -637,7 +637,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.15
 --- !u!114 &4382105738976346173
 MonoBehaviour:
   m_ObjectHideFlags: 0
