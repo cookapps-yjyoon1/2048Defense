@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,21 +15,18 @@ public class UIBoxHandler : SingletonBehaviour<UIBoxHandler>
         {
             _uiBoxes[i].Init(i);
         }
-        
-        RefreshBox();
+    }
+
+    private void OnEnable()
+    {
+        TimeManager.Instance.AddOnTickCallback(RefreshBox);
     }
 
     public void RefreshBox()
     {
         for (int i = 0; i < _uiBoxes.Count; i++)
         {
-            if (i < _boxData.Boxes.Count)
-            {
-                _uiBoxes[i].gameObject.SetActive(true);
-                continue;
-            }
-
-            _uiBoxes[i].gameObject.SetActive(false);
+            _uiBoxes[i].Refresh();
         }
     }
 

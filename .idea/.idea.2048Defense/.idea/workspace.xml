@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/BoxAnimationController.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/BoxAnimationController.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Progress.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Progress.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/WaitClaim.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/WaitClaim.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletMult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/BulletMult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/EnemyPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/WaveInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/WaveInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Scene.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIBoxHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIBoxHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +158,7 @@
       <workItem from="1710390625576" duration="2516000" />
       <workItem from="1711003095906" duration="8513000" />
       <workItem from="1711077208457" duration="1713000" />
-      <workItem from="1711086005095" duration="780000" />
+      <workItem from="1711086005095" duration="2097000" />
     </task>
     <servers />
   </component>
