@@ -152,7 +152,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         //eliteGauge.maxValue = MoveCount;
         //eliteGauge.value = MoveCount;
-        mobCount = 3000;
+        mobCount = 4096;
 
         txtMobCount.text = mobCount.ToString();
 
@@ -214,7 +214,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (mobCount <= 0 && !isLastBossSpawn)
         {
             SpawnLastBossMonster();
-            txtMobCount.text = "";
+            txtMobCount.text = "Boss\nAppear";
         }
         else
         {
@@ -231,7 +231,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (mobCount <= 0 && !isLastBossSpawn)
         {
             SpawnLastBossMonster();
-            txtMobCount.text = "";
+            txtMobCount.text = "Boss\nAppear";
         }
         else
         {

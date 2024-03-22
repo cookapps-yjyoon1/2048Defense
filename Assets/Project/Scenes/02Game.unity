@@ -7319,8 +7319,8 @@ Transform:
   m_GameObject: {fileID: 669458271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.68, y: 2.81, z: 0}
-  m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.6, y: 0.64, z: 0.64}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2078540690}
   m_RootOrder: 2
@@ -9894,8 +9894,8 @@ MonoBehaviour:
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 3000
+    m_LineSpacing: 0.64
+  m_Text: 4096
 --- !u!222 &1173417771
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -54,7 +54,8 @@ public class EnemyController : MonoBehaviour
         }
         else if (_enemyType == 3)
         {
-            cha.localScale = Vector3.one * 0.8f;
+            transform.position = new Vector3(0, GameManager.Instance.enemyPool.transform.position.y, GameManager.Instance.enemyPool.transform.position.z);
+            cha.localScale = Vector3.one * 0.85f;
         }
 
         StartCoroutine(CoMove());
