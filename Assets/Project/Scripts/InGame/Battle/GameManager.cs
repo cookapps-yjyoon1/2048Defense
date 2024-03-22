@@ -37,7 +37,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
 
-    public int mobCount = 2048;
+    public int mobCount;
 
     private int EenergyCount = 10;
     private int curEnergy = 30;
@@ -140,6 +140,9 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         //eliteGauge.maxValue = MoveCount;
         //eliteGauge.value = MoveCount;
+        mobCount = 3000;
+
+        txtMobCount.text = mobCount.ToString();
 
         txtEnergyCount.text = CurEnergy.ToString();
     }
@@ -194,7 +197,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         mobCount--;
 
-        if (mobCount <= 0)
+        if (mobCount <= 0 && !isLastBossSpawn)
         {
             SpawnLastBossMonster();
             txtMobCount.text = "0";
@@ -209,7 +212,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         mobCount -= _num;
 
-        if (mobCount <= 0)
+        if (mobCount <= 0 && !isLastBossSpawn)
         {
             SpawnLastBossMonster();
             txtMobCount.text = "0";
