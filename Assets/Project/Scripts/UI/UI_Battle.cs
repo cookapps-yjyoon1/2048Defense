@@ -13,7 +13,7 @@ public class UI_Battle : MonoBehaviour
     {
         WinPanel.SetActive(isWin);
         LosePanel.SetActive(!isWin);
-        
+
         gameObject.SetActive(true);
     }
     
@@ -21,7 +21,7 @@ public class UI_Battle : MonoBehaviour
     {
         if (WinPanel.activeInHierarchy)
         {
-            // TODO HighestStage를 갱신한다.
+            PlayerDataManager.BoxData.TryAddBox();
         }
 
         SceneManager.LoadScene("01Main");

@@ -92,6 +92,7 @@ public class UIScene_Title : MonoBehaviour
         {
             _lock = true;
             _txtLoading.transform.DOScale(1.1f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+            Application.targetFrameRate = 60;
         }
 
         protected void OnEnable()
