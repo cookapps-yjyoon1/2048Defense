@@ -6,6 +6,7 @@ public class ETCData : GameData
 
     public List<bool> IsClearStage = new List<bool>();
     public int CurStage = 0;
+    public bool IsFirstPlay = false;
     
     public override void Initialize()
     {

@@ -9,8 +9,8 @@ using UnityEngine.U2D;
 public class ObjectEnergy : MonoBehaviour
 {
 
-    float moveDuration = 0.4f; // ÀÌµ¿ÇÏ´Â µ¥ °É¸®´Â ½Ã°£
-    Ease easeType = Ease.OutQuad; // ÀÌµ¿ÀÇ °¨¼Ó À¯Çü
+    float moveDuration = 0.4f; // ï¿½Ìµï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ ï¿½É¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+    Ease easeType = Ease.OutQuad; // ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     Vector3 targetPos;
     int energy;
     Vector3 wallPos;
@@ -31,6 +31,7 @@ public class ObjectEnergy : MonoBehaviour
         GameManager.Instance.vfxPool.Spawn(3, 0, transform.position);
         GameManager.Instance.obPool.SpawnTxt(1, transform.position, "+"+energy.ToString());
         HandleCoinPickup();
+        SoundManager.Instance.Play(Enum_Sound.Effect, "EnergyGet");
     }
 
     private void HandleCoinPickup()
