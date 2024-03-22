@@ -50,11 +50,11 @@ public class EnemyController : MonoBehaviour
         }
         else if (_enemyType == 2)
         {
-            cha.localScale = Vector3.one * 0.7f;
+            cha.localScale = Vector3.one * 0.55f;
         }
         else if (_enemyType == 3)
         {
-            cha.localScale = Vector3.one * 1.1f;
+            cha.localScale = Vector3.one * 0.8f;
         }
 
         StartCoroutine(CoMove());
@@ -139,7 +139,8 @@ public class EnemyController : MonoBehaviour
     void Death()
     {
         animator.Play("die");
-        CameraManager.Instance.Shake(0.05f, 0.04f);
+        //CameraManager.Instance.Shake(0.05f, 0.04f);
+        GameManager.Instance.MobCount();
 
         switch (enemyType)
         {

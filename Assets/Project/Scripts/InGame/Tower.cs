@@ -35,14 +35,17 @@ public class Tower : MonoBehaviour , IDropHandler
     {
         if (arrows.Count >= 5)
         {
-            return;
+            arrows.RemoveAt(0);
+            GameManager.Instance.MobCountNum(100);
+            //return;
         }
         
         var index = DragAndDropHandler.Index;
         var level = DragAndDropHandler.Level;
         
         arrows.Add(new Arrow(index,level));
-        GameManager.Instance.TowerGunCount++;
+
+        //GameManager.Instance.TowerGunCount++;
         ClearDrop();
         Refresh();
     }
