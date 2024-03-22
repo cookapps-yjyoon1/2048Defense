@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/BoxAnimationController.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/BoxAnimationController.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Progress.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/Progress.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/WaitClaim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI/WaitClaim.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIPopup_Equip_Slot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIPopup_Equip_Slot.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Scene.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Animation/UI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Canvas Main.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Canvas Main.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Popup_Equip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Popup_Equip.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Scroll Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Scroll Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIBoxHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIBoxHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIPopup_Equip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIPopup_Equip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,25 +70,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Cookapps\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Cookapps\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Cookapps\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Cookapps\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Cookapps\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Cookapps\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe" />
@@ -134,10 +133,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15260">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="15260" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -158,7 +157,7 @@
       <workItem from="1710390625576" duration="2516000" />
       <workItem from="1711003095906" duration="8513000" />
       <workItem from="1711077208457" duration="1713000" />
-      <workItem from="1711086005095" duration="2097000" />
+      <workItem from="1711086005095" duration="4192000" />
     </task>
     <servers />
   </component>
@@ -213,19 +212,6 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\PlayerDataManager.cs" initialLine="35" containingFunctionPresentation="Method 'localDataSet'">
-            <startOffsets>
-              <option value="870" />
-            </startOffsets>
-            <endOffsets>
-              <option value="917" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerUI.cs</url>
           <line>19</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\InGame\Battle\TowerUI.cs" initialLine="19" containingFunctionPresentation="Method 'UpdateUI'">
@@ -237,19 +223,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs</url>
-          <line>103</line>
-          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\PlayerDataManager.cs" initialLine="103" containingFunctionPresentation="Method 'ValidCheck'">
-            <startOffsets>
-              <option value="2960" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2985" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ArrowData.cs</url>

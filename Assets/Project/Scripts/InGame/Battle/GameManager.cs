@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 using Random = UnityEngine.Random;
 using Transform = UnityEngine.Transform;
 
@@ -46,6 +45,27 @@ public class GameManager : SingletonBehaviour<GameManager>
     private int maxNumber = 4;
     private int maxNumber_tmp = 4;
 
+    public int _towerGunCount = 0;
+
+    public int TowerGunCount
+    {
+        get
+        {
+            return _towerGunCount;
+        }
+
+        set
+        {
+            if (_towerGunCount == 15)
+            {
+                SpawnLastBossMonster();
+            }
+
+            _towerGunCount = value;
+        }
+    }
+
+
     public int Numberic
     {
         get
@@ -80,6 +100,7 @@ public class GameManager : SingletonBehaviour<GameManager>
                 {
                     SpawnLastBossMonster();
                 }
+                
                 return 8;
             }
         }

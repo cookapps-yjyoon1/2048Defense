@@ -42,7 +42,7 @@ public class Tower : MonoBehaviour , IDropHandler
         var level = DragAndDropHandler.Level;
         
         arrows.Add(new Arrow(index,level));
-        
+        GameManager.Instance.TowerGunCount++;
         ClearDrop();
         Refresh();
     }

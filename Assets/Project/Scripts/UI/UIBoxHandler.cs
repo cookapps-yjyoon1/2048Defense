@@ -22,6 +22,11 @@ public class UIBoxHandler : SingletonBehaviour<UIBoxHandler>
         TimeManager.Instance.AddOnTickCallback(RefreshBox);
     }
 
+    private void OnDisable()
+    {
+        TimeManager.Instance.RemoveOnTickCallback(RefreshBox);
+    }
+
     public void RefreshBox()
     {
         for (int i = 0; i < _uiBoxes.Count; i++)
