@@ -153,6 +153,10 @@ public class BoxData : GameData
             PlayerDataManager.ArrowData.AddArrowPiece(Random.Range(0,PlayerDataManager.ArrowData.Arrows.Count),1);
         }
 
+        PlayerDataManager.ArrowData.TryUpgradeArrow(0);
+        PlayerDataManager.ArrowData.TryUpgradeArrow(1);
+        PlayerDataManager.ArrowData.TryUpgradeArrow(2);
+
         Boxes[index].Clear();
 
         return true;
