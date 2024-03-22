@@ -42,7 +42,8 @@ public class BulletMultSub : Bullet
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyController>().Hit(Dmg);
-            GameManager.instance.vfxPool.Spawn((int)vfxType, 0, transform.position);
+            GameManager.Instance.vfxPool.Spawn((int)vfxType, 0, transform.position);
+            GameManager.Instance.obPool.SpawnTxt(2, transform.position, Dmg.ToString("F0"));
             gameObject.SetActive(false);
         }
     }

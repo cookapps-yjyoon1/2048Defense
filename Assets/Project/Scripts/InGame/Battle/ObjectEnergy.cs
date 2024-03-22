@@ -17,7 +17,7 @@ public class ObjectEnergy : MonoBehaviour
 
     public void InitData(int _energy)
     {
-        wallPos = GameManager.instance.enemyPool.target.transform.position;
+        wallPos = GameManager.Instance.enemyPool.target.transform.position;
 
         energy = _energy;
         targetPos = new Vector3(transform.position.x + Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(-0.5f, 0.5f), transform.position.z + Random.Range(-0.5f, 0.5f));
@@ -28,14 +28,14 @@ public class ObjectEnergy : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GameManager.instance.vfxPool.Spawn(3, 0, transform.position);
-        GameManager.instance.obPool.SpawnTxt(transform.position, energy.ToString());
+        GameManager.Instance.vfxPool.Spawn(3, 0, transform.position);
+        GameManager.Instance.obPool.SpawnTxt(1, transform.position, "+"+energy.ToString());
         HandleCoinPickup();
     }
 
     private void HandleCoinPickup()
     {
-        GameManager.instance.MoveEnergyFull(energy);
+        GameManager.Instance.MoveEnergyFull(energy);
         gameObject.SetActive(false);
     }
 

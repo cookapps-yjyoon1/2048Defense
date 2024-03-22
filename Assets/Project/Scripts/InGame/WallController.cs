@@ -24,13 +24,13 @@ public class WallController : MonoBehaviour
         curHp -= _dmg;
         hpSlider.value = curHp;
         
-        GameManager.instance.HitTowerEvent();
+        GameManager.Instance.HitTowerEvent();
         time = 2;
 
         if (curHp <= 0)
         {
             gameObject.SetActive(false);
-            GameManager.instance.GameOver();
+            GameManager.Instance.GameOver();
         }
     }
 
@@ -44,7 +44,7 @@ public class WallController : MonoBehaviour
 
                 if (time < 0)
                 {
-                    GameManager.instance.HitTowerEventEnd();
+                    GameManager.Instance.HitTowerEventEnd();
                 }
 
                 yield return null;

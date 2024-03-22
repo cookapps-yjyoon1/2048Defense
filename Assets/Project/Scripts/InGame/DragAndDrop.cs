@@ -20,7 +20,7 @@ public class DragAndDrop : MonoBehaviour
     
     public void OnDrag()
     {
-        _spriteRenderer.sprite = GameManager.instance.WeaponSprite[DragAndDropHandler.Index];
+        _spriteRenderer.sprite = GameManager.Instance.WeaponSprite[DragAndDropHandler.Index];
         isDragging = true;
         gameObject.SetActive(true);
     }

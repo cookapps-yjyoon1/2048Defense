@@ -6,9 +6,8 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 using Random = UnityEngine.Random;
 using Transform = UnityEngine.Transform;
 
-public class GameManager : MonoBehaviour
+public class GameManager : SingletonBehaviour<GameManager>
 {
-    public static GameManager instance;
     public WaveInfo waveInfo;
     public StageData stageData;
     public EnemyPool enemyPool;
@@ -90,22 +89,6 @@ public class GameManager : MonoBehaviour
         }
     }
     //public UnitList unitList;
-
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-        //gameMgrCanvas.gameObject.SetActive(true);
-    }
 
     private void Start()
     {
@@ -297,10 +280,5 @@ public class GameManager : MonoBehaviour
         _imgBoardRed.gameObject.SetActive(false);
         _trBoard.DOKill();
         _trBoard.position = _originBoardPos;
-    }
-
-    private void OnDestroy()
-    {
-        instance = null;
     }
 }

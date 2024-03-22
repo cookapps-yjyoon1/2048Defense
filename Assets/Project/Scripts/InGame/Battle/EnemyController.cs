@@ -144,20 +144,20 @@ public class EnemyController : MonoBehaviour
         switch (enemyType)
         {
             case 0:
-                GameManager.instance.MoveEnergy(transform.position);
+                GameManager.Instance.MoveEnergy(transform.position);
                 break;
             case 1:
-                GameManager.instance.MoveEnergy(transform.position);
+                GameManager.Instance.MoveEnergy(transform.position);
                 break;
             case 2:
-                GameManager.instance.MoveEnergy(transform.position);
+                GameManager.Instance.MoveEnergy(transform.position);
                 break;
             case 3:
-                GameManager.instance.GameOver();
+                GameManager.Instance.GameOver();
                 break;
         }
 
-        GameManager.instance.unitList.enumyList.Remove(this);
+        GameManager.Instance.unitList.enumyList.Remove(this);
 
         StopAllCoroutines();
         StartCoroutine(CoDeath());

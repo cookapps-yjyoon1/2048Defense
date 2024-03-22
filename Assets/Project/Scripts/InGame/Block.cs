@@ -83,11 +83,11 @@ public class Block : MonoBehaviour
     public void Setup()
     {
         imageGauze.fillAmount = 0;
-        Numeric = GameManager.instance.Numberic;
+        Numeric = GameManager.Instance.Numberic;
         
-        index = Random.Range(0, GameManager.instance.WeaponSprite.Length);
+        index = Random.Range(0, GameManager.Instance.WeaponSprite.Length);
         
-        imageWeapon.sprite = GameManager.instance.WeaponSprite[index];
+        imageWeapon.sprite = GameManager.Instance.WeaponSprite[index];
 
         StartCoroutine(OnScaleAnimation(Vector3.one * 0.5f, Vector3.one, 0.15f));
     }
@@ -96,7 +96,7 @@ public class Block : MonoBehaviour
     {
         index = Random.Range(0, 3);
 
-        imageWeapon.sprite = GameManager.instance.WeaponSprite[index];
+        imageWeapon.sprite = GameManager.Instance.WeaponSprite[index];
     }
 
     public void MoveToNode(Node to)
@@ -127,7 +127,7 @@ public class Block : MonoBehaviour
 
                 Target.placedBlock.SetNewWeapon();
 
-                GameManager.instance.SetMaxBlock(Target.placedBlock.Numeric);
+                GameManager.Instance.SetMaxBlock(Target.placedBlock.Numeric);
 
                 Target.placedBlock.StartPunchScale(Vector3.one * 0.25f, 0.15f, OnAfterPunchScale);
 

@@ -16,9 +16,9 @@ public class ObjectSpawnPool : ObjectPool
         obj.InitData(_energy);
     }
 
-    public void SpawnTxt(Vector3 _pos, string _str)
+    public void SpawnTxt(int _index, Vector3 _pos, string _str)
     {
-        ObjectTxt obj = Get(1, _pos).GetComponent<ObjectTxt>();
+        ObjectTxt obj = Get(_index, _pos).GetComponent<ObjectTxt>();
         obj.InitData(_str);
     }
 }

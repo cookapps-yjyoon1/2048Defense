@@ -12,11 +12,11 @@ public class EnemyPool_Elite : ObjectPool
 
     public void GameStart(int _stage)
     {
-        mobType = GameManager.instance.stageData.stage[_stage].mob_elite.Count;
+        mobType = GameManager.Instance.stageData.stage[_stage].mob_elite.Count;
 
         for (int i = 0; i < mobType; i++)
         {
-            prefab[i] = GameManager.instance.stageData.stage[_stage].mob_elite[i];
+            prefab[i] = GameManager.Instance.stageData.stage[_stage].mob_elite[i];
         }
 
         PreCreatePoolObject();
@@ -47,7 +47,7 @@ public class EnemyPool_Elite : ObjectPool
             Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
             EnemyController unit = Get(Random.Range(0, mobType), spawnPos).GetComponent<EnemyController>();
             unit.InitData(target, _correction, 1);
-            GameManager.instance.unitList.enumyList.Add(unit);
+            GameManager.Instance.unitList.enumyList.Add(unit);
         }
     }
 

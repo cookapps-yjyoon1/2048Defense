@@ -12,11 +12,11 @@ public class EnemyPool_Boss : ObjectPool
 
     public void GameStart(int _stage)
     {
-        mobType = GameManager.instance.stageData.stage[_stage].mob_boss.Count;
+        mobType = GameManager.Instance.stageData.stage[_stage].mob_boss.Count;
 
         for (int i = 0; i < mobType; i++)
         {
-            prefab[i] = GameManager.instance.stageData.stage[_stage].mob_boss[i];
+            prefab[i] = GameManager.Instance.stageData.stage[_stage].mob_boss[i];
         }
 
         PreCreatePoolObject();
@@ -43,7 +43,7 @@ public class EnemyPool_Boss : ObjectPool
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(0, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction, _enemyType);
-        GameManager.instance.unitList.enumyList.Add(unit);
+        GameManager.Instance.unitList.enumyList.Add(unit);
     }
 
     public IEnumerator CoWaveSpawn(int _repeat, float _correction, int _enemyType)

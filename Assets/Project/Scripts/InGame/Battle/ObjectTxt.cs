@@ -23,7 +23,7 @@ public class ObjectTxt : MonoBehaviour
             txtEnergy.DOFade(0f, fadeDuration).SetEase(easeType).OnComplete(() => gameObject.SetActive(false));
         });
 
-        transform.DOMoveY(transform.position.y + 0.5f, moveDuration).SetEase(easeType);
+        transform.DOMoveY(transform.position.y + 0.35f, moveDuration).SetEase(easeType);
         transform.DOScale(1.2f, moveDuration).SetEase(Ease.OutQuad);
     }
 }

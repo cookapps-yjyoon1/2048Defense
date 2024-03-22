@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class BulletDrill : Bullet
 {
@@ -17,7 +18,7 @@ public class BulletDrill : Bullet
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
-        Dmg = _dmg * GameManager.instance.DrillCrrection;
+        Dmg = _dmg * GameManager.Instance.DrillCrrection;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
 
         StartCoroutine(CoShot(_dir));
@@ -43,7 +44,8 @@ public class BulletDrill : Bullet
     {
         if (other.CompareTag("Enemy"))
         {
-            GameManager.instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
+            GameManager.Instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
+            GameManager.Instance.obPool.SpawnTxt(2, transform.position, Dmg.ToString("F0"));
             other.GetComponent<EnemyController>().Hit(Dmg);
         }
     }

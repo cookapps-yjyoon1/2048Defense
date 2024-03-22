@@ -17,7 +17,7 @@ public class BulletExplosion : Bullet
 
     override public void InitData(Vector3 _dir, float _dmg)
     {
-        Dmg = _dmg * GameManager.instance.ExplosionCrrection;
+        Dmg = _dmg * GameManager.Instance.ExplosionCrrection;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, _dir);
 
         StartCoroutine(CoShot(_dir));
@@ -43,7 +43,8 @@ public class BulletExplosion : Bullet
     {
         if (other.CompareTag("Enemy"))
         {
-            GameManager.instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
+            GameManager.Instance.vfxPool.Spawn((int)vfxType, Dmg, transform.position);
+            GameManager.Instance.obPool.SpawnTxt(2, transform.position, Dmg.ToString("F0"));
             gameObject.SetActive(false);
         }
     }
