@@ -17,7 +17,7 @@ MonoBehaviour:
     InterstitialAdUnitId: 
     RewardedAdUnitId: ca-app-pub-3940256099942544/5224354917
     Banner:
-      BannerAdUnitId: ca-app-pub-3940256099942544/6300978111
+      BannerAdUnitId: 
       Position: 0
     TestDeviceIds: []
   _ios:

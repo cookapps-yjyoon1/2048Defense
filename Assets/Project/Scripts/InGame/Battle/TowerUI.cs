@@ -13,21 +13,19 @@ public class TowerUI : MonoBehaviour
     
     public void UpdateUI(int count,int currentIndex)
     {
-        if (count == 0)
-        {
-            _goBulletSlot.ForEach(x=>x.SetActive(false));
-            return;
-        }
-        
         _count = count;
-        // for (int i = 0; i < _goBulletSlot.Count; i++)
-        // {
-        //     _goBulletSlot[i].SetActive(i < count);
-        // }
-
-        for (int i = 0; i < _goBullet.Count; i++)
+        
+        // 1개 장착했을때 맨 처음것만 작동
+        // count = 1, i = 0
+        for (int i = _goBullet.Count-1; i >= 0 ; i--)
         {
-            _goBullet[i].SetActive(currentIndex-1 < i);
+            if (i >= count)
+            {
+                _goBullet[i].SetActive(false);
+                continue;
+            }
+            
+            _goBullet[i].SetActive(i - currentIndex >= 0);
         }
     }
 

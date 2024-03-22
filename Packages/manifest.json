@@ -2,6 +2,7 @@
   "dependencies": {
     "com.cookapps.admob": "1.1.1",
     "com.cookapps.analytics-lite": "1.2.4",
+    "com.cookapps.facebook": "1.1.4",
     "com.cookapps.local.data": "3.0.6",
     "com.cookapps.reloaddomain": "1.0.4",
     "com.cookapps.specdatamanager": "1.0.14",
