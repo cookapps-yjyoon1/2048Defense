@@ -9,6 +9,7 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] TextMeshProUGUI waveInfoText;
     [SerializeField] float waveDuration;
     [SerializeField] EnemyPool enemyPool;
+    [SerializeField] Transform bigEnergySpawnPos;
 
     //public float correction;
     //float incrCorrection;
@@ -62,6 +63,9 @@ public class WaveInfo : MonoBehaviour
                     lastWave += 5;
                     waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
                     GameManager.instance.isStart = false;
+                    GameManager.instance.obPool.SpawnEnergy(bigEnergySpawnPos.position, 30);
+
+
                     GameManager.instance.MoveEnergyFull(30);
                     yield break;
                 }

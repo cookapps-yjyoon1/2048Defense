@@ -29,7 +29,7 @@ public class ObjectEnergy : MonoBehaviour
     private void OnMouseDown()
     {
         GameManager.instance.vfxPool.Spawn(3, 0, transform.position);
-        GameManager.instance.obPool.SpawnTxt(1, transform.position, energy.ToString());
+        GameManager.instance.obPool.SpawnTxt(transform.position, energy.ToString());
         HandleCoinPickup();
     }
 

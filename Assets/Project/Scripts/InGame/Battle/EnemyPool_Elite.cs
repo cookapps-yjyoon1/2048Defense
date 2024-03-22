@@ -47,7 +47,7 @@ public class EnemyPool_Elite : ObjectPool
             Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
             EnemyController unit = Get(Random.Range(0, mobType), spawnPos).GetComponent<EnemyController>();
             unit.InitData(target, _correction, 1);
-            UnitList.enumyList.Add(unit);
+            GameManager.instance.unitList.enumyList.Add(unit);
         }
     }
 

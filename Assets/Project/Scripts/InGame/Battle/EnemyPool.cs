@@ -55,7 +55,7 @@ public class EnemyPool : ObjectPool
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction, 0);
-        UnitList.enumyList.Add(unit);
+        GameManager.instance.unitList.enumyList.Add(unit);
     }
 
     public void WaveStart(int _curWave)

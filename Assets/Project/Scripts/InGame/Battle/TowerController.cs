@@ -35,9 +35,9 @@ public class TowerController : Tower
         float curDist = 0;
         int firstDistIndex = 0;
 
-        for (int i = 0; i < UnitList.enumyList.Count; i++)
+        for (int i = 0; i < GameManager.instance.unitList.enumyList.Count; i++)
         {
-            curDist = Vector3.Distance(transform.position, UnitList.enumyList[i].transform.position); //GameManager.instance.unitList.enumyList[i].transform.position.y;
+            curDist = Vector3.Distance(transform.position, GameManager.instance.unitList.enumyList[i].transform.position); //GameManager.instance.unitList.enumyList[i].transform.position.y;
 
             if (firstDist > curDist)
             {
@@ -45,14 +45,14 @@ public class TowerController : Tower
                 firstDist = curDist;
             }
         }
-        target = UnitList.enumyList[firstDistIndex].transform;
+        target = GameManager.instance.unitList.enumyList[firstDistIndex].transform;
         
     }
     IEnumerator CoFindTarget()
     {
         while (true)
         {
-            if (UnitList.enumyList.Count != 0)
+            if (GameManager.instance.unitList.enumyList.Count != 0)
             {
                 FirstDistTarget();
             }

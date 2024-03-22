@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameMgrCanvas;
     public Sprite[] WeaponSprite;
     public UI_Battle _UIBattle;
+    public UnitList unitList;
 
     public Slider eliteGauge;
     //public Slider energyGauge;
@@ -188,15 +189,15 @@ public class GameManager : MonoBehaviour
         {
             if (Random.value < 0.8)
             {
-                obPool.SpawnEnergy(0, _tr, 1);
+                obPool.SpawnEnergy(_tr, 1);
             }
             else if (Random.value < 0.9)
             {
-                obPool.SpawnEnergy(0, _tr, 2);
+                obPool.SpawnEnergy(_tr, 2);
             }
             else
             {
-                obPool.SpawnEnergy(0, _tr, 3);
+                obPool.SpawnEnergy(_tr, 3);
             }
             //MoveEnergyFull(1);
             EenergyCount = 10;

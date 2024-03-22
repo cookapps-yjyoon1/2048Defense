@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class UnitList : MonoBehaviour
 {
-    public static List<EnemyController> enumyList = new List<EnemyController>();
+    public List<EnemyController> enumyList = new List<EnemyController>();
     
-    public void OnDestroy()
-    {
-        enumyList.Clear();
-    }
+    //public void OnDestroy()
+    //{
+    //    enumyList.Clear();
+    //}
 }
