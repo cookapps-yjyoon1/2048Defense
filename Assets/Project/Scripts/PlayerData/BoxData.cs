@@ -15,6 +15,12 @@ public class Box
     {
         Level = level;
     }
+
+    public void Clear()
+    {
+        Level = -1;
+        IsProgress = false;
+    }
 }
 
 public class BoxData : GameData
@@ -56,10 +62,10 @@ public class BoxData : GameData
     protected override eDataType DataType => eDataType.Box;
     public override void Initialize()
     {
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     Boxes.Add(new Box());
-        // }
+        for (int i = Boxes.Count; i < 3; i++)
+        {
+            Boxes.Add(new Box());
+        }
     }
 
     public override void LateInitialize()
@@ -76,11 +82,9 @@ public class BoxData : GameData
         
         var level = UtilCode.GetWeightChance(BoxPercents);
 
-        Box box = new Box();
-        box.Init(level);
-        Boxes.Add(box);
+        var box = Boxes.Find(x => x.Level < 0);
         
-        UIBoxHandler.Instance.RefreshBox();
+        box.Init(level);
 
         return true;
     }
@@ -141,9 +145,7 @@ public class BoxData : GameData
         // 박스 초기화
         StartBoxTime = -1;
         FinishBoxTime = -1;
-        Boxes[index].IsProgress = false;
-
-
+        
         var count = Random.Range(BoxMinPieceAmount[Boxes[index].Level], BoxMaxPieceAmount[Boxes[index].Level]);
 
         for (int i = 0; i <count; i++)
@@ -151,7 +153,7 @@ public class BoxData : GameData
             PlayerDataManager.ArrowData.AddArrowPiece(Random.Range(0,PlayerDataManager.ArrowData.Arrows.Count),1);
         }
 
-        Boxes[index].Level = UtilCode.GetWeightChance(BoxPercents);
+        Boxes[index].Clear();
 
         return true;
     }
