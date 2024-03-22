@@ -35,4 +35,13 @@ public static class UtilCode
 
         return 0;
     }
+    
+    public static string GetTimeFormat(long time)
+    {
+        long hour = time / 3600;
+        long minute = time / 60;
+        long second = time % 60;
+
+        return $"{hour:D2}:{minute:D2}:{second:D2}";
+    }
 }

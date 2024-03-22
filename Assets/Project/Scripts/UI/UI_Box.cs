@@ -4,15 +4,14 @@ using UnityEngine.UI;
 
 public class UI_Box : MonoBehaviour
 {
-    [SerializeField] private Button _btnBoxOpen;
     [SerializeField] private GameObject _imgOpen;
     [SerializeField] private GameObject _imgLock;
     [SerializeField] private GameObject[] _boxList;
+    [SerializeField] private GameObject _goAds;
     [SerializeField] private Animator Animator;
+    [SerializeField] private Text _remainTime;
 
     private int _index = 0;
-
-
     private BoxData _data => PlayerDataManager.BoxData;
 
     public void Init(int index)
@@ -42,23 +41,23 @@ public class UI_Box : MonoBehaviour
         if (isEnableClaim)
         {
             Animator.Play("WaitClaim");
+            _remainTime.text = "Claim !";
         }
         else if (box.IsProgress)
         {
             Animator.Play("Progress");
+            _remainTime.text = UtilCode.GetTimeFormat(PlayerDataManager.BoxData.FinishBoxTime - TimeManager.Instance.Now);
         }
         else
         {
             Animator.Play("Idle");
+            _remainTime.text = UtilCode.GetTimeFormat(PlayerDataManager.BoxData.BoxTimes[box.Level]);
         }
+        
+        _goAds.SetActive(PlayerDataManager.BoxData.IsEnableShowAds(_index));
     }
-
-    private void Awake()
-    {
-        _btnBoxOpen.onClick.AddListener(OpenBox);
-    }
-
-    private void OpenBox()
+    
+    public void OpenBox()
     {
         if (PlayerDataManager.BoxData.TryClaimBox(_index))
         {
@@ -71,5 +70,23 @@ public class UI_Box : MonoBehaviour
             Refresh();
             return;
         }
+    }
+
+    public void ShowAds()
+    {
+        if (!PlayerDataManager.BoxData.IsEnableShowAds(_index))
+        {
+            return;
+        }
+        
+        CookApps.Admob.CAppAdmob.Rewarded.Show((isSuccess) =>
+        {
+            if (isSuccess)
+            {
+                PlayerDataManager.BoxData.Boxes[_index].IsShowAds = true;
+                PlayerDataManager.BoxData.FinishBoxTime -= 1800;
+                Refresh();
+            }
+        });
     }
 }
