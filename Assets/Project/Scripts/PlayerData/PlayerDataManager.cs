@@ -99,4 +99,11 @@ public class PlayerDataManager : SingletonBehaviour<PlayerDataManager>
         yield return null;
     }
     
+    public IEnumerator ValidCheck()
+    {
+        _playerData.ValidCheck();
+
+        yield return new WaitForSeconds(2f);
+    }
+    
 }

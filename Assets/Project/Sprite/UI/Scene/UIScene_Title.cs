@@ -169,7 +169,8 @@ public class UIScene_Title : MonoBehaviour
             yield return StartCoroutine(PlayerDataManager.Instance.SaveLocalData());
             Progress = 0.9f;
             yield return null;
-            
+
+            yield return StartCoroutine(PlayerDataManager.Instance.ValidCheck());
             Progress = 1f;
             yield return null;
 
