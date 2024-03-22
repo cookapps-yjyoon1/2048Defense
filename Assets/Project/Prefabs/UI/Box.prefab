@@ -205,7 +205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 209, y: -6}
+  m_AnchoredPosition: {x: 202, y: -6}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8676584267390711140
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.754717, g: 0.18867925, b: 0.18867925, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -238,11 +238,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 787345f68f2def74bbad0029c249beac, type: 3}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -456,9 +456,9 @@ MonoBehaviour:
   _imgOpen: {fileID: 6702864793311747892}
   _imgLock: {fileID: 1466930668761348294}
   _boxList:
-  - {fileID: 1651279550203666532}
-  - {fileID: 8161417293691761625}
   - {fileID: 8474712874712053894}
+  - {fileID: 8161417293691761625}
+  - {fileID: 1651279550203666532}
   _goAds: {fileID: 5763337602499050071}
   Animator: {fileID: 4341456989072165059}
   _remainTime: {fileID: 8687977097066158586}
@@ -670,7 +670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 9.92, y: -98.563}
+  m_AnchoredPosition: {x: 9.92, y: 4}
   m_SizeDelta: {x: -84.767, y: 142.873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9063582924861025817
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1022,8 +1022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.152, y: 31.668}
-  m_SizeDelta: {x: 426.431, y: 480.2}
+  m_AnchoredPosition: {x: -12.152, y: -122}
+  m_SizeDelta: {x: 426.431, y: 50.003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2487185644191993327
 CanvasRenderer:
@@ -1109,7 +1109,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2683957723785281118}
         m_TargetAssemblyTypeName: UI_Box, Assembly-CSharp
-        m_MethodName: OpenBox
+        m_MethodName: ShowAds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

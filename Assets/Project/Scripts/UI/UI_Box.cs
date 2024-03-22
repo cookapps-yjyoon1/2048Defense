@@ -33,11 +33,9 @@ public class UI_Box : MonoBehaviour
         {
             _boxList[i].SetActive(box.Level == i);
         }
-
+        
         var isEnableClaim = PlayerDataManager.BoxData.IsEnableClaimBox(_index);
         
-        _imgOpen.gameObject.SetActive(isEnableClaim);
-
         if (isEnableClaim)
         {
             Animator.Play("WaitClaim");
@@ -54,13 +52,19 @@ public class UI_Box : MonoBehaviour
             _remainTime.text = UtilCode.GetTimeFormat(PlayerDataManager.BoxData.BoxTimes[box.Level]);
         }
         
+        _imgOpen.gameObject.SetActive(isEnableClaim);
+        
         _goAds.SetActive(PlayerDataManager.BoxData.IsEnableShowAds(_index));
+        
+        gameObject.SetActive(true);
     }
     
     public void OpenBox()
     {
-        if (PlayerDataManager.BoxData.TryClaimBox(_index))
+        SoundManager.Instance.Play(Enum_Sound.Effect, "BoxClick");
+        if (PlayerDataManager.BoxData.TryClaimBox(_index,out var list))
         {
+            UI_Toast.Instance.Open(list);
             Refresh();
             return;
         }

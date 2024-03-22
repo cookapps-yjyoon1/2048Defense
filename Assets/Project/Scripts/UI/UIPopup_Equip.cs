@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class UIPopup_Equip : MonoBehaviour
 {
     [SerializeField] private UIPopup_Equip_Slot[] slots;
-    
+
     public void OnClickButton()
     {
         gameObject.SetActive(!gameObject.activeSelf);

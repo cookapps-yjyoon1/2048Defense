@@ -68,6 +68,10 @@ public class BoxData : GameData
         {
             Boxes.Add(new Box());
         }
+        
+        Boxes[0].Init(0);
+        Boxes[1].Init(1);
+        Boxes[2].Init(2);
     }
 
     public override void LateInitialize()
@@ -87,6 +91,8 @@ public class BoxData : GameData
         var box = Boxes.Find(x => x.Level < 0);
         
         box.Init(level);
+        
+        PlayerDataManager.Instance.SaveLocalData();
 
         return true;
     }
@@ -113,13 +119,15 @@ public class BoxData : GameData
         FinishBoxTime = StartBoxTime + BoxTimes[Boxes[index].Level];
         
         Boxes[index].IsProgress = true;
+        
+        PlayerDataManager.Instance.SaveLocalData();
 
         return true;
     }
 
     public bool IsEnableShowAds(int index)
     {
-        if (index >= Boxes.Count)
+        if (IsEnableClaimBox(index))
         {
             return false;
         }
@@ -129,7 +137,7 @@ public class BoxData : GameData
             return false;
         }
 
-        if (!Boxes[index].IsShowAds)
+        if (Boxes[index].IsShowAds)
         {
             return false;
         }
@@ -157,13 +165,18 @@ public class BoxData : GameData
         return true;
     }
 
-    public bool TryClaimBox(int index)
+    public bool TryClaimBox(int index, out List<int> arrows)
     {
+        arrows = new List<int>();
+        
         if (!IsEnableClaimBox(index))
         {
             return false;
         }
-
+        
+        arrows.Add(0);
+        arrows.Add(0);
+        arrows.Add(0);
         // 박스 초기화
         StartBoxTime = -1;
         FinishBoxTime = -1;
@@ -172,7 +185,9 @@ public class BoxData : GameData
 
         for (int i = 0; i <count; i++)
         {
-            PlayerDataManager.ArrowData.AddArrowPiece(Random.Range(0,PlayerDataManager.ArrowData.Arrows.Count),1);
+            var arrowIndex = Random.Range(0, PlayerDataManager.ArrowData.Arrows.Count);
+            arrows[arrowIndex]++;
+            PlayerDataManager.ArrowData.AddArrowPiece(arrowIndex,1);
         }
 
         PlayerDataManager.ArrowData.TryUpgradeArrow(0);
@@ -180,6 +195,8 @@ public class BoxData : GameData
         PlayerDataManager.ArrowData.TryUpgradeArrow(2);
 
         Boxes[index].Clear();
+
+        PlayerDataManager.Instance.SaveLocalData();
 
         return true;
     }

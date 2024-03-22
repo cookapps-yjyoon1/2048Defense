@@ -56,7 +56,7 @@ public class ArrowData : GameData
         }
         
         Arrows[index]++;
-        OwnArrowPiece[index] -= Arrows[index] * UpgradeCost;
+        OwnArrowPiece[index] -= UpgradeCost;
 
         return true;
     }
