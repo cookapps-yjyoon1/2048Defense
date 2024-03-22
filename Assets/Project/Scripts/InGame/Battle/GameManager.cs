@@ -30,7 +30,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public Text txtBlockProbBig;
     public Text txtMaxBlock;
 
-    public int curStage = 0;
+    public int curStage => PlayerDataManager.ETCData.CurStage;
     [HideInInspector] public int ExplosionCrrection = 1;
     [HideInInspector] public int MultCrrection = 1;
     [HideInInspector] public int DrillCrrection = 1;
