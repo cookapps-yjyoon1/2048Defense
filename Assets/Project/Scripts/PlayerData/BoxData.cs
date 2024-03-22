@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using Random = UnityEngine.Random;
 
@@ -26,17 +27,22 @@ public class BoxData : GameData
     
     
     [JsonIgnore] public const float BoxPrecent1 = 70;
-    [JsonIgnore] public const long BoxTime1 = 900;
+    [JsonIgnore] public const long BoxTime1 = 2;
+    //[JsonIgnore] public const long BoxTime1 = 900;
+
     [JsonIgnore] public const int MinPieceAmount1 = 8;
     [JsonIgnore] public const int MaxPieceAmount1 = 12;
 
     [JsonIgnore] public const float BoxPrecent2 = 20;
-    [JsonIgnore] public const long BoxTime2 = 1800;
+    [JsonIgnore] public const long BoxTime2 = 4;
+    //[JsonIgnore] public const long BoxTime2 = 1800;
+
     [JsonIgnore] public const int MinPieceAmount2 = 20;
     [JsonIgnore] public const int MaxPieceAmount2 = 26;
 
     [JsonIgnore] public const float BoxPrecent3 = 10;
-    [JsonIgnore] public const long BoxTime3 = 3600;
+    [JsonIgnore] public const long BoxTime3 = 6;
+    //[JsonIgnore] public const long BoxTime3 = 3600;
     [JsonIgnore] public const int MinPieceAmount3 = 50;
     [JsonIgnore] public const int MaxPieceAmount3 = 56;
 
@@ -48,6 +54,7 @@ public class BoxData : GameData
     protected override eDataType DataType => eDataType.Box;
     public override void Initialize()
     {
+
     }
 
     public override void LateInitialize()
@@ -56,12 +63,7 @@ public class BoxData : GameData
 
     public bool IsEnableAddBox()
     {
-        if (Boxes.Count >= MaxBoxCount)
-        {
-            return false;
-        }
-
-        return true;
+        return Boxes.Count < 3;
     }
     
     public bool TryAddBox()
@@ -74,21 +76,29 @@ public class BoxData : GameData
         var index = UtilCode.GetWeightChance(BoxPercents);
 
         Box box = new Box();
-
         box.Init(index);
-        Boxes.Add(box);
+        Boxes[index] = box;
+        UIBoxHandler.Instance.RefreshBox();
+        
+        // var  Box = Boxes.First(x => x == null);
+        //  Box = box;
 
         return true;
     }
 
-    public bool IsEnableOpenBox()
+    public bool IsEnableStartBox()
     {
-        return !Boxes.Exists(x => x.IsProgress);
+        return !Boxes.Any(x => x.IsProgress);
     }
 
-    public bool TryOpenBox(int index)
+    public bool TryStartBox(int index)
     {
-        if (!IsEnableOpenBox())
+        if (index >= Boxes.Count)
+        {
+            return false;
+        }
+
+        if (!IsEnableStartBox())
         {
             return false;
         }
@@ -103,6 +113,11 @@ public class BoxData : GameData
 
     public bool IsEnableClaimBox(int index)
     {
+        if (index >= Boxes.Count)
+        {
+            return false;
+        }
+
         if (!Boxes[index].IsProgress)
         {
             return false;
@@ -133,6 +148,8 @@ public class BoxData : GameData
         {
             PlayerDataManager.ArrowData.AddArrowPiece(Random.Range(0,PlayerDataManager.ArrowData.Arrows.Count),1);
         }
+
+        //Boxes[index] = null;
 
         return true;
     }
