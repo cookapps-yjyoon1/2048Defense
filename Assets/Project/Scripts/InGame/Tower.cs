@@ -36,6 +36,7 @@ public class Tower : MonoBehaviour , IDropHandler
         if (arrows.Count >= 5)
         {
             arrows.RemoveAt(0);
+            GameManager.Instance.MobCountNum(100);
             //return;
         }
         

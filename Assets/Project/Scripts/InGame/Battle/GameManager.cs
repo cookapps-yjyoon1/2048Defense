@@ -192,16 +192,34 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void MobCount()
     {
-        MoveCount--;
+        mobCount--;
 
-        if (MoveCount == 0)
+        if (mobCount <= 0)
         {
             SpawnLastBossMonster();
+            txtMobCount.text = "0";
         }
-        //eliteGauge.value = MoveCount;
-
-        //txtCount.text = MoveCount.ToString();
+        else
+        {
+            txtMobCount.text = mobCount.ToString();
+        }
     }
+
+    public void MobCountNum(int _num)
+    {
+        mobCount -= _num;
+
+        if (mobCount <= 0)
+        {
+            SpawnLastBossMonster();
+            txtMobCount.text = "0";
+        }
+        else
+        {
+            txtMobCount.text = mobCount.ToString();
+        }
+    }
+
 
     public void MoveEnergy(Vector3 _tr)
     {
