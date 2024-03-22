@@ -14,6 +14,8 @@ public class EnemyPool_Elite : ObjectPool
     {
         mobType = GameManager.Instance.stageData.stage[_stage].mob_elite.Count;
 
+        prefab = new GameObject[mobType];
+
         for (int i = 0; i < mobType; i++)
         {
             prefab[i] = GameManager.Instance.stageData.stage[_stage].mob_elite[i];

@@ -23,7 +23,10 @@ public class EnemyPool : ObjectPool
         correction = increCorrection;
         repeat = 1;
 
+
         mobType = GameManager.Instance.stageData.stage[_stage].mob.Count;
+
+        prefab = new GameObject[mobType];
 
         for (int i = 0; i < mobType; i++)
         {
@@ -92,10 +95,7 @@ public class EnemyPool : ObjectPool
                 StartCoroutine(elitePool.CoWaveSpawn_3wave(5, correction));
                 break;
             case 4:
-                for (int i = 0; i < repeat; i++)
-                {
-                    bossPool.Spawn(correction * 10f, 2);
-                }
+                StartCoroutine(bossPool.CoWaveSpawn(repeat, correction * 10f, 2));
                 correction += increCorrection;
                 repeat++;
                 break;
