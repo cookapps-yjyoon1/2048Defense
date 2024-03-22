@@ -166,6 +166,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void GameClear()
     {
+        PlayerDataManager.ETCData.SetClearStage(curStage);
         _UIBattle.FinishGame(true);
     }
 
