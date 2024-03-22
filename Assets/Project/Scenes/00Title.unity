@@ -1351,6 +1351,9 @@ MonoBehaviour:
   - name: 2048Move
     clip:
     - {fileID: 8300000, guid: fbd774d0cf95f9e46acefdf9de568154, type: 3}
+  - name: EnergyGet
+    clip:
+    - {fileID: 8300000, guid: 23c167935b5901747bc09bb25d93fb86, type: 3}
 --- !u!4 &2042194760
 Transform:
   m_ObjectHideFlags: 0

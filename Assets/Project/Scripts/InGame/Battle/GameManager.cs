@@ -123,11 +123,23 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     private void Start()
     {
-        OnClickBtnGameStart();
+        // if (PlayerDataManager.ETCData.IsFirstPlay)
+        // {
+        //     // 팝업 띄우고 endAction으로 StartEvent 태우기
+        //     
+        //     return;
+        // }
 
-        _originBoardPos = _trBoard.position;
-        _imgBoardRed.DOFade(35f / 255f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
-        _imgBoardRed.gameObject.SetActive(false);
+        StartEvent();
+        
+        void StartEvent()
+        {
+            OnClickBtnGameStart();
+
+            _originBoardPos = _trBoard.position;
+            _imgBoardRed.DOFade(35f / 255f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+            _imgBoardRed.gameObject.SetActive(false);
+        }
     }
 
     public void GameStart()

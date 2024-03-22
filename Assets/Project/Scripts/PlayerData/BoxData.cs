@@ -70,9 +70,9 @@ public class BoxData : GameData
             Boxes.Add(new Box());
         }
         
-        // Boxes[0].Init(0);
-        // Boxes[1].Init(1);
-        // Boxes[2].Init(2);
+        Boxes[0].Init(0);
+        Boxes[1].Init(1);
+        Boxes[2].Init(2);
     }
 
     public override void LateInitialize()
