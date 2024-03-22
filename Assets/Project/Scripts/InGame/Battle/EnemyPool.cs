@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class EnemyPool : ObjectPool
 {
-    [SerializeField] WallController target;
+    public WallController target;
     [SerializeField] float randomXvalue;
     [SerializeField] EnemyPool_Elite elitePool;
     [SerializeField] EnemyPool_Boss bossPool;
@@ -55,7 +55,7 @@ public class EnemyPool : ObjectPool
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(_unitIndex, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction, 0);
-        UnitList.enumyList.Add(unit);
+        GameManager.instance.unitList.enumyList.Add(unit);
     }
 
     public void WaveStart(int _curWave)

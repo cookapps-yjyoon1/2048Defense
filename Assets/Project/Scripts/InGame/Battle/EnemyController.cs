@@ -157,7 +157,7 @@ public class EnemyController : MonoBehaviour
                 break;
         }
 
-        UnitList.enumyList.Remove(this);
+        GameManager.instance.unitList.enumyList.Remove(this);
 
         StopAllCoroutines();
         StartCoroutine(CoDeath());

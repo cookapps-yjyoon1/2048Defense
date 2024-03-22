@@ -43,7 +43,7 @@ public class EnemyPool_Boss : ObjectPool
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, transform.position.z);
         EnemyController unit = Get(0, spawnPos).GetComponent<EnemyController>();
         unit.InitData(target, _correction, _enemyType);
-        UnitList.enumyList.Add(unit);
+        GameManager.instance.unitList.enumyList.Add(unit);
     }
 
     public IEnumerator CoWaveSpawn(int _repeat, float _correction, int _enemyType)
