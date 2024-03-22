@@ -7882,12 +7882,12 @@ MonoBehaviour:
   txtBlockProbSmall: {fileID: 853891143}
   txtBlockProbBig: {fileID: 853891142}
   txtMaxBlock: {fileID: 1442721345}
-  curStage: 0
   ExplosionCrrection: 1
   MultCrrection: 1
   DrillCrrection: 1
   MoveCount: 10
   isStart: 0
+  _towerGunCount: 0
   _imgBoardRed: {fileID: 1592993163}
   _trBoard: {fileID: 1830594605}
 --- !u!4 &889187071
@@ -10035,7 +10035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage:
-  - correction: 1
+  - correction: 0.5
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
@@ -10046,7 +10046,7 @@ MonoBehaviour:
     - {fileID: 2630675431004917544, guid: 9677af53cba1d924f81e61d98ac1bc4a, type: 3}
     mob_boss:
     - {fileID: 8491345864846289548, guid: dfaf05132d96e254eafd65272af28048, type: 3}
-  - correction: 1.1
+  - correction: 0.5
     mob:
     - {fileID: 3847619667622731575, guid: a4a88e9ca66054e46adfccb00cd817ad, type: 3}
     - {fileID: 6316968778235879720, guid: e462b9731a5ac7440b5692b8b5136394, type: 3}
@@ -10057,7 +10057,7 @@ MonoBehaviour:
     - {fileID: 754331208657057047, guid: 55b7fe3da6dcaae4f9576d8541a7e50f, type: 3}
     mob_boss:
     - {fileID: 6896268832580764500, guid: c3452229ee7be874eaa35abc083b3ed7, type: 3}
-  - correction: 1.2
+  - correction: 0.5
     mob:
     - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
     - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
@@ -10068,7 +10068,7 @@ MonoBehaviour:
     - {fileID: 754331208657057047, guid: 55b7fe3da6dcaae4f9576d8541a7e50f, type: 3}
     mob_boss:
     - {fileID: 3999968486082146707, guid: 543b84d3422d0ac4a9f0f55278a285b3, type: 3}
-  - correction: 1.4
+  - correction: 0.5
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
@@ -10082,7 +10082,7 @@ MonoBehaviour:
     - {fileID: 4994087048403906739, guid: b057a8aeff68a334caf5f24747d3cff9, type: 3}
     mob_boss:
     - {fileID: 4355502652166624174, guid: ebe4ce44135921f42b94c5b1ddc4b135, type: 3}
-  - correction: 1.5
+  - correction: 0.5
     mob:
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
     - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
@@ -10096,7 +10096,7 @@ MonoBehaviour:
     - {fileID: 2630675431004917544, guid: 9677af53cba1d924f81e61d98ac1bc4a, type: 3}
     mob_boss:
     - {fileID: 4382105738976346169, guid: b7b29ab1a0f3c2c4abb9683233aae22a, type: 3}
-  - correction: 1.7
+  - correction: 0.5
     mob:
     - {fileID: 9128313270053639154, guid: 0b87e31244cdd0e4f9607b0bb6d0b925, type: 3}
     - {fileID: 8634596583720058937, guid: 0fb43ba61b2976b488a8e1bc7487d9a7, type: 3}
@@ -10110,7 +10110,7 @@ MonoBehaviour:
     - {fileID: 754331208657057047, guid: 55b7fe3da6dcaae4f9576d8541a7e50f, type: 3}
     mob_boss:
     - {fileID: 2194115699930398326, guid: 77bf291f902280b488b4cc75c104845a, type: 3}
-  - correction: 2
+  - correction: 0.5
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
@@ -10127,7 +10127,7 @@ MonoBehaviour:
     - {fileID: 8510893567252809522, guid: 4ab157ed58386824988ce136bfc39390, type: 3}
     mob_boss:
     - {fileID: 1280897722431167726, guid: 480cf911bd44a044da517f0f83531462, type: 3}
-  - correction: 2.5
+  - correction: 0.5
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
@@ -10145,7 +10145,7 @@ MonoBehaviour:
     - {fileID: 7876516748129695385, guid: 4c97e38a70cfcd74aba6ffdf0457fd36, type: 3}
     mob_boss:
     - {fileID: 5700888829929102460, guid: 812db75d430eb934386e1676beadefff, type: 3}
-  - correction: 3
+  - correction: 0.5
     mob:
     - {fileID: 274897996198959854, guid: 0b4ef4db409dba6488af930c568d5ba6, type: 3}
     - {fileID: 274897996198959854, guid: 33b98009f64ac5b40b4de43ec47ecf0a, type: 3}
