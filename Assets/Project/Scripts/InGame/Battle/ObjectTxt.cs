@@ -11,8 +11,6 @@ public class ObjectTxt : MonoBehaviour
     Ease easeType = Ease.OutQuad; // 이동의 감속 유형
     [SerializeField] TextMeshPro txtEnergy;
 
-
-
     public void InitData(string _str)
     {
         txtEnergy.text = _str;

@@ -16,6 +16,8 @@ public class Tower : MonoBehaviour , IDropHandler
     
     [SerializeField] protected TowerUI _towerUI;
 
+
+
     private void Start()
     {
         Refresh();
@@ -37,6 +39,7 @@ public class Tower : MonoBehaviour , IDropHandler
         {
             arrows.RemoveAt(0);
             GameManager.Instance.MobCountNum(100);
+            GameManager.Instance.obPool.SpawnTxt(3, _towerUI.transform.position, "-100");
             //return;
         }
         
