@@ -8,10 +8,10 @@ public class UIPopup_Equip_Slot : MonoBehaviour
     
     public void Refresh(int index)
     {
-        var equip = PlayerDataManager.ArrowData.Arrows[index];
-        var equipCount = PlayerDataManager.ArrowData.OwnArrowPiece[index];
+        var arrow = PlayerDataManager.ArrowData.Arrows[index];
+        var arrowExp = PlayerDataManager.ArrowData.OwnArrowPiece[index];
         
-        Level.text = $"Lv.{equip:00}";
-        Damage.text = $"({equipCount}/100)";
+        Level.text = $"Lv.{arrow:00}";
+        Damage.text = $"({arrowExp}/100)";
     }
 }

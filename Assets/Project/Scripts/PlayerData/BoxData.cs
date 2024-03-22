@@ -68,11 +68,8 @@ public class BoxData : GameData
         for (int i = Boxes.Count; i < 3; i++)
         {
             Boxes.Add(new Box());
+            Boxes[i].Init(1);
         }
-        
-        Boxes[0].Init(0);
-        Boxes[1].Init(1);
-        Boxes[2].Init(2);
     }
 
     public override void LateInitialize()

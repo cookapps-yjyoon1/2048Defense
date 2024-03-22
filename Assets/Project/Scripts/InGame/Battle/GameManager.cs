@@ -119,7 +119,6 @@ public class GameManager : SingletonBehaviour<GameManager>
             maxNumber = value;
         }
     }
-    //public UnitList unitList;
 
     private void Start()
     {
