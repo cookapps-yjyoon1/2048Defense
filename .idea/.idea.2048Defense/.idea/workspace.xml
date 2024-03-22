@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/01Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ArrowData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ArrowData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIPopup_Equip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UIPopup_Equip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +153,7 @@
       <workItem from="1710390625576" duration="2516000" />
       <workItem from="1711003095906" duration="8513000" />
       <workItem from="1711077208457" duration="1713000" />
-      <workItem from="1711086005095" duration="10217000" />
+      <workItem from="1711086005095" duration="10661000" />
     </task>
     <servers />
   </component>
@@ -253,30 +247,30 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Box.cs</url>
-          <line>23</line>
-          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\UI\UI_Box.cs" initialLine="23" containingFunctionPresentation="Method 'Refresh'">
-            <startOffsets>
-              <option value="584" />
-            </startOffsets>
-            <endOffsets>
-              <option value="634" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs</url>
-          <line>134</line>
+          <line>130</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\BoxData.cs" initialLine="134" containingFunctionPresentation="Method 'IsEnableShowAds'">
             <startOffsets>
-              <option value="3344" />
+              <option value="3277" />
             </startOffsets>
             <endOffsets>
-              <option value="3373" />
+              <option value="3305" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs</url>
+          <line>150</line>
+          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\BoxData.cs" initialLine="149" containingFunctionPresentation="Method 'IsEnableClaimBox'">
+            <startOffsets>
+              <option value="3619" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3644" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

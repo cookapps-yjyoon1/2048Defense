@@ -36,22 +36,23 @@ public class BoxData : GameData
     
     
     [JsonIgnore] public const float BoxPercent1 = 70;
-    [JsonIgnore] public const long BoxTime1 = 2;
-    //[JsonIgnore] public const long BoxTime1 = 900;
+    //[JsonIgnore] public const long BoxTime1 = 2;
+    [JsonIgnore] public const long BoxTime1 = 900;
 
     [JsonIgnore] public const int MinPieceAmount1 = 8;
     [JsonIgnore] public const int MaxPieceAmount1 = 12;
 
     [JsonIgnore] public const float BoxPercent2 = 20;
-    [JsonIgnore] public const long BoxTime2 = 4;
-    //[JsonIgnore] public const long BoxTime2 = 1800;
+    //[JsonIgnore] public const long BoxTime2 = 4;
+    [JsonIgnore] public const long BoxTime2 = 1800;
 
     [JsonIgnore] public const int MinPieceAmount2 = 20;
     [JsonIgnore] public const int MaxPieceAmount2 = 26;
 
     [JsonIgnore] public const float BoxPrecent3 = 10;
-    [JsonIgnore] public const long BoxTime3 = 6;
-    //[JsonIgnore] public const long BoxTime3 = 3600;
+    //[JsonIgnore] public const long BoxTime3 = 6;
+    [JsonIgnore] public const long BoxTime3 = 3600;
+    
     [JsonIgnore] public const int MinPieceAmount3 = 50;
     [JsonIgnore] public const int MaxPieceAmount3 = 56;
 
@@ -69,9 +70,9 @@ public class BoxData : GameData
             Boxes.Add(new Box());
         }
         
-        Boxes[0].Init(0);
-        Boxes[1].Init(1);
-        Boxes[2].Init(2);
+        // Boxes[0].Init(0);
+        // Boxes[1].Init(1);
+        // Boxes[2].Init(2);
     }
 
     public override void LateInitialize()
