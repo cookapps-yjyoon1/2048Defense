@@ -314,7 +314,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(enemyPool.correction * 20f, 3);
+        enemyPool_Boss.Spawn(enemyPool.correction * 22f, 3);
         waveInfo.WaveStop();
         isLastBossSpawn = true;
     }
