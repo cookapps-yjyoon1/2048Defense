@@ -74,25 +74,25 @@ public class EnemyPool : ObjectPool
         {
             case 0:
                 StartCoroutine(CoWaveSpawn(10, correction));
-                StartCoroutine(CoWaveSpawn(10, correction));
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
                 StartCoroutine(CoWaveSpawn_3wave(10, correction));
                 break;
             case 1:
                 StartCoroutine(CoWaveSpawn(10, correction));
-                StartCoroutine(CoWaveSpawn_3wave(5, correction));
+                StartCoroutine(CoWaveSpawn_3wave(4 + repeat, correction));
                 StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
                 break;
             case 2:
                 correction += increCorrection;
-                StartCoroutine(CoWaveSpawn(10, correction));
-                StartCoroutine(CoWaveSpawn_3wave(5, correction));
-                StartCoroutine(elitePool.CoWaveSpawn_3wave(5, correction));
+                StartCoroutine(CoWaveSpawn(10 + repeat, correction));
+                StartCoroutine(CoWaveSpawn_3wave(4, correction));
+                StartCoroutine(elitePool.CoWaveSpawn_3wave(4 + repeat, correction));
                 break;
             case 3:
                 StartCoroutine(CoWaveSpawn(10, correction));
-                StartCoroutine(CoWaveSpawn_3wave(5, correction));
+                StartCoroutine(CoWaveSpawn_3wave(4 + repeat, correction));
                 StartCoroutine(elitePool.CoWaveSpawn(repeat, correction));
-                StartCoroutine(elitePool.CoWaveSpawn_3wave(5, correction));
+                StartCoroutine(elitePool.CoWaveSpawn_3wave(4 + repeat, correction));
                 break;
             case 4:
                 StartCoroutine(bossPool.CoWaveSpawn(repeat, correction * 10f, 2));

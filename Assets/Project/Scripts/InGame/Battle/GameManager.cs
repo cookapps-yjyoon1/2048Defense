@@ -22,8 +22,9 @@ public class GameManager : SingletonBehaviour<GameManager>
     public UI_Battle _UIBattle;
     public UnitList unitList;
 
-    public Slider eliteGauge;
+    //public Slider eliteGauge;
     //public Slider energyGauge;
+    public Text txtMobCount;
     public Text txtEnergyCount;
 
     public Text txtBlockProbSmall;
@@ -35,6 +36,8 @@ public class GameManager : SingletonBehaviour<GameManager>
     [HideInInspector] public int MultCrrection = 1;
     [HideInInspector] public int DrillCrrection = 1;
     [HideInInspector] public int MoveCount = 10;
+
+    public int mobCount = 2048;
 
     private int EenergyCount = 10;
     private int curEnergy = 30;
@@ -61,7 +64,6 @@ public class GameManager : SingletonBehaviour<GameManager>
             {
                 if(!isLastBossSpawn)
                 {
-                    isLastBossSpawn = true;
                     SpawnLastBossMonster();
                 }
             }
@@ -105,7 +107,6 @@ public class GameManager : SingletonBehaviour<GameManager>
                 {
                     if(!isLastBossSpawn)
                     {
-                        isLastBossSpawn = true;
                         SpawnLastBossMonster();
                     }
                 }
@@ -137,20 +138,15 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
 
-        //curEnergy = 70;
+        //eliteGauge.maxValue = MoveCount;
+        //eliteGauge.value = MoveCount;
 
-        eliteGauge.maxValue = MoveCount;
-        eliteGauge.value = MoveCount;
-
-        //energyGauge.maxValue = EenergyCount;
-        //energyGauge.value = EenergyCount;
         txtEnergyCount.text = CurEnergy.ToString();
     }
 
     public void WaveStart()
     {
         waveInfo.WaveStart();
-        //enemyPool.WaveStart(waveInfo.curWave, waveInfo.correction);
     }
 
     public void GameClear()
@@ -179,17 +175,30 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void MoveNode()
     {
-        if (!isStart) return;
+        SoundManager.Instance.Play(Enum_Sound.Effect, "2048Move");
+        //if (!isStart) return;
 
+        //MoveCount--;
+
+        //if (MoveCount == 0)
+        //{
+        //    SpawnBossMonster();
+        //    MoveCount = 10;
+        //}
+        //eliteGauge.value = MoveCount;
+
+        //txtCount.text = MoveCount.ToString();
+    }
+
+    public void MobCount()
+    {
         MoveCount--;
 
-        SoundManager.Instance.Play(Enum_Sound.Effect, "2048Move");
         if (MoveCount == 0)
         {
-            SpawnBossMonster();
-            MoveCount = 10;
+            SpawnLastBossMonster();
         }
-        eliteGauge.value = MoveCount;
+        //eliteGauge.value = MoveCount;
 
         //txtCount.text = MoveCount.ToString();
     }
@@ -250,6 +259,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         enemyPool_Boss.Spawn(enemyPool.correction * 20f, 3);
         waveInfo.WaveStop();
+        isLastBossSpawn = true;
     }
 
     public void SetMaxBlock(int num)
