@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int MoveCount = 10;
 
     private int EenergyCount = 10;
-    private int curEnergy = 30;
+    private int curEnergy = 5;
     public bool isStart = false;
 
     public int CurEnergy { get => curEnergy; set => curEnergy = value; }

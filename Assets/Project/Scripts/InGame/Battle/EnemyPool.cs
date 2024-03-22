@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 public class EnemyPool : ObjectPool
 {
-    [SerializeField] WallController target;
+    public WallController target;
     [SerializeField] float randomXvalue;
     [SerializeField] EnemyPool_Elite elitePool;
     [SerializeField] EnemyPool_Boss bossPool;
