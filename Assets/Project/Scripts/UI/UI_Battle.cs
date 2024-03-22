@@ -14,11 +14,6 @@ public class UI_Battle : MonoBehaviour
         WinPanel.SetActive(isWin);
         LosePanel.SetActive(!isWin);
 
-        if (!isWin)
-        {
-            //PlayerDataManager.BoxData.TryAddBox();
-        }
-        
         gameObject.SetActive(true);
     }
     
@@ -26,7 +21,7 @@ public class UI_Battle : MonoBehaviour
     {
         if (WinPanel.activeInHierarchy)
         {
-            //PlayerDataManager.BoxData.TryAddBox();
+            PlayerDataManager.BoxData.TryAddBox();
         }
 
         SceneManager.LoadScene("01Main");

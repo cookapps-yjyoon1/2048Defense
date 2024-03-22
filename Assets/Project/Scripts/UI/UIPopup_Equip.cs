@@ -12,10 +12,5 @@ public class UIPopup_Equip : MonoBehaviour
     public void OnClickButton()
     {
         gameObject.SetActive(!gameObject.activeSelf);
-        if (gameObject.activeSelf)
-        {
-            PlayerDataManager.BoxData.TryAddBox();
-        }
-
     }
 }
