@@ -65,7 +65,6 @@ public class TimeManager : SingletonBehaviour<TimeManager>
 
     private IEnumerator GetNetworkTime()
     {
-        Now = DateTime.Now.ToBinary();
         UnityWebRequest request = new UnityWebRequest();
         using (request = UnityWebRequest.Get("www.google.com"))
         {
@@ -78,7 +77,9 @@ public class TimeManager : SingletonBehaviour<TimeManager>
             else
             {
                 string date = request.GetResponseHeader("date"); //이곳에서 반송된 데이터에 시간 데이터가 존재
-                Now = DateTime.Parse(date).ToLocalTime().ToBinary();
+
+                var day = DateTime.Parse(date);
+                Now = (day.Year - 2000) * 31536000 + day.Day * 86400 + day.Hour * 3600 + day.Minute * 60 + day.Second;
                 
                 AddOnTickCallback(() =>
                 {
