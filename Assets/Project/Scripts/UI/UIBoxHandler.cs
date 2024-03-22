@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UIBoxHandler : SingletonBehaviour<UIBoxHandler>
@@ -29,5 +30,10 @@ public class UIBoxHandler : SingletonBehaviour<UIBoxHandler>
 
             _uiBoxes[i].gameObject.SetActive(false);
         }
+    }
+
+    public int GetActiveBoxCount()
+    {
+        return _uiBoxes.Count(x => x.gameObject.activeSelf);
     }
 }

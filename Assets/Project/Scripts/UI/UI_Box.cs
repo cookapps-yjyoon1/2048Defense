@@ -22,11 +22,17 @@ public class UI_Box : MonoBehaviour
     private void Awake()
     {
         _btnBoxOpen.onClick.AddListener(OpenBox);
-        TimeManager.Instance.AddOnTickCallback(CanOpen);
     }
 
     private void OnEnable()
     {
+    }
+
+    private void Update()
+    {
+        if (!gameObject.activeSelf) { return;}
+        CanOpen();
+
     }
 
     private void OpenBox()
@@ -34,15 +40,13 @@ public class UI_Box : MonoBehaviour
         if (PlayerDataManager.BoxData.TryClaimBox(_index))
         {
             CloseBox();
-
+            return;
         }
 
         if (PlayerDataManager.BoxData.TryStartBox(_index))
         {
-            //TimeManager.Instance.AddOnTickCallback(CanOpen);
             _imgOpen.SetActive(true);
-            //_imgLock.SetActive(true);
-            // 색깔
+            CanOpen();
         }
     }
 
@@ -65,9 +69,5 @@ public class UI_Box : MonoBehaviour
 
         }
 
-        if (_data.IsEnableClaimBox(_index))
-        {
-            //TimeManager.Instance.RemoveOnTickCallback(CanOpen);
-        }
     }
 }
