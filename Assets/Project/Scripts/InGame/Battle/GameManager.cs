@@ -79,7 +79,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         {
             if (maxNumber <= 32)
             {
-                return Random.Range(0, 100) < 80 ? 2 : 4;
+                return Random.Range(0, 100) < 90 ? 2 : 4;
             }
             else if (maxNumber <= 64)
             {
@@ -87,11 +87,11 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 128)
             {
-                return Random.Range(0, 100) < 20 ? 2 : 4;
+                return Random.Range(0, 100) < 10 ? 2 : 4;
             }
             else if (maxNumber <= 256)
             {
-                return Random.Range(0, 100) < 80 ? 4 : 8;
+                return Random.Range(0, 100) < 90 ? 4 : 8;
             }
             else if (maxNumber <= 512)
             {
@@ -99,7 +99,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 1024)
             {
-                return Random.Range(0, 100) < 20 ? 4 : 8;
+                return Random.Range(0, 100) < 10 ? 4 : 8;
             }
             else
             {
@@ -195,12 +195,14 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void MobCount()
     {
+        if (mobCount <= 0) return;
+
         mobCount--;
 
         if (mobCount <= 0 && !isLastBossSpawn)
         {
             SpawnLastBossMonster();
-            txtMobCount.text = "0";
+            txtMobCount.text = "";
         }
         else
         {
@@ -210,12 +212,14 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void MobCountNum(int _num)
     {
+        if (mobCount <= 0) return;
+
         mobCount -= _num;
 
         if (mobCount <= 0 && !isLastBossSpawn)
         {
             SpawnLastBossMonster();
-            txtMobCount.text = "0";
+            txtMobCount.text = "";
         }
         else
         {
@@ -230,19 +234,39 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         if (EenergyCount == 0)
         {
-            if (Random.value < 0.8)
+            if(waveInfo.curWave > 4)
             {
-                obPool.SpawnEnergy(_tr, 1);
-            }
-            else if (Random.value < 0.9)
-            {
-                obPool.SpawnEnergy(_tr, 2);
+                if (Random.value < 0.7)
+                {
+                    obPool.SpawnEnergy(_tr, 1);
+                }
+                else if (Random.value < 0.9)
+                {
+                    obPool.SpawnEnergy(_tr, 2);
+                }
+                else
+                {
+                    obPool.SpawnEnergy(_tr, 3);
+                }
+                //MoveEnergyFull(1);
             }
             else
             {
-                obPool.SpawnEnergy(_tr, 3);
+                if (Random.value < 0.4)
+                {
+                    obPool.SpawnEnergy(_tr, 1);
+                }
+                else if (Random.value < 0.7)
+                {
+                    obPool.SpawnEnergy(_tr, 2);
+                }
+                else
+                {
+                    obPool.SpawnEnergy(_tr, 3);
+                }
             }
-            //MoveEnergyFull(1);
+
+
             EenergyCount = 10;
         }
         //energyGauge.value = EenergyCount;
@@ -296,8 +320,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
             if (maxNumber <= 32)
             {
-                txtBlockProbSmall.text = "2\n80%";
-                txtBlockProbBig.text = "4\n20%";
+                txtBlockProbSmall.text = "2\n90%";
+                txtBlockProbBig.text = "4\n10%";
             }
             else if (maxNumber <= 64)
             {
@@ -306,13 +330,13 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 128)
             {
-                txtBlockProbSmall.text = "2\n20%";
-                txtBlockProbBig.text = "4\n80%";
+                txtBlockProbSmall.text = "2\n10%";
+                txtBlockProbBig.text = "4\n90%";
             }
             else if (maxNumber <= 256)
             {
-                txtBlockProbSmall.text = "4\n80%";
-                txtBlockProbBig.text = "8\n20%";
+                txtBlockProbSmall.text = "4\n90%";
+                txtBlockProbBig.text = "8\n10%";
             }
             else if (maxNumber <= 512)
             {
@@ -321,8 +345,8 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 1024)
             {
-                txtBlockProbSmall.text = "4\n20%";
-                txtBlockProbBig.text = "8\n80%";
+                txtBlockProbSmall.text = "4\n10%";
+                txtBlockProbBig.text = "8\n90%";
             }
         }
     }
