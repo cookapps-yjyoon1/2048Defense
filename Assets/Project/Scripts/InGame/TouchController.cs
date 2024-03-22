@@ -5,17 +5,18 @@ public class TouchController : MonoBehaviour
     [SerializeField] private float dragDistance = 25;
     private Vector3 touchStart, touchEnd;
     private bool isTouch = false;
-
+    private bool isVaildArea = true;
+    
     public Direction UpdateTouch()
     {
         Direction direction = Direction.None;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isVaildArea)
         {
             isTouch = true;
             touchStart = Input.mousePosition;
         }
-        else if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0) && isVaildArea)
         {
             if (isTouch == false) return Direction.None;
 
@@ -41,5 +42,15 @@ public class TouchController : MonoBehaviour
         if (direction != Direction.None) isTouch = false;
 
         return direction;
+    }
+
+    public void PointerDown()
+    {
+        isVaildArea = false;
+    }
+
+    public void PointerUp()
+    {
+        isVaildArea = true;
     }
 }
