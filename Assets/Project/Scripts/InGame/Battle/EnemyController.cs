@@ -153,7 +153,7 @@ public class EnemyController : MonoBehaviour
                 GameManager.instance.MoveEnergy(transform.position);
                 break;
             case 3:
-                GameManager.instance.GameOver();
+                GameManager.instance.GameClear();
                 break;
         }
 
