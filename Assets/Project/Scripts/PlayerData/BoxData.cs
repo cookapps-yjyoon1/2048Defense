@@ -10,6 +10,7 @@ public class Box
 {
     public int Level;
     public bool IsProgress;
+    public bool IsShowAds;
 
     public void Init(int level)
     {
@@ -20,6 +21,7 @@ public class Box
     {
         Level = -1;
         IsProgress = false;
+        IsShowAds = false;
     }
 }
 
@@ -27,10 +29,10 @@ public class BoxData : GameData
 {
     [JsonIgnore] public const int MaxBoxCount = 4;
 
-    public static readonly float[] BoxPercents = new float[] { BoxPercent1, BoxPercent2, BoxPrecent3 };
-    public static readonly long[] BoxTimes = new long[] { BoxTime1, BoxTime2, BoxTime3 };
-    public static readonly int[] BoxMinPieceAmount = new int[] { MinPieceAmount1, MinPieceAmount2, MinPieceAmount3 };
-    public static readonly int[] BoxMaxPieceAmount = new int[] { MaxPieceAmount1, MaxPieceAmount2, MaxPieceAmount3 };
+    public readonly float[] BoxPercents = new float[] { BoxPercent1, BoxPercent2, BoxPrecent3 };
+    public readonly long[] BoxTimes = new long[] { BoxTime1, BoxTime2, BoxTime3 };
+    public readonly int[] BoxMinPieceAmount = new int[] { MinPieceAmount1, MinPieceAmount2, MinPieceAmount3 };
+    public readonly int[] BoxMaxPieceAmount = new int[] { MaxPieceAmount1, MaxPieceAmount2, MaxPieceAmount3 };
     
     
     [JsonIgnore] public const float BoxPercent1 = 70;
@@ -115,6 +117,26 @@ public class BoxData : GameData
         return true;
     }
 
+    public bool IsEnableShowAds(int index)
+    {
+        if (index >= Boxes.Count)
+        {
+            return false;
+        }
+
+        if (!Boxes[index].IsProgress)
+        {
+            return false;
+        }
+
+        if (!Boxes[index].IsShowAds)
+        {
+            return false;
+        }
+        
+        return true;
+    }
+    
     public bool IsEnableClaimBox(int index)
     {
         if (index >= Boxes.Count)
