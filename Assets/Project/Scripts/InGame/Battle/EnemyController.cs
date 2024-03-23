@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     int enemyType;
 
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
-    WaitForSeconds wfsDeath = new WaitForSeconds(1f);
+    float wfsDeath = 1;
     WaitForFixedUpdate wffUpdate = new WaitForFixedUpdate();
     Vector3 orgTransScale = new Vector3(1, 1, 1);
     Vector3 flipTransScale = new Vector3(-1, 1, 1);
@@ -51,10 +51,18 @@ public class EnemyController : MonoBehaviour
         }
         else if (_enemyType == 2)
         {
+            wfsDeath = 1;
             cha.localScale = Vector3.one * 0.55f;
+        }
+        else if (_enemyType == 4)
+        {
+            wfsDeath = 3;
+            transform.position = new Vector3(0, GameManager.Instance.enemyPool.transform.position.y, GameManager.Instance.enemyPool.transform.position.z);
+            cha.localScale = Vector3.one * 0.65f;
         }
         else if (_enemyType == 3)
         {
+            wfsDeath = 3;
             transform.position = new Vector3(0, GameManager.Instance.enemyPool.transform.position.y, GameManager.Instance.enemyPool.transform.position.z);
             cha.localScale = Vector3.one * 0.85f;
         }
@@ -117,7 +125,7 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator CoDeath()
     {
-        yield return wfsDeath;
+        yield return new WaitForSeconds(wfsDeath);
         gameObject.SetActive(false);
     }
 
@@ -156,6 +164,9 @@ public class EnemyController : MonoBehaviour
                 break;
             case 3:
                 GameManager.Instance.GameClear();
+                break;
+            case 4:
+                GameManager.Instance.waveInfo.WaveEnd(transform.position);
                 break;
         }
 

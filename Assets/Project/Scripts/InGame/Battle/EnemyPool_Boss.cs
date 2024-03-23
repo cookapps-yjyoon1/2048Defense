@@ -48,10 +48,12 @@ public class EnemyPool_Boss : ObjectPool
 
     public IEnumerator CoWaveSpawn(int _repeat, float _correction, int _enemyType)
     {
-        for (int i = 0; i < _repeat; i++)
+        for (int i = 0; i < _repeat - 1; i++)
         {
             Spawn(_correction, _enemyType);
             yield return new WaitForSeconds(1f);
         }
+        yield return new WaitForSeconds(1f);
+        Spawn(_correction, 4);
     }
 }

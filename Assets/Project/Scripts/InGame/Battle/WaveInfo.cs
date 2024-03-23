@@ -21,7 +21,7 @@ public class WaveInfo : MonoBehaviour
     {
         //correction = GameManager.instance.stageData.stage[_stage].correction;  
         curWave = 0;
-        waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
+        waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
         //StartCoroutine(CoTimer());
     }
 
@@ -32,7 +32,7 @@ public class WaveInfo : MonoBehaviour
 
     public void WaveStart()
     {
-        waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
+        waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
         StartCoroutine(CoTimer());
         enemyPool.ChangeWave(curWave);
 
@@ -41,10 +41,34 @@ public class WaveInfo : MonoBehaviour
         //    GameManager.Instance.energyValue = 1;
         //}
     }
-
     public void WaveStop()
     {
         StopAllCoroutines();
+    }
+
+    public void WaveEnd(Vector3 _pos)
+    {
+        StopAllCoroutines();
+        StartCoroutine(CoWaveEnd(_pos));
+    }
+
+    IEnumerator CoWaveEnd(Vector3 _pos)
+    {
+
+        for (int i = (int)(waveDuration - waveTime); i <= waveDuration; i++)
+        {
+            timerSlider.value = i;
+            GameManager.Instance.obPool.SpawnEnergy(_pos, Random.Range(1, 3));
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        GameManager.Instance.isStart = false;
+
+        curWave++;
+        lastWave += 5;
+        waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
     }
 
     IEnumerator CoTimer()
@@ -53,8 +77,8 @@ public class WaveInfo : MonoBehaviour
 
         while (true)
         {
-            float sliderValue = Mathf.Lerp(0, 1, waveTime / waveDuration);
-            timerSlider.value = sliderValue;
+            //float sliderValue = Mathf.Lerp(0, 1, waveTime / waveDuration);
+            timerSlider.value = waveTime;
 
             yield return null;
 
@@ -64,27 +88,14 @@ public class WaveInfo : MonoBehaviour
             {
                 if (curWave == lastWave)
                 {
-                    curWave++;
-                    lastWave += 5;
-                    waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
-                    GameManager.Instance.isStart = false;
-                    StartCoroutine(CoEnergy());
                     yield break;
                 }
+
                 waveTime = 0;
                 curWave++;
-                waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
+                waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
                 enemyPool.ChangeWave(curWave);
             }
-        }
-    }
-
-    IEnumerator CoEnergy()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            GameManager.Instance.obPool.SpawnEnergy(bigEnergySpawnPos.position, Random.Range(1, 3));
-            yield return new WaitForSeconds(0.2f);
         }
     }
 }
