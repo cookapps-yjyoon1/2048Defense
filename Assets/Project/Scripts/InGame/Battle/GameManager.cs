@@ -50,7 +50,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int _towerGunCount = 0;
     bool spawnLastBoss = false;
-    public int energyValue = 1;
+    public int energyValue = 2;
 
     public int TowerGunCount
     {
@@ -247,17 +247,17 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         if (EenergyCount == 0)
         {
-            if (Random.value < 0.7)
+            if (Random.value < 0.8)
             {
                 obPool.SpawnEnergy(_tr, energyValue);
             }
             else if (Random.value < 0.9)
             {
-                obPool.SpawnEnergy(_tr, energyValue);
+                obPool.SpawnEnergy(_tr, energyValue + 1);
             }
             else
             {
-                obPool.SpawnEnergy(_tr, energyValue);
+                obPool.SpawnEnergy(_tr, energyValue + 3);
             }
 
             EenergyCount = 10;
