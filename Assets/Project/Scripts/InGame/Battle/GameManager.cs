@@ -39,7 +39,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int mobCount;
 
-    private int EenergyCount = 10;
+    private int EenergyCount = 6;
     private int curEnergy = 30;
     public bool isStart = false;
 
@@ -50,7 +50,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int _towerGunCount = 0;
     bool spawnLastBoss = false;
-    public int energyValue = 2;
+    public int energyValue;
 
     public int TowerGunCount
     {
@@ -152,7 +152,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         //eliteGauge.maxValue = MoveCount;
         //eliteGauge.value = MoveCount;
-        mobCount = 5000;
+        mobCount = 4096;
+        energyValue = 1;
 
         txtMobCount.text = mobCount.ToString();
 
@@ -247,20 +248,20 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         if (EenergyCount == 0)
         {
-            if (Random.value < 0.8)
+            if (Random.value < 0.7)
             {
-                obPool.SpawnEnergy(_tr, energyValue);
+                obPool.SpawnEnergy(_tr, 1);
             }
             else if (Random.value < 0.9)
             {
-                obPool.SpawnEnergy(_tr, energyValue + 1);
+                obPool.SpawnEnergy(_tr, 2);
             }
-            else
+            else if (Random.value <= 1)
             {
-                obPool.SpawnEnergy(_tr, energyValue + 3);
+                obPool.SpawnEnergy(_tr, 4);
             }
 
-            EenergyCount = 10;
+            EenergyCount = 6;
         }
     }
 
@@ -288,14 +289,14 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         for (int i = 0; i < (waveInfo.curWave / 10) + 1; i++)
         {
-            enemyPool_Boss.Spawn(enemyPool.correction * 7f, 1);
+            enemyPool_Boss.Spawn(enemyPool.correction * 8f, 1);
         }
     }
 
     public void SpawnLastBossMonster()
     {
         spawnLastBoss = true;
-        enemyPool_Boss.Spawn(enemyPool.correction * 35f, 3);
+        enemyPool_Boss.Spawn(enemyPool.correction * 60f, 3);
         waveInfo.WaveStop();
         enemyPool.WaveStop();
     }

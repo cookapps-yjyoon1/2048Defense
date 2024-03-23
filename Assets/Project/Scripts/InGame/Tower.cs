@@ -44,7 +44,7 @@ public class Tower : MonoBehaviour, IDropHandler
         {
             GameManager.Instance.obPool.SpawnIcon(4, _towerUI.transform.position, "+"+(1 + arrows.Count).ToString());
             GameManager.Instance.MoveEnergyFull(1 + arrows.Count);
-            _towerUI.txtEquip.text = (arrows.Count + 1) + "/5";
+            _towerUI.txtEquip.text = (arrows.Count + 1).ToString();
         }
 
         var index = DragAndDropHandler.Index;
