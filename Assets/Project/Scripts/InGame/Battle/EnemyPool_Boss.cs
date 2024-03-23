@@ -51,7 +51,7 @@ public class EnemyPool_Boss : ObjectPool
         for (int i = 0; i < _repeat; i++)
         {
             Spawn(_correction, _enemyType);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 }

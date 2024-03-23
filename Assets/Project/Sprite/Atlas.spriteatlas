@@ -158,6 +158,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 33853c142b11148f8865e14371815614, type: 3}
   - {fileID: 21300000, guid: 65e1ca24b2a364145b7a22d5ecc01630, type: 3}
   - {fileID: 21300000, guid: 7c5fdd24167ca4f96b322e2c158c0f4c, type: 3}
+  - {fileID: 21300000, guid: cf8b36347348795438beb63db42d3eb9, type: 3}
   - {fileID: 21300000, guid: 0480ab34fb5194d31bfd412bca49f0a5, type: 3}
   - {fileID: 21300000, guid: 59971444fe04d4cacb3b1b907d2cecc7, type: 3}
   - {fileID: 21300000, guid: 3f338744f0bbd44cca9769cb3f4bab08, type: 3}
@@ -365,6 +366,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5394f0dbec19d461098c8fe6a7aaa3d6, type: 3}
   - {fileID: 21300000, guid: 442b87db147addc4b85ade51baa89830, type: 3}
   - {fileID: 21300000, guid: ab2a48dbfd3f14c658c6f095f8a227f7, type: 3}
+  - {fileID: 21300000, guid: bf2fd8db8b2a71f4bacf25275b199366, type: 3}
   - {fileID: 21300000, guid: 92ac0adb4c4584d3f9525795727d11a9, type: 3}
   - {fileID: 21300000, guid: 6efe59fb6a2f648bb9f656398231a15e, type: 3}
   - {fileID: 21300000, guid: 855cfb0c5cedd34479e59c3e675595ac, type: 3}
@@ -568,6 +570,7 @@ SpriteAtlas:
   - arm2
   - body-run3
   - complete_ribbondark3
+  - bigicon256_chronometer
   - face-decor02-1
   - longgun03
   - t_hair04
@@ -775,6 +778,7 @@ SpriteAtlas:
   - body-idle
   - Icon_bullet_01
   - complete_featherfly10
+  - fill6_icon_full_energy_02
   - arm1
   - complete_featherfly7
   - Icon_skull
