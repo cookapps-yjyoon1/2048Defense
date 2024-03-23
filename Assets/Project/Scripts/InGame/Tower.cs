@@ -42,7 +42,7 @@ public class Tower : MonoBehaviour, IDropHandler
         }
         else
         {
-            GameManager.Instance.obPool.SpawnIcon(4, _towerUI.transform.position, (1 + arrows.Count).ToString());
+            GameManager.Instance.obPool.SpawnIcon(4, _towerUI.transform.position, "+"+(1 + arrows.Count).ToString());
             GameManager.Instance.MoveEnergyFull(1 + arrows.Count);
             _towerUI.txtEquip.text = (arrows.Count + 1) + "/5";
         }
