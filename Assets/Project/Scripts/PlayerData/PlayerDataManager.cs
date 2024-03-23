@@ -24,7 +24,7 @@ public class PlayerDataManager : SingletonBehaviour<PlayerDataManager>
 
     private CookAppsLocalData _localData;
 
-    private static readonly string FILE_NAME = "Defense2048_PlayerData";
+    private static readonly string FILE_NAME = "playerData";
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class PlayerDataManager : SingletonBehaviour<PlayerDataManager>
     private void localDataSet()
     {
         _localData ??= new CookAppsLocalData(GetKey());
-        if (_localData.TryLoad(FILE_NAME, out _playerData) == false)
+        if (!_localData.TryLoad(FILE_NAME, out _playerData))
         {
             _playerData = new PlayerDataContainer();
         }
@@ -79,7 +79,7 @@ public class PlayerDataManager : SingletonBehaviour<PlayerDataManager>
         _playerData = sampleData;
     }
 
-    public IEnumerator SaveLocalData()
+    public void SaveLocalData()
     {
         _playerData.SessionSave();
         CookAppsLocalData.EnumSaveResult enumSaveResult = _localData.Save(_playerData, FILE_NAME);
@@ -95,8 +95,6 @@ public class PlayerDataManager : SingletonBehaviour<PlayerDataManager>
                 Debug.LogError("저장에 실패");
                 break;
         }
-
-        yield return null;
     }
     
     public IEnumerator ValidCheck()

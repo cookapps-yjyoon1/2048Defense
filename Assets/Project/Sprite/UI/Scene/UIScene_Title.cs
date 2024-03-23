@@ -167,7 +167,7 @@ public class UIScene_Title : MonoBehaviour
             yield return null;
 
             // 유저 로컬 데이터 저장
-            yield return StartCoroutine(PlayerDataManager.Instance.SaveLocalData());
+            PlayerDataManager.Instance.SaveLocalData();
             Progress = 0.9f;
             yield return null;
 

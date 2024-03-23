@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 [Serializable]
 public abstract class GameData
 {
-    protected abstract eDataType DataType { get; }
+    [JsonIgnore] protected abstract eDataType DataType { get; }
     public abstract void Initialize();
     public abstract void LateInitialize();
 

@@ -3,7 +3,6 @@ using UnityEngine;
 using DG.Tweening;
 public class ObjectEnergy : MonoBehaviour
 {
-
     float moveDuration = 0.4f; // �̵��ϴ� �� �ɸ��� �ð�
     Ease easeType = Ease.OutQuad; // �̵��� ���� ����
     Vector3 targetPos;
