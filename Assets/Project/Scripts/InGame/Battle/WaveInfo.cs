@@ -63,10 +63,7 @@ public class WaveInfo : MonoBehaviour
                     lastWave += 5;
                     waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
                     GameManager.Instance.isStart = false;
-                    for (int i = 0; i < 7; i++)
-                    {
-                        GameManager.Instance.obPool.SpawnEnergy(new Vector3(bigEnergySpawnPos.position.x + Random.Range(-0.5f, 0.5f), bigEnergySpawnPos.position.y + Random.Range(-0.5f, 0.5f), bigEnergySpawnPos.position.z), Random.Range(1, 3));
-                    }
+                    StartCoroutine(CoEnergy());
                     yield break;
                 }
                 waveTime = 0;
@@ -74,6 +71,15 @@ public class WaveInfo : MonoBehaviour
                 waveInfoText.text = "WAVE\n" + curWave / 5 + " - " + curWave % 5;
                 enemyPool.ChangeWave(curWave);
             }
+        }
+    }
+
+    IEnumerator CoEnergy()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            GameManager.Instance.obPool.SpawnEnergy(bigEnergySpawnPos.position, Random.Range(1, 3));
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }
