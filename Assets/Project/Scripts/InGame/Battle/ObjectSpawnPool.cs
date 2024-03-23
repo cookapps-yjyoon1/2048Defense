@@ -21,4 +21,10 @@ public class ObjectSpawnPool : ObjectPool
         ObjectTxt obj = Get(_index, _pos).GetComponent<ObjectTxt>();
         obj.InitData(_str);
     }
+
+    public void SpawnIcon(int _index, Vector3 _pos, string _str)
+    {
+        ObjectIcon obj = Get(_index, _pos).GetComponent<ObjectIcon>();
+        obj.InitData(_str);
+    }
 }

@@ -24,7 +24,7 @@ public class WallController : MonoBehaviour
         curHp -= _dmg;
         hpSlider.value = curHp;
 
-        //CameraManager.Instance.Shake(0.06f, 0.05f);
+        CameraManager.Instance.Shake(0.08f, 0.05f);
         GameManager.Instance.HitTowerEvent();
         time = 2;
 

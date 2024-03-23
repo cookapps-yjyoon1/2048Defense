@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class Tower : MonoBehaviour , IDropHandler
 {
@@ -35,12 +36,15 @@ public class Tower : MonoBehaviour , IDropHandler
     {
         if (arrows.Count >= 5)
         {
-            
             arrows.RemoveAt(0);
             GameManager.Instance.MobCountNum(100);
-            GameManager.Instance.obPool.SpawnTxt(3, _towerUI.transform.position, "-100");
-
-            //return;
+            GameManager.Instance.obPool.SpawnIcon(3, _towerUI.transform.position, "-100");
+        }
+        else
+        {
+            GameManager.Instance.obPool.SpawnIcon(4, _towerUI.transform.position, arrows.Count.ToString());
+            GameManager.Instance.MoveEnergyFull(5- arrows.Count);
+            _towerUI.txtEquip.text = (arrows.Count + 1) + "/5";
         }
         
         var index = DragAndDropHandler.Index;
@@ -48,9 +52,6 @@ public class Tower : MonoBehaviour , IDropHandler
         
         arrows.Add(new Arrow(index,level));
 
-        _towerUI.txtEquip.text = arrows.Count + "/5";
-
-        //GameManager.Instance.TowerGunCount++;
         ClearDrop();
         Refresh();
     }

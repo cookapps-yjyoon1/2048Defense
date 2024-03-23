@@ -140,6 +140,9 @@ public class EnemyController : MonoBehaviour
 
     void Death()
     {
+        animator.Play("die");
+        //CameraManager.Instance.Shake(0.05f, 0.04f);
+
         switch (enemyType)
         {
             case 0:
@@ -155,8 +158,7 @@ public class EnemyController : MonoBehaviour
                 GameManager.Instance.GameClear();
                 break;
         }
-        CameraManager.Instance.Shake(0.05f, 0.04f);
-        animator.Play("die");
+
         col.enabled = false;
         GameManager.Instance.MobCount();
         GameManager.Instance.unitList.enumyList.Remove(this);

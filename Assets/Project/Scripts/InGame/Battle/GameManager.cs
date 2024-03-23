@@ -50,6 +50,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int _towerGunCount = 0;
     bool spawnLastBoss = false;
+    public int energyValue = 1;
 
     public int TowerGunCount
     {
@@ -151,7 +152,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         //eliteGauge.maxValue = MoveCount;
         //eliteGauge.value = MoveCount;
-        mobCount = 5500;
+        mobCount = 5000;
 
         txtMobCount.text = mobCount.ToString();
 
@@ -246,42 +247,21 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         if (EenergyCount == 0)
         {
-            if(waveInfo.curWave > 4)
+            if (Random.value < 0.7)
             {
-                if (Random.value < 0.7)
-                {
-                    obPool.SpawnEnergy(_tr, 1);
-                }
-                else if (Random.value < 0.9)
-                {
-                    obPool.SpawnEnergy(_tr, 2);
-                }
-                else
-                {
-                    obPool.SpawnEnergy(_tr, 3);
-                }
-                //MoveEnergyFull(1);
+                obPool.SpawnEnergy(_tr, energyValue);
+            }
+            else if (Random.value < 0.9)
+            {
+                obPool.SpawnEnergy(_tr, energyValue);
             }
             else
             {
-                if (Random.value < 0.35)
-                {
-                    obPool.SpawnEnergy(_tr, 1);
-                }
-                else if (Random.value < 0.7)
-                {
-                    obPool.SpawnEnergy(_tr, 2);
-                }
-                else
-                {
-                    obPool.SpawnEnergy(_tr, 3);
-                }
+                obPool.SpawnEnergy(_tr, energyValue);
             }
-
 
             EenergyCount = 10;
         }
-        //energyGauge.value = EenergyCount;
     }
 
     public void MoveEnergyFull(int _energy)
@@ -314,10 +294,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void SpawnLastBossMonster()
     {
+        spawnLastBoss = true;
         enemyPool_Boss.Spawn(enemyPool.correction * 35f, 3);
         waveInfo.WaveStop();
         enemyPool.WaveStop();
-        spawnLastBoss = true;
     }
 
     public void SetMaxBlock(int num)
