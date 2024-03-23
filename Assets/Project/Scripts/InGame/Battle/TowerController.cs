@@ -97,17 +97,6 @@ public class TowerController : Tower
                 return wfsReload;
             }
         }
-
         return null;
     }
-
-    //int DmgCalculation(float _dmg, bool _isCri)
-    //{
-    //    if (_isCri)
-    //    {
-    //        _dmg = criFactor * _dmg;
-    //    }
-
-    //    return Mathf.CeilToInt(_dmg);
-    //}
 }
