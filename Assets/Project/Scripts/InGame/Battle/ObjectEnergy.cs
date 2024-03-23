@@ -1,14 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.PlayerLoop.PostLateUpdate;
-using UnityEngine.U2D;
-
 public class ObjectEnergy : MonoBehaviour
 {
-
     float moveDuration = 0.4f; // �̵��ϴ� �� �ɸ��� �ð�
     Ease easeType = Ease.OutQuad; // �̵��� ���� ����
     Vector3 targetPos;
@@ -26,7 +20,7 @@ public class ObjectEnergy : MonoBehaviour
         StartCoroutine(CoMoveDown());
     }
 
-    private void OnMouseDown()
+    private void OnMouseEnter()
     {
         GameManager.Instance.vfxPool.Spawn(3, 0, transform.position);
         GameManager.Instance.obPool.SpawnTxt(1, transform.position, "+"+energy.ToString());

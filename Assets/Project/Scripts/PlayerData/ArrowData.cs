@@ -35,7 +35,7 @@ public class ArrowData : GameData
 
     public bool IsEnoughArrow(int index)
     {
-        if (OwnArrowPiece[index] < Arrows[index] * UpgradeCost)
+        if (OwnArrowPiece[index] < UpgradeCost)
         {
             return false;
         }

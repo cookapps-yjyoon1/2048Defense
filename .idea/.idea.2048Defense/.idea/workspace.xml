@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Guide.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/UI/UI_Guide.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/00Title.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/00Title.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/ObjectEnergy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/ObjectEnergy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ETCData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ETCData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/GameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,7 @@
       <workItem from="1710390625576" duration="2516000" />
       <workItem from="1711003095906" duration="8513000" />
       <workItem from="1711077208457" duration="1713000" />
-      <workItem from="1711086005095" duration="12134000" />
+      <workItem from="1711086005095" duration="17273000" />
     </task>
     <servers />
   </component>
@@ -196,10 +196,10 @@
           <line>70</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\PlayerDataManager.cs" initialLine="71" containingFunctionPresentation="Method 'LoadLocalData'">
             <startOffsets>
-              <option value="2012" />
+              <option value="1992" />
             </startOffsets>
             <endOffsets>
-              <option value="2104" />
+              <option value="2084" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
@@ -209,10 +209,10 @@
           <line>84</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\PlayerDataManager.cs" initialLine="86" containingFunctionPresentation="Method 'SaveLocalData'">
             <startOffsets>
-              <option value="2404" />
+              <option value="2377" />
             </startOffsets>
             <endOffsets>
-              <option value="2494" />
+              <option value="2467" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -257,30 +257,30 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs</url>
-          <line>130</line>
-          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\BoxData.cs" initialLine="134" containingFunctionPresentation="Method 'IsEnableShowAds'">
+          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs</url>
+          <line>73</line>
+          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\PlayerDataManager.cs" initialLine="73" containingFunctionPresentation="Method 'LoadLocalData'">
             <startOffsets>
-              <option value="3268" />
+              <option value="2141" />
             </startOffsets>
             <endOffsets>
-              <option value="3296" />
+              <option value="2180" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs</url>
-          <line>150</line>
-          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\BoxData.cs" initialLine="149" containingFunctionPresentation="Method 'IsEnableClaimBox'">
+          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\PlayerData\PlayerDataManager.cs" initialLine="35" containingFunctionPresentation="Method 'localDataSet'">
             <startOffsets>
-              <option value="3610" />
+              <option value="858" />
             </startOffsets>
             <endOffsets>
-              <option value="3635" />
+              <option value="905" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

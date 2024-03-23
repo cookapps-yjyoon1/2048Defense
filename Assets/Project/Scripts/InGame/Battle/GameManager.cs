@@ -119,7 +119,6 @@ public class GameManager : SingletonBehaviour<GameManager>
             maxNumber = value;
         }
     }
-    //public UnitList unitList;
 
     private void Start()
     {
@@ -166,6 +165,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void GameClear()
     {
+        PlayerDataManager.ETCData.SetClearStage(curStage);
         _UIBattle.FinishGame(true);
     }
 

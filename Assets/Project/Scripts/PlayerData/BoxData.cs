@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using Unity.VisualScripting.FullSerializer.Internal;
+
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -25,14 +25,15 @@ public class Box
     }
 }
 
+[Serializable]
 public class BoxData : GameData
 {
     [JsonIgnore] public const int MaxBoxCount = 4;
 
-    public readonly float[] BoxPercents = new float[] { BoxPercent1, BoxPercent2, BoxPrecent3 };
-    public readonly long[] BoxTimes = new long[] { BoxTime1, BoxTime2, BoxTime3 };
-    public readonly int[] BoxMinPieceAmount = new int[] { MinPieceAmount1, MinPieceAmount2, MinPieceAmount3 };
-    public readonly int[] BoxMaxPieceAmount = new int[] { MaxPieceAmount1, MaxPieceAmount2, MaxPieceAmount3 };
+    [JsonIgnore] public readonly float[] BoxPercents = new float[] { BoxPercent1, BoxPercent2, BoxPrecent3 };
+    [JsonIgnore] public readonly long[] BoxTimes = new long[] { BoxTime1, BoxTime2, BoxTime3 };
+    [JsonIgnore] public readonly int[] BoxMinPieceAmount = new int[] { MinPieceAmount1, MinPieceAmount2, MinPieceAmount3 };
+    [JsonIgnore] public readonly int[] BoxMaxPieceAmount = new int[] { MaxPieceAmount1, MaxPieceAmount2, MaxPieceAmount3 };
     
     
     [JsonIgnore] public const float BoxPercent1 = 70;
@@ -68,11 +69,8 @@ public class BoxData : GameData
         for (int i = Boxes.Count; i < 3; i++)
         {
             Boxes.Add(new Box());
+            Boxes[i].Init(1);
         }
-        
-        Boxes[0].Init(0);
-        Boxes[1].Init(1);
-        Boxes[2].Init(2);
     }
 
     public override void LateInitialize()
