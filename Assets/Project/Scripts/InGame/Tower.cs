@@ -15,9 +15,7 @@ public class Tower : MonoBehaviour , IDropHandler
     protected int _curIndex = 0;
     
     [SerializeField] protected TowerUI _towerUI;
-
-
-
+    
     private void Start()
     {
         Refresh();
@@ -37,9 +35,11 @@ public class Tower : MonoBehaviour , IDropHandler
     {
         if (arrows.Count >= 5)
         {
+            
             arrows.RemoveAt(0);
             GameManager.Instance.MobCountNum(100);
             GameManager.Instance.obPool.SpawnTxt(3, _towerUI.transform.position, "-100");
+
             //return;
         }
         
@@ -47,6 +47,8 @@ public class Tower : MonoBehaviour , IDropHandler
         var level = DragAndDropHandler.Level;
         
         arrows.Add(new Arrow(index,level));
+
+        _towerUI.txtEquip.text = arrows.Count + "/5";
 
         //GameManager.Instance.TowerGunCount++;
         ClearDrop();

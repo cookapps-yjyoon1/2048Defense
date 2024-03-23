@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class TowerUI : MonoBehaviour
     [SerializeField] private List<GameObject> _goBulletSlot;
     [SerializeField] private List<GameObject> _goBullet;
     [SerializeField] private GameObject _goReloadText;
+    public TextMeshProUGUI txtEquip;
 
     private int _count = 0;
     

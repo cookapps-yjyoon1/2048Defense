@@ -65,7 +65,7 @@ public class WaveInfo : MonoBehaviour
                     GameManager.Instance.isStart = false;
                     for (int i = 0; i < 7; i++)
                     {
-                        GameManager.Instance.obPool.SpawnEnergy(bigEnergySpawnPos.position, Random.Range(1, 3));
+                        GameManager.Instance.obPool.SpawnEnergy(new Vector3(bigEnergySpawnPos.position.x + Random.Range(-0.5f, 0.5f), bigEnergySpawnPos.position.y + Random.Range(-0.5f, 0.5f), bigEnergySpawnPos.position.z), Random.Range(1, 3));
                     }
                     yield break;
                 }

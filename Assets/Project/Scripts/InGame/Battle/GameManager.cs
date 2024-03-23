@@ -48,6 +48,31 @@ public class GameManager : SingletonBehaviour<GameManager>
     private int maxNumber = 4;
     private int maxNumber_tmp = 4;
 
+    public int _towerGunCount = 0;
+    bool spawnLastBoss = false;
+
+    public int TowerGunCount
+    {
+        get
+        {
+            return _towerGunCount;
+        }
+
+        set
+        {
+            if (_towerGunCount == 15)
+            {
+                if(!spawnLastBoss)
+                {
+                    SpawnLastBossMonster();
+                }
+            }
+
+            _towerGunCount = value;
+        }
+    }
+
+
     public int Numberic
     {
         get
@@ -80,7 +105,10 @@ public class GameManager : SingletonBehaviour<GameManager>
             {
                 if (maxNumber == 2048)
                 {
-                    SpawnLastBossMonster();
+                    if(!spawnLastBoss)
+                    {
+                        SpawnLastBossMonster();
+                    }
                 }
                 
                 return 8;
@@ -179,7 +207,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void MobCount()
     {
-        if (mobCount <= 0) return;
+        if (spawnLastBoss) return;
 
         mobCount--;
 
@@ -196,7 +224,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void MobCountNum(int _num)
     {
-        if (mobCount <= 0) return;
+        if (spawnLastBoss) return;
 
         mobCount -= _num;
 
@@ -289,6 +317,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool_Boss.Spawn(enemyPool.correction * 35f, 3);
         waveInfo.WaveStop();
         enemyPool.WaveStop();
+        spawnLastBoss = true;
     }
 
     public void SetMaxBlock(int num)
