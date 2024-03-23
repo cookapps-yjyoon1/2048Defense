@@ -66,6 +66,11 @@ public class EnemyPool : ObjectPool
         ChangeWave(_curWave);
     }
 
+    public void WaveStop()
+    {
+        StopAllCoroutines();
+    }
+
     public void ChangeWave(int _curWave)
     {
         StopAllCoroutines();

@@ -48,31 +48,6 @@ public class GameManager : SingletonBehaviour<GameManager>
     private int maxNumber = 4;
     private int maxNumber_tmp = 4;
 
-    public int _towerGunCount = 0;
-    bool isLastBossSpawn = false;
-
-    public int TowerGunCount
-    {
-        get
-        {
-            return _towerGunCount;
-        }
-
-        set
-        {
-            if (_towerGunCount == 15)
-            {
-                if(!isLastBossSpawn)
-                {
-                    SpawnLastBossMonster();
-                }
-            }
-
-            _towerGunCount = value;
-        }
-    }
-
-
     public int Numberic
     {
         get
@@ -105,10 +80,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             {
                 if (maxNumber == 2048)
                 {
-                    if(!isLastBossSpawn)
-                    {
-                        SpawnLastBossMonster();
-                    }
+                    SpawnLastBossMonster();
                 }
                 
                 return 8;
@@ -151,7 +123,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         //eliteGauge.maxValue = MoveCount;
         //eliteGauge.value = MoveCount;
-        mobCount = 100;
+        mobCount = 5500;
 
         txtMobCount.text = mobCount.ToString();
 
@@ -211,7 +183,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         mobCount--;
 
-        if (mobCount <= 0 && !isLastBossSpawn)
+        if (mobCount <= 0)
         {
             GameOver();
             txtMobCount.text = "Game\nOver";
@@ -228,7 +200,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         mobCount -= _num;
 
-        if (mobCount <= 0 && !isLastBossSpawn)
+        if (mobCount <= 0)
         {
             GameOver();
             txtMobCount.text = "Game\nOver";
@@ -264,7 +236,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else
             {
-                if (Random.value < 0.4)
+                if (Random.value < 0.35)
                 {
                     obPool.SpawnEnergy(_tr, 1);
                 }
@@ -314,9 +286,9 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void SpawnLastBossMonster()
     {
-        enemyPool_Boss.Spawn(enemyPool.correction * 40f, 3);
+        enemyPool_Boss.Spawn(enemyPool.correction * 35f, 3);
         waveInfo.WaveStop();
-        isLastBossSpawn = true;
+        enemyPool.WaveStop();
     }
 
     public void SetMaxBlock(int num)

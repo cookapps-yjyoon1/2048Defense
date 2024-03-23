@@ -14,7 +14,7 @@ public class ObjectEnergy : MonoBehaviour
         wallPos = GameManager.Instance.enemyPool.target.transform.position;
 
         energy = _energy;
-        targetPos = new Vector3(transform.position.x + Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(-0.5f, 0.5f), transform.position.z + Random.Range(-0.5f, 0.5f));
+        targetPos = new Vector3(transform.position.x + Random.Range(-0.3f, 0.3f), transform.position.y + Random.Range(0.2f, 0.3f), transform.position.z + Random.Range(-0.3f, 0.3f));
         transform.DOMove(targetPos, moveDuration).SetEase(easeType);
 
         StartCoroutine(CoMoveDown());
