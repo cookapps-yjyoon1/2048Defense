@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] WallController target;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRendererController spriteCon;
-
+    [SerializeField] Collider2D col;
     int enemyType;
 
     WaitForSeconds wfsAtk = new WaitForSeconds(1);
@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
 
     public void InitData(WallController _target, float _correction, int _enemyType)
     {
+        col.enabled = true;
         target = _target;
         nowHp = maxHp * _correction;
         isDecomposition1 = false;
@@ -139,6 +140,7 @@ public class EnemyController : MonoBehaviour
 
     void Death()
     {
+        col.enabled = false;
         animator.Play("die");
         //CameraManager.Instance.Shake(0.05f, 0.04f);
         GameManager.Instance.MobCount();

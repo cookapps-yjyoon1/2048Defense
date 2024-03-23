@@ -791,6 +791,7 @@ MonoBehaviour:
   target: {fileID: 0}
   animator: {fileID: 3877001291805530913}
   spriteCon: {fileID: 3502743150794329168}
+  col: {fileID: 3942303300065309222}
 --- !u!58 &3942303300065309222
 CircleCollider2D:
   m_ObjectHideFlags: 0

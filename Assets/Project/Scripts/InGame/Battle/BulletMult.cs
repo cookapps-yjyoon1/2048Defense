@@ -23,7 +23,7 @@ public class BulletMult : Bullet
 
         for (int i = 0; i < 5; i++)
         {
-            _dir = new Vector3(_dir.x + Random.Range(-0.2f, 0.2f), _dir.y + Random.Range(-0.2f, 0.2f), 0);
+            _dir = new Vector3(_dir.x + Random.Range(-0.15f, 0.15f), _dir.y + Random.Range(-0.15f, 0.15f), 0);
             GameManager.Instance.commonBulletPool.Shot(_dir, 0, Dmg, transform);
         }
 
