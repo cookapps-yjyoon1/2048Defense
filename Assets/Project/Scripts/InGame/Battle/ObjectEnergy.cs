@@ -24,15 +24,11 @@ public class ObjectEnergy : MonoBehaviour
     {
         GameManager.Instance.vfxPool.Spawn(3, 0, transform.position);
         GameManager.Instance.obPool.SpawnTxt(1, transform.position, "+"+energy.ToString());
-        HandleCoinPickup();
+        GameManager.Instance.MoveEnergyFull(energy);
+        gameObject.SetActive(false);
         SoundManager.Instance.Play(Enum_Sound.Effect, "EnergyGet");
     }
 
-    private void HandleCoinPickup()
-    {
-        GameManager.Instance.MoveEnergyFull(energy);
-        gameObject.SetActive(false);
-    }
 
     IEnumerator CoMoveDown()
     {
@@ -45,7 +41,10 @@ public class ObjectEnergy : MonoBehaviour
             }
             else
             {
-                //OnMouseDown();
+                if(GameManager.Instance.energyAutoAds)
+                {
+                    OnMouseEnter();
+                }
                 yield break;
             }
 

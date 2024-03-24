@@ -42,6 +42,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     private int EenergyCount = 6;
     private int curEnergy = 30;
     public bool isStart = false;
+    public bool energyAutoAds = false;
 
     public int CurEnergy { get => curEnergy; set => curEnergy = value; }
 
@@ -50,7 +51,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int _towerGunCount = 0;
     bool spawnLastBoss = false;
-    public int energyValue;
 
     public int TowerGunCount
     {
@@ -140,6 +140,8 @@ public class GameManager : SingletonBehaviour<GameManager>
             _imgBoardRed.DOFade(35f / 255f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
             _imgBoardRed.gameObject.SetActive(false);
         }
+
+        energyAutoAds = false;
     }
 
     public void GameStart()
@@ -150,10 +152,8 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
 
-        //eliteGauge.maxValue = MoveCount;
-        //eliteGauge.value = MoveCount;
+        energyAutoAds = false;
         mobCount = 4096;
-        energyValue = 1;
 
         txtMobCount.text = mobCount.ToString();
 
