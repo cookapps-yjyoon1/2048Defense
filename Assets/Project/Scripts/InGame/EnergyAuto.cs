@@ -8,6 +8,8 @@ public class EnergyAuto : MonoBehaviour
 
     private void Start()
     {
+
+
         if (GameManager.Instance.curStage == 0)
         {
             _goAds.SetActive(false);
