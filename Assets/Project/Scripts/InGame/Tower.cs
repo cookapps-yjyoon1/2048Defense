@@ -41,6 +41,11 @@ public class Tower : MonoBehaviour, IDropHandler
             arrows.RemoveAt(0);
             GameManager.Instance.MobCountNum(100);
             GameManager.Instance.obPool.SpawnIcon(3, _towerUI.transform.position, "-100");
+
+            for (int i = 0; i < 4; i++)
+            {
+                _towerUI._goBullet[i].color = _towerUI._goBullet[i + 1].color;
+            }
         }
         else
         {

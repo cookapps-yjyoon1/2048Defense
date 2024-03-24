@@ -44,7 +44,7 @@ public class TowerUI : MonoBehaviour
 
     IEnumerator CoReload()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         WaitForSeconds wfs = new WaitForSeconds(0.4f / _count);
 
         _goReloadText.SetActive(true);
