@@ -20,6 +20,7 @@ public class WaveInfo : MonoBehaviour
     public void GameStart(int _stage)
     {
         curWave = 0;
+        btnStart.SetActive(false);
         waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
     }
 

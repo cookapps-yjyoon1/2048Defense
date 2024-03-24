@@ -154,7 +154,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool_Boss.GameStart(curStage);
 
         energyAutoAds = false;
-        mobCount = 3000;
+        mobCount = 2500;
 
         txtMobCount.text = mobCount.ToString();
 
@@ -222,7 +222,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (mobCount <= 0)
         {
             GameOver();
-            txtMobCount.text = "Game\nOver";
+            txtMobCount.text = "0";
         }
         else
         {
@@ -239,7 +239,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (mobCount <= 0)
         {
             GameOver();
-            txtMobCount.text = "Game\nOver";
+            txtMobCount.text = "0";
         }
         else
         {

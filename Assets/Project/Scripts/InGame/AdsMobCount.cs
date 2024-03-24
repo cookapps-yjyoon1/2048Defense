@@ -27,6 +27,7 @@ public class AdsMobCount : MonoBehaviour
             if (isSuccess)
             {
                 GameManager.Instance.mobCount += 500;
+                GameManager.Instance.txtMobCount.text = GameManager.Instance.mobCount.ToString();
                 _goAds.SetActive(false);
                 count++;
                 
