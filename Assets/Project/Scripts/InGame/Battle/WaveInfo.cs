@@ -35,11 +35,6 @@ public class WaveInfo : MonoBehaviour
         waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
         StartCoroutine(CoTimer());
         enemyPool.ChangeWave(curWave);
-
-        //if (curWave == 5)
-        //{
-        //    GameManager.Instance.energyValue = 1;
-        //}
     }
     public void WaveStop()
     {

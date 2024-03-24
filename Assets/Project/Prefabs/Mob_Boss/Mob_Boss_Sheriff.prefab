@@ -476,7 +476,7 @@ MonoBehaviour:
   maxHp: 10
   nowHp: 0
   atkDmg: 7
-  atkDist: 1.2
+  atkDist: 1
   moveSpeed: 0.2
   _decompositionController: {fileID: 3999968486082146711}
   target: {fileID: 0}

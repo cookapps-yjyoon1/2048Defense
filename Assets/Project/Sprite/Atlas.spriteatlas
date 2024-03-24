@@ -79,6 +79,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f7f573f01067e41648e62691d9e9c338, type: 3}
   - {fileID: 21300000, guid: c52fcef03f38b4aa29a6ada09fe7c3b7, type: 3}
   - {fileID: 21300000, guid: a4535ff00a98648c584c1d3ab1916347, type: 3}
+  - {fileID: 21300000, guid: e80331111d250e4499eb0f91678ad8c8, type: 3}
   - {fileID: 21300000, guid: 1a354d11efa5a479e840283c4c142489, type: 3}
   - {fileID: 21300000, guid: f00f002126f374ce8ab524de8f9dd734, type: 3}
   - {fileID: 21300000, guid: 280f17210aa504d65b9ceea8b7ff2c06, type: 3}
@@ -491,6 +492,7 @@ SpriteAtlas:
   - hat10
   - body-walk2
   - front-arm-pistal
+  - Icon_Auto
   - body-hurt
   - body-run3
   - face03-1
