@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/ObjectEnergy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/ObjectEnergy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ETCData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/ETCData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/PlayerDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/UI/Scene/UIScene_Title.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +158,7 @@
       <workItem from="1710390625576" duration="2516000" />
       <workItem from="1711003095906" duration="8513000" />
       <workItem from="1711077208457" duration="1713000" />
-      <workItem from="1711086005095" duration="17273000" />
+      <workItem from="1711086005095" duration="18512000" />
     </task>
     <servers />
   </component>
@@ -180,13 +175,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerUI.cs</url>
-          <line>43</line>
+          <line>45</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\InGame\Battle\TowerUI.cs" initialLine="45" containingFunctionPresentation="Method 'CoReload'">
             <startOffsets>
-              <option value="1063" />
+              <option value="1113" />
             </startOffsets>
             <endOffsets>
-              <option value="1098" />
+              <option value="1148" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -219,13 +214,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Scripts/InGame/Battle/TowerUI.cs</url>
-          <line>19</line>
+          <line>21</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\InGame\Battle\TowerUI.cs" initialLine="19" containingFunctionPresentation="Method 'UpdateUI'">
             <startOffsets>
-              <option value="506" />
+              <option value="556" />
             </startOffsets>
             <endOffsets>
-              <option value="551" />
+              <option value="601" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

@@ -80,14 +80,14 @@ public class BoxData : GameData
 
     public bool TryAddBox()
     {
-        if (Boxes.Count>= 3)
+        var box = Boxes.Find(x => x.Level < 0);
+        
+        if (box == null)
         {
             return false;
         }
         
         var level = UtilCode.GetWeightChance(BoxPercents);
-
-        var box = Boxes.Find(x => x.Level < 0);
         
         box.Init(level);
         
