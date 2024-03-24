@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnergyAuto : MonoBehaviour
+public class AdsMobCount : MonoBehaviour
 {
-    [SerializeField] private GameObject _goAds;
+    public GameObject _goAds;
+    int count;
+    public bool off;
 
     private void Start()
     {
-
-
-        if (GameManager.Instance.curStage == 0)
-        {
-            _goAds.SetActive(false);
-        }
+        count = 0;
+        off = false;
+        _goAds.SetActive(false);
     }
 
     public void ShowAds()
@@ -27,8 +26,14 @@ public class EnergyAuto : MonoBehaviour
         {
             if (isSuccess)
             {
-                GameManager.Instance.energyAutoAds = true;
+                GameManager.Instance.mobCount += 500;
                 _goAds.SetActive(false);
+                count++;
+                
+                if(count == 2)
+                {
+                    off = true;
+                }
             }
         });
     }
