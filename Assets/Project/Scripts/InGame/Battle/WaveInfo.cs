@@ -12,6 +12,7 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] EnemyPool enemyPool;
     [SerializeField] Transform bigEnergySpawnPos;
     [SerializeField] GameObject btnStart;
+    [SerializeField] Image sliderImage;
 
     public int curWave;
     int lastWave = 4;
@@ -19,6 +20,18 @@ public class WaveInfo : MonoBehaviour
 
     public void GameStart(int _stage)
     {
+        if(GameManager.Instance.isHardMode)
+        {
+            waveInfoText.color = new Color(0.65f, 0, 0);
+            sliderImage.color = new Color(0.6f, 0, 0);
+        }
+        else
+        {
+            waveInfoText.color = new Color(1, 1, 1);
+            sliderImage.color = new Color(0.65f, 0.65f, 0.65f);
+        }
+
+
         curWave = 0;
         btnStart.SetActive(false);
         waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);

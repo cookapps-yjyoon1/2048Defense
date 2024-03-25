@@ -35,6 +35,8 @@ public class GameManager : SingletonBehaviour<GameManager>
     public Text txtMaxBlock;
 
     public int curStage => PlayerDataManager.ETCData.CurStage;
+    public bool isHardMode => PlayerDataManager.ETCData.IsHardMode;
+
     [HideInInspector] public int ExplosionCrrection = 1;
     [HideInInspector] public int MultCrrection = 1;
     [HideInInspector] public int DrillCrrection = 1;
@@ -54,7 +56,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int _towerGunCount = 0;
     bool spawnLastBoss = false;
-    
+
     [SerializeField] GameObject energyPos;
 
     public int TowerGunCount
@@ -83,45 +85,91 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         get
         {
-            if (maxNumber <= 16)
+            if (!isHardMode)
             {
-                return 2;
-            }
-            else if (maxNumber <= 32)
-            {
-                return Random.Range(0, 100) < 80 ? 2 : 4;
-            }
-            else if (maxNumber <= 64)
-            {
-                return Random.Range(0, 100) < 20 ? 2 : 4;
-            }
-            else if (maxNumber <= 128)
-            {
-                return 4;
-            }
-            else if (maxNumber <= 256)
-            {
-                return Random.Range(0, 100) < 80 ? 4 : 8;
-            }
-            else if (maxNumber <= 512)
-            {
-                return Random.Range(0, 100) < 20 ? 4 : 8;
-            }
-            else if (maxNumber <= 1024)
-            {
-                return 8;
+                if (maxNumber <= 16)
+                {
+                    return 2;
+                }
+                else if (maxNumber <= 32)
+                {
+                    return Random.Range(0, 100) < 80 ? 2 : 4;
+                }
+                else if (maxNumber <= 64)
+                {
+                    return Random.Range(0, 100) < 20 ? 2 : 4;
+                }
+                else if (maxNumber <= 128)
+                {
+                    return 4;
+                }
+                else if (maxNumber <= 256)
+                {
+                    return Random.Range(0, 100) < 80 ? 4 : 8;
+                }
+                else if (maxNumber <= 512)
+                {
+                    return Random.Range(0, 100) < 20 ? 4 : 8;
+                }
+                else if (maxNumber <= 1024)
+                {
+                    return 8;
+                }
+                else
+                {
+                    if (maxNumber == 2048)
+                    {
+                        if (!spawnLastBoss)
+                        {
+                            SpawnLastBossMonster();
+                        }
+                    }
+
+                    return 8;
+                }
             }
             else
             {
-                if (maxNumber == 2048)
+                if (maxNumber <= 16)
                 {
-                    if (!spawnLastBoss)
-                    {
-                        SpawnLastBossMonster();
-                    }
+                    return 2;
                 }
+                else if (maxNumber <= 32)
+                {
+                    return Random.Range(0, 100) < 90 ? 2 : 4;
+                }
+                else if (maxNumber <= 64)
+                {
+                    return Random.Range(0, 100) < 50 ? 2 : 4;
+                }
+                else if (maxNumber <= 128)
+                {
+                    return Random.Range(0, 100) < 10 ? 2 : 4;
+                }
+                else if (maxNumber <= 256)
+                {
+                    return Random.Range(0, 100) < 90 ? 4 : 8;
+                }
+                else if (maxNumber <= 512)
+                {
+                    return Random.Range(0, 100) < 50 ? 4 : 8;
+                }
+                else if (maxNumber <= 1024)
+                {
+                    return Random.Range(0, 100) < 10 ? 4 : 8;
+                }
+                else
+                {
+                    if (maxNumber == 2048)
+                    {
+                        if (!spawnLastBoss)
+                        {
+                            SpawnLastBossMonster();
+                        }
+                    }
 
-                return 8;
+                    return 8;
+                }
             }
         }
         set
@@ -149,12 +197,12 @@ public class GameManager : SingletonBehaviour<GameManager>
             _imgBoardRed.DOFade(35f / 255f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
             _imgBoardRed.gameObject.SetActive(false);
         }
-
-        energyAutoAds = false;
     }
 
     public void GameStart()
     {
+        print(isHardMode);
+
         gameMgrCanvas.SetActive(false);
         waveInfo.GameStart(curStage);
         enemyPool.GameStart(curStage);
@@ -191,7 +239,15 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void GameClear()
     {
-        PlayerDataManager.ETCData.SetClearStage(curStage);
+        if(!isHardMode)
+        {
+            PlayerDataManager.ETCData.SetClearStage(curStage);
+        }
+        else
+        {
+            PlayerDataManager.ETCData.SetClearStageHard(curStage);
+        }
+
         _UIBattle.FinishGame(true, waveInfo.curWave);
     }
 
@@ -339,41 +395,83 @@ public class GameManager : SingletonBehaviour<GameManager>
 
             txtMaxBlock.text = "Max : " + maxNumber_tmp;
 
-            if (maxNumber <= 16)
+            if(!isHardMode)
             {
-                txtBlockProbSmall.text = "2\n100%";
-                txtBlockProbBig.text = "4\n0%";
+                if (maxNumber <= 16)
+                {
+                    txtBlockProbSmall.text = "2\n100%";
+                    txtBlockProbBig.text = "4\n0%";
+                }
+                else if (maxNumber <= 32)
+                {
+                    txtBlockProbSmall.text = "2\n80%";
+                    txtBlockProbBig.text = "4\n20%";
+                }
+                else if (maxNumber <= 64)
+                {
+                    txtBlockProbSmall.text = "2\n20%";
+                    txtBlockProbBig.text = "4\n80%";
+                }
+                else if (maxNumber <= 128)
+                {
+                    txtBlockProbSmall.text = "2\n0%";
+                    txtBlockProbBig.text = "4\n100%";
+                }
+                else if (maxNumber <= 256)
+                {
+                    txtBlockProbSmall.text = "4\n80%";
+                    txtBlockProbBig.text = "8\n20%";
+                }
+                else if (maxNumber <= 512)
+                {
+                    txtBlockProbSmall.text = "4\n20%";
+                    txtBlockProbBig.text = "8\n80%";
+                }
+                else if (maxNumber <= 1024)
+                {
+                    txtBlockProbSmall.text = "4\n0%";
+                    txtBlockProbBig.text = "8\n100%";
+                }
             }
-            else if (maxNumber <= 32)
+            else
             {
-                txtBlockProbSmall.text = "2\n80%";
-                txtBlockProbBig.text = "4\n20%";
+                if (maxNumber <= 16)
+                {
+                    txtBlockProbSmall.text = "2\n100%";
+                    txtBlockProbBig.text = "4\n0%";
+                }
+                else if (maxNumber <= 32)
+                {
+                    txtBlockProbSmall.text = "2\n90%";
+                    txtBlockProbBig.text = "4\n10%";
+                }
+                else if (maxNumber <= 64)
+                {
+                    txtBlockProbSmall.text = "2\n50%";
+                    txtBlockProbBig.text = "4\n50%";
+                }
+                else if (maxNumber <= 128)
+                {
+                    txtBlockProbSmall.text = "2\n10%";
+                    txtBlockProbBig.text = "4\n90%";
+                }
+                else if (maxNumber <= 256)
+                {
+                    txtBlockProbSmall.text = "4\n90%";
+                    txtBlockProbBig.text = "8\n10%";
+                }
+                else if (maxNumber <= 512)
+                {
+                    txtBlockProbSmall.text = "4\n50%";
+                    txtBlockProbBig.text = "8\n50%";
+                }
+                else if (maxNumber <= 1024)
+                {
+                    txtBlockProbSmall.text = "4\n10%";
+                    txtBlockProbBig.text = "8\n90%";
+                }
             }
-            else if (maxNumber <= 64)
-            {
-                txtBlockProbSmall.text = "2\n20%";
-                txtBlockProbBig.text = "4\n80%";
-            }
-            else if (maxNumber <= 128)
-            {
-                txtBlockProbSmall.text = "4\n100%";
-                txtBlockProbBig.text = "8\n0%";
-            }
-            else if (maxNumber <= 256)
-            {
-                txtBlockProbSmall.text = "4\n80%";
-                txtBlockProbBig.text = "8\n20%";
-            }
-            else if (maxNumber <= 512)
-            {
-                txtBlockProbSmall.text = "4\n20%";
-                txtBlockProbBig.text = "8\n80%";
-            }
-            else if (maxNumber <= 1024)
-            {
-                txtBlockProbSmall.text = "4\n00%";
-                txtBlockProbBig.text = "8\n100%";
-            }
+            
         }
     }
 
