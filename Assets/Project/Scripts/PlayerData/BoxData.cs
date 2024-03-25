@@ -40,22 +40,22 @@ public class BoxData : GameData
     //[JsonIgnore] public const long BoxTime1 = 2;
     [JsonIgnore] public const long BoxTime1 = 900;
 
-    [JsonIgnore] public const int MinPieceAmount1 = 8;
-    [JsonIgnore] public const int MaxPieceAmount1 = 12;
+    [JsonIgnore] public const int MinPieceAmount1 = 25;
+    [JsonIgnore] public const int MaxPieceAmount1 = 35;
 
     [JsonIgnore] public const float BoxPercent2 = 20;
     //[JsonIgnore] public const long BoxTime2 = 4;
     [JsonIgnore] public const long BoxTime2 = 1800;
 
-    [JsonIgnore] public const int MinPieceAmount2 = 20;
-    [JsonIgnore] public const int MaxPieceAmount2 = 26;
+    [JsonIgnore] public const int MinPieceAmount2 = 65;
+    [JsonIgnore] public const int MaxPieceAmount2 = 75;
 
     [JsonIgnore] public const float BoxPrecent3 = 10;
     //[JsonIgnore] public const long BoxTime3 = 6;
     [JsonIgnore] public const long BoxTime3 = 3600;
     
-    [JsonIgnore] public const int MinPieceAmount3 = 50;
-    [JsonIgnore] public const int MaxPieceAmount3 = 56;
+    [JsonIgnore] public const int MinPieceAmount3 = 95;
+    [JsonIgnore] public const int MaxPieceAmount3 = 105;
 
     [JsonProperty] public long StartBoxTime;
     [JsonProperty] public long FinishBoxTime;
@@ -78,7 +78,7 @@ public class BoxData : GameData
     }
 
 
-    public bool TryAddBox()
+    public bool TryAddBox(int index)
     {
         var box = Boxes.Find(x => x.Level < 0);
         
@@ -87,9 +87,7 @@ public class BoxData : GameData
             return false;
         }
         
-        var level = UtilCode.GetWeightChance(BoxPercents);
-        
-        box.Init(level);
+        box.Init(index);
         
         PlayerDataManager.Instance.SaveLocalData();
 

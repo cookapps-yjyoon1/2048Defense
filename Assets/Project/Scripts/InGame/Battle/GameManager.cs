@@ -168,7 +168,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public void GameClear()
     {
         PlayerDataManager.ETCData.SetClearStage(curStage);
-        _UIBattle.FinishGame(true);
+        _UIBattle.FinishGame(true, waveInfo.curWave);
     }
 
     public void GameOver()
@@ -177,7 +177,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool.GameOver();
         enemyPool_Elite.GameOver();
         enemyPool_Boss.GameOver();
-        _UIBattle.FinishGame(false);
+        _UIBattle.FinishGame(false,waveInfo.curWave);
         tower[0].GameOver();
         tower[1].GameOver();
         tower[2].GameOver();
