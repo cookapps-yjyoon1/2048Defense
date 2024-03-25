@@ -83,29 +83,33 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         get
         {
-            if (maxNumber <= 32)
+            if (maxNumber <= 16)
             {
                 return 2;
             }
-            else if (maxNumber <= 64)
+            else if (maxNumber <= 32)
             {
                 return Random.Range(0, 100) < 80 ? 2 : 4;
             }
-            else if (maxNumber <= 128)
+            else if (maxNumber <= 64)
             {
                 return Random.Range(0, 100) < 20 ? 2 : 4;
             }
-            else if (maxNumber <= 256)
+            else if (maxNumber <= 128)
             {
                 return 4;
             }
-            else if (maxNumber <= 512)
+            else if (maxNumber <= 256)
             {
                 return Random.Range(0, 100) < 80 ? 4 : 8;
             }
-            else if (maxNumber <= 1024)
+            else if (maxNumber <= 512)
             {
                 return Random.Range(0, 100) < 20 ? 4 : 8;
+            }
+            else if (maxNumber <= 1024)
+            {
+                return 8;
             }
             else
             {
@@ -157,6 +161,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool_Elite.GameStart(curStage);
         enemyPool_Boss.GameStart(curStage);
 
+        isStart = true;
         energyAutoAds = false;
         mobCount = 2500;
 
@@ -169,11 +174,14 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     IEnumerator CoGameStart()
     {
-        for (int i = 1; i <= 30; i++)
+        for (int i = 0; i < 10; i++)
         {
-            GameManager.Instance.obPool.SpawnEnergy(energyPos.transform.position, 1);
+            GameManager.Instance.obPool.SpawnEnergy(energyPos.transform.position, 3);
             yield return new WaitForSeconds(0.2f);
         }
+
+        yield return new WaitForSeconds(5f);
+        isStart = false;
     }
 
     public void WaveStart()
@@ -331,21 +339,25 @@ public class GameManager : SingletonBehaviour<GameManager>
 
             txtMaxBlock.text = "Max : " + maxNumber_tmp;
 
-
-            if (maxNumber <= 32)
+            if (maxNumber <= 16)
             {
                 txtBlockProbSmall.text = "2\n100%";
                 txtBlockProbBig.text = "4\n0%";
             }
-            else if (maxNumber <= 64)
+            else if (maxNumber <= 32)
             {
                 txtBlockProbSmall.text = "2\n80%";
                 txtBlockProbBig.text = "4\n20%";
             }
-            else if (maxNumber <= 128)
+            else if (maxNumber <= 64)
             {
                 txtBlockProbSmall.text = "2\n20%";
                 txtBlockProbBig.text = "4\n80%";
+            }
+            else if (maxNumber <= 128)
+            {
+                txtBlockProbSmall.text = "4\n100%";
+                txtBlockProbBig.text = "8\n0%";
             }
             else if (maxNumber <= 256)
             {
@@ -359,7 +371,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             }
             else if (maxNumber <= 1024)
             {
-                txtBlockProbSmall.text = "4\n0%";
+                txtBlockProbSmall.text = "4\n00%";
                 txtBlockProbBig.text = "8\n100%";
             }
         }
