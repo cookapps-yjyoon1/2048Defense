@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -41,7 +43,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public int mobCount;
 
     private int EenergyCount = 6;
-    private int curEnergy = 30;
+    private int curEnergy = 0;
     public bool isStart = false;
     public bool energyAutoAds = false;
 
@@ -52,6 +54,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public int _towerGunCount = 0;
     bool spawnLastBoss = false;
+    
+    [SerializeField] GameObject energyPos;
 
     public int TowerGunCount
     {
@@ -81,27 +85,27 @@ public class GameManager : SingletonBehaviour<GameManager>
         {
             if (maxNumber <= 32)
             {
-                return Random.Range(0, 100) < 90 ? 2 : 4;
+                return 2;
             }
             else if (maxNumber <= 64)
             {
-                return Random.Range(0, 100) < 50 ? 2 : 4;
+                return Random.Range(0, 100) < 80 ? 2 : 4;
             }
             else if (maxNumber <= 128)
             {
-                return Random.Range(0, 100) < 10 ? 2 : 4;
+                return Random.Range(0, 100) < 20 ? 2 : 4;
             }
             else if (maxNumber <= 256)
             {
-                return Random.Range(0, 100) < 90 ? 4 : 8;
+                return 4;
             }
             else if (maxNumber <= 512)
             {
-                return Random.Range(0, 100) < 50 ? 4 : 8;
+                return Random.Range(0, 100) < 80 ? 4 : 8;
             }
             else if (maxNumber <= 1024)
             {
-                return Random.Range(0, 100) < 10 ? 4 : 8;
+                return Random.Range(0, 100) < 20 ? 4 : 8;
             }
             else
             {
@@ -159,6 +163,17 @@ public class GameManager : SingletonBehaviour<GameManager>
         txtMobCount.text = mobCount.ToString();
 
         txtEnergyCount.text = CurEnergy.ToString();
+
+        StartCoroutine(CoGameStart());
+    }
+
+    IEnumerator CoGameStart()
+    {
+        for (int i = 1; i <= 30; i++)
+        {
+            GameManager.Instance.obPool.SpawnEnergy(energyPos.transform.position, 1);
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 
     public void WaveStart()
@@ -319,33 +334,33 @@ public class GameManager : SingletonBehaviour<GameManager>
 
             if (maxNumber <= 32)
             {
-                txtBlockProbSmall.text = "2\n90%";
-                txtBlockProbBig.text = "4\n10%";
+                txtBlockProbSmall.text = "2\n100%";
+                txtBlockProbBig.text = "4\n0%";
             }
             else if (maxNumber <= 64)
             {
-                txtBlockProbSmall.text = "2\n50%";
-                txtBlockProbBig.text = "4\n50%";
+                txtBlockProbSmall.text = "2\n80%";
+                txtBlockProbBig.text = "4\n20%";
             }
             else if (maxNumber <= 128)
             {
-                txtBlockProbSmall.text = "2\n10%";
-                txtBlockProbBig.text = "4\n90%";
+                txtBlockProbSmall.text = "2\n20%";
+                txtBlockProbBig.text = "4\n80%";
             }
             else if (maxNumber <= 256)
             {
-                txtBlockProbSmall.text = "4\n90%";
-                txtBlockProbBig.text = "8\n10%";
+                txtBlockProbSmall.text = "4\n80%";
+                txtBlockProbBig.text = "8\n20%";
             }
             else if (maxNumber <= 512)
             {
-                txtBlockProbSmall.text = "4\n50%";
-                txtBlockProbBig.text = "8\n50%";
+                txtBlockProbSmall.text = "4\n20%";
+                txtBlockProbBig.text = "8\n80%";
             }
             else if (maxNumber <= 1024)
             {
-                txtBlockProbSmall.text = "4\n10%";
-                txtBlockProbBig.text = "8\n90%";
+                txtBlockProbSmall.text = "4\n0%";
+                txtBlockProbBig.text = "8\n100%";
             }
         }
     }

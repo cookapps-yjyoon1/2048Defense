@@ -7864,6 +7864,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockProb
       objectReference: {fileID: 0}
+    - target: {fileID: 2477954097999244094, guid: 49a37e3914c07b54984d6ac3723a45a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477954098186198163, guid: 49a37e3914c07b54984d6ac3723a45a6, type: 3}
+      propertyPath: m_Text
+      value: '4
+
+        0%'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477954098990036201, guid: 49a37e3914c07b54984d6ac3723a45a6, type: 3}
+      propertyPath: m_Text
+      value: '2
+
+        100%'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a37e3914c07b54984d6ac3723a45a6, type: 3}
 --- !u!224 &853891141 stripped
@@ -7986,6 +8002,7 @@ MonoBehaviour:
   isStart: 0
   energyAutoAds: 0
   _towerGunCount: 0
+  energyPos: {fileID: 1747981457}
   _imgBoardRed: {fileID: 1592993163}
   _trBoard: {fileID: 1830594605}
 --- !u!4 &889187071
