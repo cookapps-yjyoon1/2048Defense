@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,19 +11,17 @@ public class WaveInfo : MonoBehaviour
     [SerializeField] float waveDuration;
     [SerializeField] EnemyPool enemyPool;
     [SerializeField] Transform bigEnergySpawnPos;
+    [SerializeField] GameObject btnStart;
 
-    //public float correction;
-    //float incrCorrection;
     public int curWave;
     int lastWave = 4;
     float waveTime = 0;
 
     public void GameStart(int _stage)
     {
-        //correction = GameManager.instance.stageData.stage[_stage].correction;  
         curWave = 0;
+        btnStart.SetActive(false);
         waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
-        //StartCoroutine(CoTimer());
     }
 
     public void GameOver()
@@ -32,10 +31,13 @@ public class WaveInfo : MonoBehaviour
 
     public void WaveStart()
     {
+        GameManager.Instance.isStart = true;
+        btnStart.SetActive(false);
         waveInfoText.text = "WAVE\n" + (curWave / 5 +1)+ " - " + (curWave % 5+1);
         StartCoroutine(CoTimer());
         enemyPool.ChangeWave(curWave);
     }
+
     public void WaveStop()
     {
         StopAllCoroutines();
@@ -60,6 +62,7 @@ public class WaveInfo : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         GameManager.Instance.isStart = false;
+        btnStart.gameObject.SetActive(true);
 
         curWave++;
         lastWave += 5;
@@ -92,5 +95,10 @@ public class WaveInfo : MonoBehaviour
                 enemyPool.ChangeWave(curWave);
             }
         }
+    }
+
+    public void OnButtonClick()
+    {
+        WaveStart();
     }
 }

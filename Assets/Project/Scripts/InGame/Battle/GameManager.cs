@@ -12,6 +12,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public EnemyPool enemyPool;
     public EnemyPool_Elite enemyPool_Elite;
     public EnemyPool_Boss enemyPool_Boss;
+    public AdsMobCount adsMobCount;
     public List<TowerController> tower;
 
     public VFXPool vfxPool;
@@ -63,7 +64,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         {
             if (_towerGunCount == 15)
             {
-                if(!spawnLastBoss)
+                if (!spawnLastBoss)
                 {
                     SpawnLastBossMonster();
                 }
@@ -106,12 +107,12 @@ public class GameManager : SingletonBehaviour<GameManager>
             {
                 if (maxNumber == 2048)
                 {
-                    if(!spawnLastBoss)
+                    if (!spawnLastBoss)
                     {
                         SpawnLastBossMonster();
                     }
                 }
-                
+
                 return 8;
             }
         }
@@ -131,7 +132,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         // }
 
         StartEvent();
-        
+
         void StartEvent()
         {
             OnClickBtnGameStart();
@@ -153,7 +154,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         enemyPool_Boss.GameStart(curStage);
 
         energyAutoAds = false;
-        mobCount = 4096;
+        mobCount = 2500;
 
         txtMobCount.text = mobCount.ToString();
 
@@ -213,10 +214,15 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         mobCount--;
 
+        if (!adsMobCount._goAds.activeSelf && !adsMobCount.off && mobCount <= 500)
+        {
+            adsMobCount._goAds.SetActive(true);
+        }
+
         if (mobCount <= 0)
         {
             GameOver();
-            txtMobCount.text = "Game\nOver";
+            txtMobCount.text = "0";
         }
         else
         {
@@ -233,14 +239,13 @@ public class GameManager : SingletonBehaviour<GameManager>
         if (mobCount <= 0)
         {
             GameOver();
-            txtMobCount.text = "Game\nOver";
+            txtMobCount.text = "0";
         }
         else
         {
             txtMobCount.text = mobCount.ToString();
         }
     }
-
 
     public void MoveEnergy(Vector3 _tr)
     {
