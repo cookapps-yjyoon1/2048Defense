@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="" />
+    <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Util/UtilCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Util/UtilCode.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,6 +157,7 @@
       <workItem from="1711003095906" duration="8513000" />
       <workItem from="1711077208457" duration="1713000" />
       <workItem from="1711086005095" duration="18512000" />
+      <workItem from="1711428099316" duration="373000" />
     </task>
     <servers />
   </component>
@@ -272,19 +275,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/UI_Guide_Main.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\UI_Guide_Main.cs" initialLine="30" containingFunctionPresentation="Method 'OnClick'">
-            <startOffsets>
-              <option value="716" />
-            </startOffsets>
-            <endOffsets>
-              <option value="758" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
