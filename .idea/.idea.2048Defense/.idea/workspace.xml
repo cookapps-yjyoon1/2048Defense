@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2048Defense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/PlayerData/BoxData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Sprite/Atlas.spriteatlas" afterDir="false" />
-    </list>
+    <list default="true" id="4e883c72-cdd3-4e72-96c2-7e830a004243" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,10 +130,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11472">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11472" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -240,13 +236,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Scripts/MainScenario.cs</url>
-          <line>38</line>
+          <line>72</line>
           <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\MainScenario.cs" initialLine="37" containingFunctionPresentation="Method 'OnClickLeft'">
             <startOffsets>
-              <option value="1040" />
+              <option value="2021" />
             </startOffsets>
             <endOffsets>
-              <option value="1064" />
+              <option value="2045" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
@@ -276,6 +272,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Project/Scripts/UI_Guide_Main.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\Cookapps\2048Defense\Assets\Project\Scripts\UI_Guide_Main.cs" initialLine="30" containingFunctionPresentation="Method 'OnClick'">
+            <startOffsets>
+              <option value="716" />
+            </startOffsets>
+            <endOffsets>
+              <option value="758" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

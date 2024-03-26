@@ -13,8 +13,11 @@ public class UI_Guide_Main : MonoBehaviour
     
     public void Open()
     {
+        _currentIndex = 0;
         _main.alpha = 1;
-        _gameObjects.ForEach(x=>x.DOFade(0,0f));
+        _gameObjects.ForEach(x=>x.alpha = 0);
+        _gameObjects.ForEach(x=>x.gameObject.SetActive(false));
+        _gameObjects[0].gameObject.SetActive(true);
         _gameObjects[0].DOFade(1, 0.5f);
         gameObject.SetActive(true);
     }
@@ -34,11 +37,14 @@ public class UI_Guide_Main : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
+
+        _gameObjects[_currentIndex].DOFade(0, 0f);
+
+        _currentIndex++;
         
-        _gameObjects[_currentIndex].DOFade(0, 0.5f).OnComplete(() =>
-        {
-            _gameObjects[_currentIndex+1].DOFade(1, 0.5f);
-        });
+        _gameObjects[_currentIndex].gameObject.SetActive(true);
+        _gameObjects[_currentIndex].DOFade(1, 0.5f);
+        
     }
     
     private void Start()
