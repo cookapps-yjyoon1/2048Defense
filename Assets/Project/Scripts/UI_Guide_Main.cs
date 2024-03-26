@@ -15,6 +15,7 @@ public class UI_Guide_Main : MonoBehaviour
     {
         _main.alpha = 1;
         _gameObjects.ForEach(x=>x.DOFade(0,0f));
+        _gameObjects[0].DOFade(1, 0.5f);
         gameObject.SetActive(true);
     }
 
@@ -45,6 +46,10 @@ public class UI_Guide_Main : MonoBehaviour
         if (!PlayerDataManager.ETCData.IsFirstPlay)
         {
             Close();
+        }
+        else
+        {
+            Open();
         }
     }
 }
