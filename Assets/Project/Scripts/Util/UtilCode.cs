@@ -39,7 +39,7 @@ public static class UtilCode
     public static string GetTimeFormat(long time)
     {
         long hour = time / 3600;
-        long minute = time / 60;
+        long minute = (long)Mathf.Clamp(time / 60f - 3600,0,59);
         long second = time % 60;
 
         return $"{hour:D2}:{minute:D2}:{second:D2}";

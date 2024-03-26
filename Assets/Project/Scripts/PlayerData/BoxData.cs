@@ -78,7 +78,7 @@ public class BoxData : GameData
     }
 
 
-    public bool TryAddBox(int index)
+    public bool TryAddBox(int level)
     {
         var box = Boxes.Find(x => x.Level < 0);
         
@@ -87,7 +87,7 @@ public class BoxData : GameData
             return false;
         }
         
-        box.Init(index);
+        box.Init(level);
         
         PlayerDataManager.Instance.SaveLocalData();
 
@@ -130,11 +130,6 @@ public class BoxData : GameData
         }
 
         if (!Boxes[index].IsProgress)
-        {
-            return false;
-        }
-
-        if (Boxes[index].IsShowAds)
         {
             return false;
         }
