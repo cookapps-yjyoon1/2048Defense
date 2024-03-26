@@ -10,7 +10,7 @@ public class ETCData : GameData
     [JsonProperty] public List<bool> IsClearStage = new List<bool>();
     [JsonProperty] public List<bool> IsClearStageHard = new List<bool>();
     [JsonProperty] public int CurStage = 0;
-    [JsonProperty] public bool IsFirstPlay = false;
+    [JsonProperty] public bool IsFirstPlay = true;
 
     [JsonProperty] public bool IsHardMode = false;
 
