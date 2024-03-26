@@ -34,7 +34,7 @@ public class UI_Guide_Main : MonoBehaviour
         if (_currentIndex >= _gameObjects.Count-1)
         {
             _main.DOFade(0, 0.5f);
-            gameObject.SetActive(false);
+            Close();
             return;
         }
 
