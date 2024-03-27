@@ -138,7 +138,7 @@ MonoBehaviour:
   nowHp: 0
   atkDmg: 1
   atkDist: 1
-  moveSpeed: 0.2
+  moveSpeed: 0.25
   _decompositionController: {fileID: 3684549847250542482}
   target: {fileID: 0}
   animator: {fileID: 9081180030657173476}
