@@ -58,6 +58,8 @@ public class ArrowData : GameData
         Arrows[index]++;
         OwnArrowPiece[index] -= UpgradeCost;
 
+        PlayerDataManager.Instance.SaveLocalData();
+        
         return true;
     }
 

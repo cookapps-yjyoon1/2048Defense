@@ -578,7 +578,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 760cbcd0daeae5d4db347e637d98c6cd, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 4
     m_MaxSize: 70
     m_Alignment: 4
@@ -1467,6 +1467,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7170159146328909434, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Name
       value: Scroll Item (3)
@@ -1568,6 +1584,22 @@ PrefabInstance:
     - target: {fileID: 1295414517089847339, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170159146328909434, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Name
@@ -1699,9 +1731,17 @@ PrefabInstance:
       propertyPath: m_Text
       value: Sniper
       objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Text
       value: Fires a bullet that penetrates the monster.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3839436740007910349, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_IsActive
@@ -1717,6 +1757,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5896134723233121998, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
@@ -1864,6 +1912,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7170159146328909434, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Name
       value: Scroll Item (5)
@@ -1965,6 +2029,22 @@ PrefabInstance:
     - target: {fileID: 1295414517089847339, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170159146328909434, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Name
@@ -2092,9 +2172,17 @@ PrefabInstance:
       propertyPath: m_Text
       value: ShotGun
       objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Text
       value: Fires 5 bullets with slightly less damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3839436740007910349, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_IsActive
@@ -2110,6 +2198,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5896134723233121998, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
@@ -2265,6 +2361,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1725451962118274224, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 268.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725451962118274224, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 61.8865
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725451962118274224, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -74.696
+      objectReference: {fileID: 0}
     - target: {fileID: 1807292136076767585, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2285,9 +2393,17 @@ PrefabInstance:
       propertyPath: m_Text
       value: RPG
       objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Text
       value: Fires a bullet that explodes when hit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3839436740007910349, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_IsActive
@@ -2307,6 +2423,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5896134723233121998, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
@@ -2453,6 +2577,22 @@ PrefabInstance:
     - target: {fileID: 1295414517089847339, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905795744102593652, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552487460919291376, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391958838799978669, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340005755468996522, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170159146328909434, guid: 3ae29d09eea58384e953ec04a626c3b0, type: 3}
       propertyPath: m_Name
